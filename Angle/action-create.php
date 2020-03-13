@@ -83,6 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       else {
         $NumLang = $StrLang . $numSeqLang;
       }
+      echo "Affichage de NumSeq : ". $numSeqLang;
     }
 
     try {

@@ -1,4 +1,8 @@
 <?php require 'header.php'; ?>
+<?php
+  $NumPays = "";
+  $frPays = "";   
+?>
 <div class="container">
   <div class="card mt-5">
     <div class="card-header">
@@ -24,13 +28,42 @@
         <div class="form-group">
             <span class="span-text">Quel pays</span>
 						<input class="form-control" type="text" name="NumPays" maxlength="4" required>
-						<span class="line"></span>
+						<span class="line"></span>            
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-info">Ajouter une langue</button>
         </div>
       </form>
     </div>
+    <input type="hidden" id="idTypPays" name="idTypPays" value="<?php echo $NumPays; ?>" />            
+    <select size="1" name="TypPays" id="TypPays"  class="form-control form-control-create" tabindex="30" >
+<?php 
+            $NumPays = "";
+            $frPays = "";  
+
+            // 2. Preparation requete NON PREPAREE
+            // Récupération de l'occurrence pays à partir de l'id
+            $queryText = 'SELECT * FROM pays';
+
+            // 3. Lancement de la requete SQL
+            $result = $bdPdo->query($queryText);
+
+            // S'il y a bien un resultat
+            if ($result) {
+                // Parcours chaque ligne du resultat de requete
+                // Récupération du résultat de requête
+                    while ($tuple = $result->fetch()) {
+                        $ListnumPays = $tuple["numPays"];
+                        $ListfrPays = $tuple["frPays"];
+?>
+                        <option value="<?= $ListnumPays; ?>" >
+                            <?php echo $ListfrPays; ?>
+                        </option>
+<?php 
+                    } // End of while
+            }   // if ($result)
+?> 
+        </select>
   </div>
 </div>
 <?php require 'footer.php'; ?> <!-- Va chercher le fichier footer.php -->
