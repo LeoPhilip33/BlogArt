@@ -1,7 +1,7 @@
 <?php
   require 'db.php'; // Importation du fichier db.php
   $id = $_GET['id']; // Récupération d'id
-  $sql = 'SELECT * FROM angle WHERE NumLang=:id'; // Tout sélectionner à propos de la table langue ou NumLang=:id
+  $sql = 'SELECT * FROM angle WHERE NumAngl=:id'; // Tout sélectionner à propos de la table langue ou NumLang=:id
   $statement = $connection->prepare($sql); // Préparation de $sql
   $statement->execute([':id' => $id ]); // 
   $person = $statement->fetch(PDO::FETCH_OBJ);

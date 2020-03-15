@@ -24,6 +24,7 @@ $langues = $statement->fetchAll(PDO::FETCH_OBJ);
           <th>EmailAuteur</th>
           <th>TitrCom</th>
           <th>LibCom</th>
+          <th>NumArt</th>
           <th>Action</th>
         </tr> <!-- FIN tableau -->
         <?php foreach($langues as $row): ?> <!-- Tableau en PHP -->
@@ -32,6 +33,7 @@ $langues = $statement->fetchAll(PDO::FETCH_OBJ);
             <td><?= $row->PseudoAuteur; ?></td>
             <td><?= $row->EmailAuteur; ?></td>
             <td><?= $row->TitrCom; ?></td>
+            <td><?= $row->LibCom; ?></td>
             <td><?= $row->NumArt; ?></td>
             <td>
             <?php
