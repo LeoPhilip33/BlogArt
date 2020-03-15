@@ -25,8 +25,8 @@
 	$userBD = 'root';
 	$passBD = '';
 	try {
-	        $bdPdo = new PDO("mysql:dbname=$nomBD;host=$hostBD;charset=utf8", $userBD, $passBD);
-	        $bdPdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	        $connection = new PDO("mysql:dbname=$nomBD;host=$hostBD;charset=utf8", $userBD, $passBD);
+	        $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 	    } 
 	    catch (PDOException $error) {
@@ -58,13 +58,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $Lib1Lang = (ctrlSaisies($_POST["Lib1Lang"]));
     $Lib2Lang = (ctrlSaisies($_POST["Lib2Lang"]));
-    $numPays = (ctrlSaisies($_POST["NumPays"]));
+    $numPays = (ctrlSaisies($_POST["TypPays"]));
 
     $numPaysSelect = $numPays;
     $parmNumLang = $numPaysSelect . '%';
     $requete = "SELECT MAX(NumLang) AS NumLang FROM LANGUE WHERE NumLang LIKE '$parmNumLang';";
 
-    $result = $bdPdo->query($requete);
+    $result = $connection->query($requete);
 
     $numSeqLang = 0;
 
@@ -92,10 +92,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     try {
-      $bdPdo->beginTransaction();
+      $connection->beginTransaction();
 
-      echo "<br>"."Dernier echo avant le SEND : ".$Lib1Lang." ".$Lib2Lang." ".$NumPays ;
-      $query = $bdPdo->prepare("INSERT INTO LANGUE (NumLang, Lib1Lang, Lib2Lang, numPays) VALUES (:NumLang, :Lib1Lang, :Lib2Lang, :numPays)");
+      echo "<br>"."Dernier echo avant le SEND : ".$Lib1Lang." ".$Lib2Lang." ".$StrLang ;
+      $query = $connection->prepare("INSERT INTO LANGUE (NumLang, Lib1Lang, Lib2Lang, numPays) VALUES (:NumLang, :Lib1Lang, :Lib2Lang, :numPays)");
 
       $query->execute(
         array(
@@ -108,9 +108,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       $langid = $NumLang;
 
-      echo $NumLang, $Lib1Lang, $Lib2Lang, $numPays ;
 
-      $bdPdo->commit();
+      $connection->commit();
 
       $query->closeCursor();
 
@@ -118,7 +117,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     catch (PDOException $e) {
       die('Failed to insert Article : ' . $e->getMessage());
-      $bdPdo->rollBack();
+      $connection->rollBack();
     }
   
 

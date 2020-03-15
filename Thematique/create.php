@@ -2,7 +2,7 @@
 <div class="container">
   <div class="card mt-5">
     <div class="card-header">
-    <h2>Ajoutez une langue</h2>
+    <h2>Ajoutez une thématique</h2>
     </div>
     <div class="card-body">
       <?php if(!empty($message)): ?> <!-- Si $message n'est pas vide -->
@@ -27,7 +27,7 @@
 						<span class="line"></span>
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-info">Ajouter une langue</button>
+          <button type="submit" class="btn btn-info">Ajouter une thématique</button>
         </div>
       </form>
     </div>

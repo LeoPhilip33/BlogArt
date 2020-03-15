@@ -20,10 +20,25 @@
         <a class="nav-link" href="index.php">Accueil <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="create.php">Ajouter une langue</a>
+        <a class="nav-link" href="../Angle/index.php">Angles</a>
+        <a class="nav-link" href="../Angle/create.php">Ajouter un angle</a>
       </li>
-      
-      
+      <li class="nav-item">
+      <a class="nav-link" href="../Commentaire/index.php">Commentaires</a>
+        <a class="nav-link" href="../Commentaire/create.php">Ajouter un commentaire</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="../Langue/index.php">Langues</a>
+        <a class="nav-link" href="../Langue/create.php">Ajouter une langue</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="../Mot cle/index.php">Mots clé</a>
+        <a class="nav-link" href="../Mot cle/create.php">Ajouter un mot clé</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="../Thematique/index.php">Thématiques</a>
+        <a class="nav-link" href="../Thematique/create.php">Ajouter une thématique</a>
+      </li>
     </ul>
   </div>
 </nav>
