@@ -1,7 +1,5 @@
 <?php require 'header.php'; 
   require 'db.php';
-?>
-<?php
   $NumPays = "";
   $frPays = "";   
 ?>

@@ -1,12 +1,7 @@
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+<?php 
 
-
-
-	<?php 
+include 'db.php';
+include 'motcleadd.php';
 
 	function ctrlSaisies($saisie) {
 
@@ -19,87 +14,55 @@
 
 	  return $saisie;
 	}
+      
+$LibMoCle = $_POST['LibMoCle'];
+$idTypPays = $_POST['idTypPays'];
 
-	$hostBD = "localhost";
-	$nomBD = "blogart20";
-	$userBD = 'root';
-	$passBD = '';
-	try {
-	        $connection = new PDO("mysql:dbname=$nomBD;host=$hostBD;charset=utf8", $userBD, $passBD);
-	        $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-	    } 
-	    catch (PDOException $error) {
-	        die('Failed to connect : ' . $error->getMessage());
-	    }
-
-$LibMoCle = "";
-$NumMoCle = "";
-$Lib1Lang = "";
-$NumLang = "";
-
-$NumMoCle = $_POST['LibMoCle'];
-$Lib1Lang = $_POST['TypPays'];
-
+echo "Informations reçus : ".$LibMoCle." ".$idTypPays;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+    echo "<br/>Passage de condition 1 : ".$LibMoCle." ".$idTypPays;
 
   $Submit = isset($_POST['Submit']) ? $_POST['Submit'] : '';
 
+    echo "<br>"."Passage de condition2 : ".$LibMoCle." ".$idTypPays;
 
-    $erreur = false;
+    $NumLang = 0;
 
-    $NumMoCle = (ctrlSaisies($_POST["LibMoCle"]));
-    $Lib1Lang = (ctrlSaisies($_POST["TypPays"]));
-    echo $NumMoCle;
-    echo " ";
-    echo $Lib1Lang  ;
+    $LibMoCle = (ctrlSaisies($_POST["LibMoCle"]));
+    $idTypPays = (ctrlSaisies($_POST["idTypPays"]));
 
-    $numPaysSelect = $Lib1Lang;
-    $parmNumLang = $numPaysSelect . '%';
-    $requete = "SELECT NumLang FROM LANGUE WHERE NumLang='$parmNumLang';";
-    $result = $connection->query($requete);
-    $tuple = $result->fetch();
-    echo $tuple;
+// Appel getNextNumMoCle() : récup next PK NumMoCle
+$NumMoCle = getNextNumMoCle($NumLang);
 
     try {
       $connection->beginTransaction();
 
-      echo "<br>"."Dernier echo avant le SEND : ".$NumMoCle." ".$LibMoCle." ".$NumLang ;
-      $query = $connection->prepare("INSERT INTO MOTCLE (NumMoCle, LibMoCle, NumLang) VALUES (:NumMoCle, :LibMoCle, :NumLang)");
+      echo "<br>"."Dernier echo avant le SEND : ".$LibMoCle." ".$idTypPays." ".$NumLang ;
+      /// Coller ici 
 
       $query->execute(
         array(
           ':NumMoCle' => $NumMoCle,
           ':LibMoCle' => $LibMoCle,
-          ':NumLang' => $NumLang
+          ':idTypPays' => $NumLang,
         )
       );
-
-      $langid = $NumLang;
-
 
       $connection->commit();
 
       $query->closeCursor();
 
-      header("Location:index.php?");
+      header("Location:index.php?#Langues");
     }
     catch (PDOException $e) {
       die('Failed to insert Article : ' . $e->getMessage());
       $connection->rollBack();
     }
-  
-
 }
 
-	
-
 ?>
-
-
-
 
 </body>
 </html>

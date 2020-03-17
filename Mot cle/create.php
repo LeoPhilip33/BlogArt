@@ -2,6 +2,7 @@
   require 'db.php';
 ?>
 <?php
+$idTypPays = "";
   $NumPays = "";
   $frPays = "";   
 ?>
@@ -24,15 +25,13 @@
         </div>
         <div class="form-group">
             <span class="span-text">Langue</span>
-            <input type="hidden" id="idTypPays" name="idTypPays" value="<?php echo $NumPays; ?>" />
 						<select size="1" name="TypPays" id="TypPays"  class="form-control form-control-create" tabindex="30" >
+            <input type="hidden" id="idTypPays" name="idTypPays" value="<?php echo $idTypPays; ?>" />
 <?php 
-            $NumPays = "";
-            $frPays = "";  
 
             // 2. Preparation requete NON PREPAREE
             // Récupération de l'occurrence pays à partir de l'id
-            $queryText = 'SELECT * FROM PAYS';
+            $queryText = 'SELECT * FROM langue';
 
             // 3. Lancement de la requete SQL
             $result = $connection->query($queryText);
@@ -42,8 +41,8 @@
                 // Parcours chaque ligne du resultat de requete
                 // Récupération du résultat de requête
                     while ($tuple = $result->fetch()) {
-                        $ListnumPays = $tuple["numPays"];
-                        $ListfrPays = $tuple["frPays"];
+                        $ListnumPays = $tuple["NumLang"];
+                        $ListfrPays = $tuple["Lib1Lang"];
                         echo $ListfrPays;
 ?>
                         <option value="<?= $ListnumPays; ?>" >
