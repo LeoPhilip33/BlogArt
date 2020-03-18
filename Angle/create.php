@@ -1,4 +1,11 @@
-<?php require 'header.php'; ?>
+<?php require 'header.php'; 
+  require 'db.php';
+?>
+<?php
+  $ListnumPays = "";
+  $NumPays = "";
+  $frPays = "";
+?>
 <div class="container">
   <div class="card mt-5">
     <div class="card-header">
@@ -12,20 +19,42 @@
       <?php endif; ?>
       <form class="container-contact-us" action="action-create.php" method="POST"> <!-- Si le formulaire est activé, on redirige vers action-create.php -->
         <div class="form-group">
-            <span class="span-text">Libellé angle</span> 
-            <input class="form-control" type="text" name="LibAngl" maxlength="60" required> <!-- Définition du taille max et impose à se que le champ soit complété -->
+            <span class="span-text">Angle</span> 
+            <input class="form-control" type="text" name="LibMoCle" maxlength="25" required> <!-- Définition du taille max et impose à se que le champ soit complété -->
 						<span class="line"></span>
         </div>
         <div class="form-group">
-            <span class="span-text">Quel angle ?</span>
-						<input class="form-control" type="text" name="NumLang" maxlength="4" required>
-						<span class="line"></span>
+            <span class="span-text">Sélectionner la langue</span>
+            <input type="hidden" id="idTypPays" name="idTypPays" value="<?php echo $NumPays; ?>" />
+						<select size="1" name="TypPays" id="TypPays"  class="form-control form-control-create" tabindex="30" >
+<?php 
+
+            // 2. Preparation requete NON PREPAREE
+            // Récupération de l'occurrence pays à partir de l'id
+            $queryText = 'SELECT * FROM langue';
+
+            // 3. Lancement de la requete SQL
+            $result = $connection->query($queryText);
+
+            // S'il y a bien un resultat
+            if ($result) {
+                // Parcours chaque ligne du resultat de requete
+                // Récupération du résultat de requête
+                  while ($tuple = $result->fetch()) {
+                    $ListnumPays = $tuple["NumLang"];
+                    $ListfrPays = $tuple["Lib1Lang"];
+                    echo '<option value="' .$ListnumPays. '">' .$ListfrPays. '</option>';
+                } // End of while
+            }   // if ($result)
+?>
+          </select>
+				  <span class="line"></span>            
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-info">Ajouter un angle</button>
+          <button type="submit" class="btn btn-info">Ajouter l'angle</button>
         </div>
       </form>
-    </div>
+    </div>            
   </div>
 </div>
 <?php require 'footer.php'; ?> <!-- Va chercher le fichier footer.php -->
