@@ -14,7 +14,7 @@
     function getNextNumThem($NumLang) {
 
       // Connexion à la BDD 
-      include 'db.php';
+      include '../db.php';
 
       // Découpage FK LANGUE 
       $LibLangSelect = substr($NumLang, 0, 4); 

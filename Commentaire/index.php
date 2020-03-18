@@ -1,5 +1,5 @@
 <?php
-require 'db.php'; // On importe le fichier db.php
+require '../db.php'; // On importe le fichier db.php
 $sql = 'SELECT * FROM comment'; // Met dans la varaible toute la sélection de la table langue
 $statement = $connection->prepare($sql);
 $statement->execute();

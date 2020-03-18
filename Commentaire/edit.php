@@ -1,5 +1,5 @@
 <?php
-  require 'db.php'; // Importation du fichier db.php
+  require '../db.php'; // Importation du fichier db.php
   $id = $_GET['id']; // Récupération d'id
   $sql = 'SELECT * FROM comment WHERE NumCom=:id'; // Tout sélectionner à propos de la table langue ou NumLang=:id
   $statement = $connection->prepare($sql); // Préparation de $sql

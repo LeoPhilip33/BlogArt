@@ -1,5 +1,5 @@
 <?php require 'header.php';
-require 'db.php';
+require '../db.php';
 $NumPays = " ";
 ?>
 <div class="container">
