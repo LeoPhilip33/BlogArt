@@ -2,9 +2,9 @@
   require 'db.php';
 ?>
 <?php
-$idTypPays = "";
+  $ListnumPays = "";
   $NumPays = "";
-  $frPays = "";   
+  $frPays = "";
 ?>
 <div class="container">
   <div class="card mt-5">
@@ -25,8 +25,8 @@ $idTypPays = "";
         </div>
         <div class="form-group">
             <span class="span-text">Langue</span>
+            <input type="hidden" id="idTypPays" name="idTypPays" value="<?php echo $NumPays; ?>" />
 						<select size="1" name="TypPays" id="TypPays"  class="form-control form-control-create" tabindex="30" >
-            <input type="hidden" id="idTypPays" name="idTypPays" value="<?php echo $idTypPays; ?>" />
 <?php 
 
             // 2. Preparation requete NON PREPAREE
@@ -40,16 +40,11 @@ $idTypPays = "";
             if ($result) {
                 // Parcours chaque ligne du resultat de requete
                 // Récupération du résultat de requête
-                    while ($tuple = $result->fetch()) {
-                        $ListnumPays = $tuple["NumLang"];
-                        $ListfrPays = $tuple["Lib1Lang"];
-                        echo $ListfrPays;
-?>
-                        <option value="<?= $ListnumPays; ?>" >
-                            <?php echo $ListfrPays; ?>
-                        </option>
-<?php
-                    } // End of while
+                  while ($tuple = $result->fetch()) {
+                    $ListnumPays = $tuple["NumLang"];
+                    $ListfrPays = $tuple["Lib1Lang"];
+                    echo '<option value="' .$ListnumPays. '">' .$ListfrPays. '</option>';
+                } // End of while
             }   // if ($result)
 ?>
           </select>

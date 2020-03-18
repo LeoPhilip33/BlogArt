@@ -16,37 +16,37 @@ include 'motcleadd.php';
 	}
       
 $LibMoCle = $_POST['LibMoCle'];
-$idTypPays = $_POST['idTypPays'];
+$TypPays = $_POST['TypPays'];
 
-echo "Informations reçus : ".$LibMoCle." ".$idTypPays;
+echo "Informations reçus : ".$LibMoCle." ".$TypPays;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    echo "<br/>Passage de condition 1 : ".$LibMoCle." ".$idTypPays;
+    echo "<br/>Passage de condition 1 : ".$LibMoCle." ".$TypPays;
 
   $Submit = isset($_POST['Submit']) ? $_POST['Submit'] : '';
 
-    echo "<br>"."Passage de condition2 : ".$LibMoCle." ".$idTypPays;
+    echo "<br>"."Passage de condition2 : ".$LibMoCle." ".$TypPays;
 
     $NumLang = 0;
 
     $LibMoCle = (ctrlSaisies($_POST["LibMoCle"]));
-    $idTypPays = (ctrlSaisies($_POST["idTypPays"]));
+    $TypPays = (ctrlSaisies($_POST["TypPays"]));
 
 // Appel getNextNumMoCle() : récup next PK NumMoCle
 $NumMoCle = getNextNumMoCle($NumLang);
 
     try {
       $connection->beginTransaction();
-
-      echo "<br>"."Dernier echo avant le SEND : ".$LibMoCle." ".$idTypPays." ".$NumLang ;
+      echo "<br>"."Dernier echo avant le SEND : ".$LibMoCle." ".$TypPays;
+      $query = $connection->prepare("INSERT INTO motcle (NumMoCle, LibMoCle, NumLang) VALUES (:NumMoCle, :LibMoCle, :TypPays)");
       /// Coller ici 
 
       $query->execute(
         array(
           ':NumMoCle' => $NumMoCle,
           ':LibMoCle' => $LibMoCle,
-          ':idTypPays' => $NumLang,
+          ':TypPays' => $TypPays
         )
       );
 
