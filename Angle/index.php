@@ -10,7 +10,7 @@ $langues = $statement->fetchAll(PDO::FETCH_OBJ);
   <div class="card mt-5 bkcard"> <!-- Code bootstrap -->
     <div class="card-header"> <!-- Code bootstrap -->
       <div class="box">
-        <div class="gauche" ><h2>Commentaires :</h2></div><!-- Titre h2 -->
+        <div class="gauche" ><h2>Angles :</h2></div><!-- Titre h2 -->
         <form method="post" action="search.php">
           <div class="droit"><input type="search" id="site-search" name="q" placeholder="Rechercher.."> <button>Rechercher</button> </div>
         </form>

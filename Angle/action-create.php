@@ -1,7 +1,7 @@
 <?php 
 
 include 'db.php';
-include 'motcleadd.php';
+include 'angleadd.php';
 
 	function ctrlSaisies($saisie) {
 
@@ -34,12 +34,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $TypPays = (ctrlSaisies($_POST["TypPays"]));
 
 // Appel getNextNumMoCle() : récup next PK NumMoCle
-$NumMoCle = getNextNumMoCle($NumLang);
+$NumMoCle = getNextNumAngl($NumLang);
 
     try {
       $connection->beginTransaction();
       echo "<br>"."Dernier echo avant le SEND : ".$LibMoCle." ".$TypPays;
-      $query = $connection->prepare("INSERT INTO motcle (NumMoCle, LibMoCle, NumLang) VALUES (:NumMoCle, :LibMoCle, :TypPays)");
+      $query = $connection->prepare("INSERT INTO angle (NumAngl, LibAngl, NumLang) VALUES (:NumMoCle, :LibMoCle, :TypPays)");
       /// Coller ici 
 
       $query->execute(

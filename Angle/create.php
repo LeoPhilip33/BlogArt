@@ -19,12 +19,12 @@
       <?php endif; ?>
       <form class="container-contact-us" action="action-create.php" method="POST"> <!-- Si le formulaire est activé, on redirige vers action-create.php -->
         <div class="form-group">
-            <span class="span-text">Angle</span> 
+            <span class="span-text">Votre angle</span> 
             <input class="form-control" type="text" name="LibMoCle" maxlength="25" required> <!-- Définition du taille max et impose à se que le champ soit complété -->
 						<span class="line"></span>
         </div>
         <div class="form-group">
-            <span class="span-text">Sélectionner la langue</span>
+            <span class="span-text">Choisir la langue</span>
             <input type="hidden" id="idTypPays" name="idTypPays" value="<?php echo $NumPays; ?>" />
 						<select size="1" name="TypPays" id="TypPays"  class="form-control form-control-create" tabindex="30" >
 <?php 
@@ -51,7 +51,7 @@
 				  <span class="line"></span>            
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-info">Ajouter l'angle</button>
+          <button type="submit" class="btn btn-info">Ajouter une langue</button>
         </div>
       </form>
     </div>            
