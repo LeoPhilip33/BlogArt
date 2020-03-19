@@ -65,6 +65,7 @@ function IsEmail($email)
 
 // formulaire envoyé, on récupère tous les champs.
 $nom     = (isset($_POST['nom']))     ? Rec($_POST['nom'])     : '';
+$prenom  = (isset($_POST['prenom']))  ? Rec($_POST['prenom'])  : '';
 $email   = (isset($_POST['email']))   ? Rec($_POST['email'])   : '';
 $objet   = (isset($_POST['objet']))   ? Rec($_POST['objet'])   : '';
 $message = (isset($_POST['message'])) ? Rec($_POST['message']) : '';
@@ -76,7 +77,7 @@ if (($nom != '') && ($email != '') && ($objet != '') && ($message != ''))
 {
     // les 4 variables sont remplies, on génère puis envoie le mail
     $headers  = 'MIME-Version: 1.0' . "\r\n";
-    $headers .= 'From:'.$nom.' <'.$email.'>' . "\r\n" .
+    $headers .= 'From:'.$nom.' '.$prenom.' <'.$email.'>' . "\r\n" .
             'Reply-To:'.$email. "\r\n" .
             'Content-Type: text/plain; charset="utf-8"; DelSp="Yes"; format=flowed '."\r\n" .
             'Content-Disposition: inline'. "\r\n" .

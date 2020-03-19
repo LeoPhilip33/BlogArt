@@ -37,7 +37,7 @@ require '../db.php';
           <textarea class="form-control" id="message" name="message" rows="5" placeholder="..." required></textarea>
         </div>
         <div class="form-group">
-        <button type="envoyer" class="btn btn-primary">Envoyer</button>
+        <button type="envoyer" value="ok"class="btn btn-primary">Envoyer</button>
         </div>
       </form>
     </div>
