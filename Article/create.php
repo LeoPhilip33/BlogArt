@@ -124,7 +124,8 @@ require '../db.php';
           require 'addmocle.php';
         } 
         ?>
-          
+        <?php require 'addmocle.php'; ?>
+        <?php require 'addmocle.php'; ?>
         </div>
         
         <div class="form-group">

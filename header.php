@@ -44,6 +44,15 @@
       <a class="nav-link" href="../Article/index.php">Article</a>
         <a class="nav-link" href="../Article/create.php">Ajouter un Article</a>
       </li>
+      <li class="nav-item">
+      <a class="nav-link" href="../Article/index.php">Article</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="../Contact/create.php">Contact</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="../info.php">php.info</a>
+      </li>
     </ul>
   </div>
 </nav>
