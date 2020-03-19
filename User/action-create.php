@@ -3,9 +3,6 @@
 	<title></title>
 </head>
 <body>
-
-
-
 	<?php 
 
 	function ctrlSaisies($saisie) {
@@ -122,13 +119,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   
 
 }
-
-	
-
 ?>
-
-
-
-
 </body>
 </html>
