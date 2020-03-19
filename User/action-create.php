@@ -69,8 +69,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $user = $row->Login;
       echo $user."<br>";
       if($user == $Identifiant){
+        ?>
+      <form method=POST action=create.php>
+        <input type="hidden" name="error" ></input>
+      </form>
+      <?php
         echo "Erreur ! L'identifiant ou le mot de passe existe déja !";
-        $error = "Erreur ! L'identifiant ou le mot de passe existe déja !";
       }
     endforeach;
 

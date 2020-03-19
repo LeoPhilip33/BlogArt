@@ -18,7 +18,7 @@
         <div class="form-group">
             <?php
             $error = "";
-            $error = $_POST[''];
+            $error = $_POST['error'];
             echo $error;
             ?>
             <span class="span-text">Identifiant :</span> 
