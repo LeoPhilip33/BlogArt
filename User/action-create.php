@@ -61,10 +61,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Prenom = (ctrlSaisies($_POST["Prenom"]));
     $Email = (ctrlSaisies($_POST["Email"]));
 
+    $sql = 'SELECT * FROM user'; // Met dans la varaible toute la sélection de la table langue
+    $statement = $connection->prepare($sql);
+    $statement->execute();
+    $user = $statement->fetchAll(PDO::FETCH_OBJ);
+    foreach($user as $row):     
+      $user = $row->Login;
+      echo $user."<br>";
+      if($user = $Identifiant){
+        echo "Erreur ! L'identifiant ou le mot de passe existe déja !";
+      }
+    endforeach;
     try {
       $connection->beginTransaction();
 
-      echo "<br>"."Dernier echo avant le SEND : ".$Identifiant." ".$mdp." ".$Nom." ".$Prenom." ".$Email;
       $query = $connection->prepare("INSERT INTO user (Login, Pass, LastName, FirstName, EMail) VALUES (:Identifiant, :mdp, :Nom, :Prenom, :Email)");
 
       $query->execute(
@@ -81,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       $query->closeCursor();
 
-      header("Location:index.php?#Langues");
+      //header("Location:index.php?#Langues");
     }
     catch (PDOException $e) {
       die('Failed to insert Article : ' . $e->getMessage());
