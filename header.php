@@ -38,7 +38,7 @@
       </li>
       <li class="nav-item">
       <a class="nav-link" href="../User/index.php">Utilisateurs</a>
-        <a class="nav-link" href="#">Ajouter des utilisateurs</a>
+        <a class="nav-link" href="../User/create.php">Ajouter des utilisateurs</a>
       </li>
     </ul>
   </div>
