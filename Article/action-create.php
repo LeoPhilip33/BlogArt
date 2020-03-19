@@ -50,21 +50,9 @@ $NumAngl = " ";
 $NumThem = " ";
 $NumLang = $_POST['NumLang'];
 
-$PseudoAuteur = $_POST['PseudoAuteur'];
-$EmailAuteur = $_POST['EmailAuteur'];
-$TitrCom = $_POST['TitrCom'];
-$LibCom = $_POST['LibCom'];
-$NumArt = $_POST['quelart'];
-echo $quelart;
-echo "Informations reçus : ".$PseudoAuteur." ".$EmailAuteur." ".$TitrCom." ".$LibCom;
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    echo "<br/>Passage de condition 1 : ".$PseudoAuteur." ".$EmailAuteur." ".$TitrCom." ".$LibCom;
+if (isset($_POST['submit']) AND $_POST['submit']=='submit') {
 
     $Submit = isset($_POST['Submit']) ? $_POST['Submit'] : '';
-
-    echo "<br>"."Passage de condition2 : ".$PseudoAuteur." ".$EmailAuteur." ".$TitrCom." ".$LibCom;
-
     $erreur = false;
     $NumLang = 0;
 
@@ -73,39 +61,76 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $TitrCom = (ctrlSaisies($_POST["TitrCom"]));
     $LibCom = (ctrlSaisies($_POST["LibCom"]));
 
-    $requete = "SELECT MAX(NumCom) AS NumCom FROM COMMENT";
-
+    $requete = "SELECT MAX(NumArt) AS NumArt FROM ARTICLE";
     $result = $connection->query($requete);
-    
     $tuple = $result->fetch();
     $tuple = (int)end($tuple);
     $tuple++;
-    $NumCom = $tuple;
-    $DtCreC = date("Y-m-d");
-    $DtCreCd = date("H-i-s");
-    $DtCreC = $DtCreC." ".$DtCreCd;
+    $NumArt = $tuple;
 
+    $DtCreA = date("Y-m-d");
+    $DtCreAd = date("H-i-s");
+    $DtCreA = $DtCreA." ".$DtCreAd;
+    $requete = "SELECT MAX(NumAngl) AS NumAngl FROM ANGLE";
+    $result = $connection->query($requete);
+    $tuple = $result->fetch();
+    $tuple = explode("L", $tuple);
+    $tuple = $tuple[1];
+    echo $tuple;
+    $tuple = (int)end($tuple);
+    $tuple++;
+    if( $tuple < 1000){
+      $NumAngl = "ANGL0".$tuple;
+    }else{
+      $NumAngl = "ANGL".$tuple;
+    }
+    echo $NumAngl;
+
+    // $NumAngl = $tuple;
+    // $requete = "SELECT MAX(NumThem) AS NumThem FROM THEMATQUE";
+    // $result = $connection->query($requete);
+    // $tuple = $result->fetch();
+    // $tuple = explode("E", $tuple);
+    // $tuple = $tuple[1];
+    // $tuple = (int)end($tuple);
+    // $tuple++;
+    // if( $tuple < 1000){
+    //   $tuple = "THE0".$tuple;
+    // }else{
+    //   $tuple = "THE".$tuple;
+    // }
+    // $NumAngl = $tuple;
+    
     try {
       $connection->beginTransaction();
 
-      echo "<br>"."Dernier echo avant le SEND : ".$NumCom." ".$DtCreC." ".$PseudoAuteur." ".$EmailAuteur." ".$TitrCom." ".$LibCom." ".$NumArt."<br><br>";
-      $query = $connection->prepare("INSERT INTO COMMENT (NumCom, DtCreC, PseudoAuteur, EmailAuteur, TitrCom, LibCom, NumArt) VALUES (:NumCom, :DtCreC, :PseudoAuteur, :EmailAuteur, :TitrCom, :LibCom, :NumArt)");
+      echo "<br>"."Dernier echo avant le SEND : ".$NumArt." ".$DtCreA." ".$LibTitrA." ".$LibChapoA." ".$LibAccrochA." ".$Parag1A." ".$LibSsTitr1." ".$Parag2A." ".$LibSsTitr2." ".$Parag3A." ".$LibConclA." ".$UrlPhotA." ".$Likes." ".$NumAngl." ".$NumThem." ".$NumLang."<br><br>";
+      $query = $connection->prepare("INSERT INTO ARTICLE (NumArt, DtCreA, LibTitrA, LibChapoA, LibAccrochA, Parag1A, LibSsTitr1, Parag2A, LibSsTitr2, Parag3A, LibConclA, UrlPhotA, Likes, NumAngl, NumThem, NumLang) VALUES (:NumArt, :DtCreA, :LibTitrA, :LibChapoA, :LibAccrochA, :Parag1A, :LibSsTitr1, :Parag2A, :LibSsTitr2, :Parag3A, :LibConclA, :UrlPhotA, :Likes, :NumAngl, :NumThem, :NumLang)");
 
       $query->execute(
         array(
-          ':NumCom' => $NumCom,
-          ':DtCreC' => $DtCreC, 
-          ':PseudoAuteur' => $PseudoAuteur,
-          ':EmailAuteur' => $EmailAuteur,
-          ':TitrCom' => $TitrCom,
-          ':LibCom' => $LibCom,
-          ':NumArt' => $NumArt
+          ':NumArt' => $NumArt,
+          ':DtCreA' => $DtCreA, 
+          ':LibTitrA' => $LibTitrA,
+          ':LibChapoA' => $LibChapoA,
+          ':LibAccrochA' => $LibAccrochA,
+          ':Parag1A' => $Parag1A,
+          ':LibSsTitr1' => $LibSsTitr1,
+          ':Parag2A' => $Parag2A,
+          ':LibSsTitr2' => $LibSsTitr2,
+          ':Parag3A' => $Parag3A,
+          ':LibConclA' => $LibConclA,
+          ':UrlPhotA' => $UrlPhotA,
+          ':Likes' => $Likes,
+          ':NumAngl' => $NumAngl,
+          ':NumThem' => $NumThem,
+          ':NumLang' => $NumLang
         )
       );
 
       $langid = $NumCom;
 
-      echo $NumCom, $DtCreC, $PseudoAuteur, $EmailAuteur, $TitrCom, $LibCom, $NumArt ;
+      
 
       $connection->commit();
 
