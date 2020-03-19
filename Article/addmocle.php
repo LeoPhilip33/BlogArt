@@ -2,8 +2,9 @@
 require '../db.php';
 ?>
 <div class="form-group">
+    <div class="form-row" style="margin: 0;">
     <input type="hidden" id="idTypPays" name="idTypPays" value="<?php echo $NumAngl; ?>" />
-    <select size="1" name="TypPays" id="TypPays"  class="form-control form-control-create" tabindex="30" >
+    <select size="1" name="TypPays" id="TypPays"  class="form-control form-control-create col-md-11" tabindex="30" >
         <?php 
         // 2. Preparation requete NON PREPAREE
         // Récupération de l'occurrence pays à partir de l'id
@@ -24,5 +25,7 @@ require '../db.php';
         }   // if ($result)
         ?>
     </select>
-    <button type="button" class="btn btn-danger" style>Supprimer le menu déroulant</button>
+    <div class="col-md-0.5"></div>
+    <button type="button" class="btn btn-danger col-md-0.8" style>X</button>
+    </div>
 </div>
