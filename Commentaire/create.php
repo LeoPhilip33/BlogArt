@@ -1,4 +1,4 @@
-<?php require 'header.php';
+<?php require '../header.php';
 require '../db.php';
 $NumPays = " ";
 ?>
@@ -75,4 +75,4 @@ $NumPays = " ";
     </div>
   </div>
 </div>
-<?php require 'footer.php'; ?> <!-- Va chercher le fichier footer.php -->
+<?php require '../footer.php'; ?> <!-- Va chercher le fichier footer.php -->

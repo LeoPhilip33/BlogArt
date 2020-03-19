@@ -5,13 +5,15 @@
   $statement = $connection->prepare($sql); // Préparation de $sql
   $statement->execute([':id' => $id ]); // 
   $person = $statement->fetch(PDO::FETCH_OBJ);
-  if (isset ($_POST['Lbc'])  && isset($_POST['Lbl']) && isset ($_POST['pays']) ) { // Test des informations du form
-    $Lbc = $_POST['Lbc']; // On met les informations du form dans une variable
-    $Lbl = $_POST['Lbl']; // On met les informations du form dans une variable
-    $pays = $_POST['pays']; // On met les informations du form dans une variable
-    $sql = 'UPDATE langue SET Lib1Lang=:Lbc, Lib2Lang=:Lbl, NumPays=:pays WHERE NumLang=:id'; // Mise en place de l'Update
+  if (isset ($_POST['Login']) && isset ($_POST['Pass']) && isset ($_POST['LastName']) && isset ($_POST['FirstName']) && isset ($_POST['Email']) ) { // Test des informations du form
+    $Login = $_POST['Login']; // On met les informations du form dans une variable
+    $Pass = $_POST['Pass']; // On met les informations du form dans une variable
+    $LastName = $_POST['LastName']; // On met les informations du form dans une variable
+    $FirstName = $_POST['FirstName']; // On met les informations du form dans une variable
+    $Email = $_POST['Email']; // On met les informations du form dans une variable
+    $sql = 'UPDATE user SET Login=:Login, Pass=:Pass, LastName=:LastName, FirstName=:FirstName, Email=:Email WHERE Login=:id'; // Mise en place de l'Update
     $statement = $connection->prepare($sql); // Préparation de sql
-    if ($statement->execute([':Lbc' => $Lbc, ':Lbl' => $Lbl, ':pays' => $pays, ':id' => $id])) { // Mise à jour des infos
+    if ($statement->execute([':Login' => $Login, ':Pass' => $Pass, ':LastName' => $LastName, ':FirstName' => $FirstName, ':Email' => $Email, ':id' => $id])) { // Mise à jour des infos
       header("Location: index.php"); // Redirection vers index.php
     }
   }
@@ -21,7 +23,7 @@
 <div class="container">
   <div class="card mt-5">
     <div class="card-header">
-      <h2>Mettre à jour la langue : <?= $person->Login; ?> ? </h2> <!-- Récupération de Lib1Lang et affichage -->
+      <h2>Mettre à jour la' : <?= $person->Login; ?> ? </h2> <!-- Récupération de Lib1Lang et affichage -->
     </div>
     <div class="card-body">
       <?php if(!empty($message)): ?> <!-- On regarde si $message n'est pas vide -->
@@ -31,16 +33,24 @@
       <?php endif; ?>
       <form method="post">
         <div class="form-group">
-          <label for="Lbc">Libellé court</label>
-          <input value="<?= $person->Lib1Lang; ?>" type="text" name="Lbc" id="Lbc" class="form-control" maxlength="25" required> <!-- Récupération de la vateur Lib1Lang, définition d'un maxlength et force à ce que l'utilisateur remplisse la case -->
+          <label for="Login">Login</label>
+          <input type="text" value="<?= $person->Login; ?>" name="Login" id="Login" class="form-control" maxlength="30" required> <!-- Récupération de la vateur Lib1Lang, définition d'un maxlength et force à ce que l'utilisateur remplisse la case -->
         </div>
         <div class="form-group">
-          <label for="Lbl">Libellé long</label>
-          <input type="text" value="<?= $person->Lib2Lang; ?>" name="Lbl" id="Lbl" class="form-control" maxlength="45" required>
+          <label for="Pass">Pass</label>
+          <input type="text" value="<?= $person->Pass; ?>" name="Pass" id="Pass" class="form-control" maxlength="15" required>
         </div>
         <div class="form-group">
-          <label for="pays">Quelle pays</label>
-          <input type="text" value="<?= $person->NumPays; ?>" name="pays" id="pays" class="form-control" maxlength="4" required>
+          <label for="LastName">LastName</label>
+          <input type="text" value="<?= $person->LastName; ?>" name="LastName" id="LastName" class="form-control" maxlength="30" required>
+        </div>
+        <div class="form-group">
+          <label for="FirstName">FirstName</label>
+          <input type="text" value="<?= $person->FirstName; ?>" name="FirstName" id="FirstName" class="form-control" maxlength="30" required>
+        </div>
+        <div class="form-group">
+          <label for="Email">Email</label>
+          <input type="text" value="<?= $person->EMail; ?>" name="Email" id="Email" class="form-control" maxlength="50" required>
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-info">Mettre à jour la langue</button>
@@ -49,4 +59,4 @@
     </div>
   </div>
 </div>
-<?php require 'footer.php'; ?> <!-- Va chercher le fichier footer.php -->
+<?php require '../footer.php'; ?> <!-- Va chercher le fichier footer.php -->

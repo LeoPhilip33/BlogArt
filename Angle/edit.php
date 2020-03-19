@@ -16,7 +16,7 @@
   }
  ?>
  
-<?php require 'header.php'; ?> <!-- On va chercher header.php -->
+<?php require '../header.php'; ?> <!-- On va chercher header.php -->
 <div class="container">
   <div class="card mt-5">
     <div class="card-header">
@@ -44,4 +44,4 @@
     </div>
   </div>
 </div>
-<?php require 'footer.php'; ?> <!-- Va chercher le fichier footer.php -->
+<?php require '../footer.php'; ?> <!-- Va chercher le fichier footer.php -->

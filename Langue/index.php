@@ -5,7 +5,7 @@ $statement = $connection->prepare($sql);
 $statement->execute();
 $langues = $statement->fetchAll(PDO::FETCH_OBJ);
  ?>
-<?php require 'header.php'; ?> <!-- Importation du header.php -->
+<?php require '../header.php'; ?> <!-- Importation du header.php -->
 <div class="container"> <!-- Code bootstrap -->
   <div class="card mt-5 bkcard"> <!-- Code bootstrap -->
     <div class="card-header"> <!-- Code bootstrap -->
@@ -43,4 +43,4 @@ $langues = $statement->fetchAll(PDO::FETCH_OBJ);
     </div>
   </div>
 </div>
-<?php require 'footer.php'; ?> <!-- Inportation du fichier footer.php -->
+<?php require '../footer.php'; ?> <!-- Inportation du fichier footer.php -->
