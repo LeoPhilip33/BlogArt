@@ -36,75 +36,46 @@ $Lib1Lang = "";
 $Lib2Lang = "";
 $NumPays = "";
 
-$Lib1Lang = $_POST['Lib1Lang'];
-$Lib2Lang = $_POST['Lib2Lang'];
-$NumPays = $_POST['NumPays'];
+$Identifiant = $_POST['Identifiant'];
+$mdp = $_POST['mdp'];
+$Nom = $_POST['Nom'];
+$Prenom = $_POST['Prenom'];
+$Email = $_POST['Email'];
 
-echo "Informations reçus : ".$Lib1Lang." ".$Lib2Lang." ".$NumPays;
+echo "Informations reçus : ".$Identifiant." ".$mdp." ".$Nom." ".$Prenom." ".$Email;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    echo "<br/>Passage de condition 1 : ".$Lib1Lang." ".$Lib2Lang." ".$NumPays;
+    echo "<br/>Passage de condition 1 : ".$Identifiant." ".$mdp." ".$Nom." ".$Prenom." ".$Email;
 
   $Submit = isset($_POST['Submit']) ? $_POST['Submit'] : '';
 
-    echo "<br>"."Passage de condition2 : ".$Lib1Lang." ".$Lib2Lang." ".$NumPays;
+    echo "<br>"."Passage de condition2 : ".$Identifiant." ".$mdp." ".$Nom." ".$Prenom." ".$Email;
 
     $erreur = false;
     $NumLang = 0;
 
-    $Lib1Lang = (ctrlSaisies($_POST["Lib1Lang"]));
-    $Lib2Lang = (ctrlSaisies($_POST["Lib2Lang"]));
-    $numPays = (ctrlSaisies($_POST["TypPays"]));
-
-    $numPaysSelect = $numPays;
-    $parmNumLang = $numPaysSelect . '%';
-    $requete = "SELECT MAX(NumLang) AS NumLang FROM LANGUE WHERE NumLang LIKE '$parmNumLang';";
-
-    $result = $connection->query($requete);
-
-    $numSeqLang = 0;
-
-    if ($result) {
-      $tuple = $result->fetch();
-      $NumLang = $tuple["NumLang"];
-      if (is_null($NumLang)) {
-        $NumLang = 0;
-        $StrLang = $numPaysSelect;
-      }
-      else {
-        $NumLang = $tuple["NumLang"];
-        $StrLang = substr($NumLang, 0, 4);
-        $numSeqLang = (int)substr($NumLang, 4);
-      }
-
-      $numSeqLang++;
-
-      if ($numSeqLang < 10) {
-        $NumLang = $StrLang . "0" . $numSeqLang;
-      }
-      else {
-        $NumLang = $StrLang . $numSeqLang;
-      }
-    }
+    $Identifiant = (ctrlSaisies($_POST["Identifiant"]));
+    $mdp = (ctrlSaisies($_POST["mdp"]));
+    $Nom = (ctrlSaisies($_POST["Nom"]));
+    $Prenom = (ctrlSaisies($_POST["Prenom"]));
+    $Email = (ctrlSaisies($_POST["Email"]));
 
     try {
       $connection->beginTransaction();
 
-      echo "<br>"."Dernier echo avant le SEND : ".$Lib1Lang." ".$Lib2Lang." ".$StrLang ;
-      $query = $connection->prepare("INSERT INTO LANGUE (NumLang, Lib1Lang, Lib2Lang, numPays) VALUES (:NumLang, :Lib1Lang, :Lib2Lang, :numPays)");
+      echo "<br>"."Dernier echo avant le SEND : ".$Identifiant." ".$mdp." ".$Nom." ".$Prenom." ".$Email;
+      $query = $connection->prepare("INSERT INTO user (Login, Pass, LastName, FirstName, EMail) VALUES (:Identifiant, :mdp, :Nom, :Prenom, :Email)");
 
       $query->execute(
         array(
-          ':NumLang' => $NumLang,
-          ':Lib1Lang' => $Lib1Lang, 
-          ':Lib2Lang' => $Lib2Lang,
-          ':numPays' => $numPays
+          ':Identifiant' => $Identifiant,
+          ':mdp' => $mdp, 
+          ':Nom' => $Nom,
+          ':Prenom' => $Prenom,
+          ':Email' => $Email
         )
       );
-
-      $langid = $NumLang;
-
 
       $connection->commit();
 

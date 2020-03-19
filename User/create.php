@@ -22,7 +22,7 @@
         </div>
         <div class="form-group">
             <span class="span-text">Mot de passe :</span>
-            <input class="form-control"type="text" name="mdp" maxlength="15" required>
+            <input class="form-control"type="password" name="mdp" maxlength="15" required>
 						<span class="line"></span>
         </div>
         <div class="form-group">
@@ -37,7 +37,7 @@
         </div>
         <div class="form-group">
             <span class="span-text">Email :</span>
-            <input class="form-control"type="text" name="Email" maxlength="50" required>
+            <input class="form-control"type="email" name="Email" maxlength="50" required>
 						<span class="line"></span>
         </div>
         <div class="form-group">
