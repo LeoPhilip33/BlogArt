@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 <?php 
-require 'header.php';
+require '../header.php';
 require '../db.php';
 ?>
-=======
-<?php require '../header.php'; ?>
->>>>>>> ba2af05b46612aecc168ac012e2d00e1731d237d
 <div class="container">
   <div class="card mt-5">
     <div class="card-header">

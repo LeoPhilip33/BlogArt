@@ -50,7 +50,7 @@ $NumAngl = " ";
 $NumThem = " ";
 $NumLang = $_POST['NumLang'];
 
-if (isset($_POST['submit']) AND $_POST['submit']=='submit') {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $Submit = isset($_POST['Submit']) ? $_POST['Submit'] : '';
     $erreur = false;
