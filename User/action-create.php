@@ -68,10 +68,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     foreach($user as $row):     
       $user = $row->Login;
       echo $user."<br>";
-      if($user = $Identifiant){
+      if($user == $Identifiant){
         echo "Erreur ! L'identifiant ou le mot de passe existe déja !";
       }
     endforeach;
+
     try {
       $connection->beginTransaction();
 
