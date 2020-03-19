@@ -16,6 +16,11 @@
       <?php endif; ?>
       <form class="container-contact-us" action="action-create.php" method="POST"> <!-- Si le formulaire est activé, on redirige vers action-create.php -->
         <div class="form-group">
+            <?php
+            $error = "";
+            $error = $_POST[''];
+            echo $error;
+            ?>
             <span class="span-text">Identifiant :</span> 
             <input class="form-control" type="text" name="Identifiant" maxlength="30" required> <!-- Définition du taille max et impose à se que le champ soit complété -->
 						<span class="line"></span>

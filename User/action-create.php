@@ -70,6 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       echo $user."<br>";
       if($user == $Identifiant){
         echo "Erreur ! L'identifiant ou le mot de passe existe déja !";
+        $error = "Erreur ! L'identifiant ou le mot de passe existe déja !";
       }
     endforeach;
 
