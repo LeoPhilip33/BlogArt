@@ -42,7 +42,7 @@
       </li>
       <li class="nav-item">
       <a class="nav-link" href="../Article/index.php">Article</a>
-        <a class="nav-link" href="../Article/create.php">Ajouter un Article</a>
+        <a class="nav-link" href="../Article/create.php">Ajouter un Articzetzetzgeifkpl^rgujzprjgpzijrpiergergle</a>
       </li>
     </ul>
   </div>
