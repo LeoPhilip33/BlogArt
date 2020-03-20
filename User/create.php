@@ -66,39 +66,55 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $statement = $connection->prepare($sql);
   $statement->execute();
   $user = $statement->fetchAll(PDO::FETCH_OBJ);
-  foreach($user as $row):
-    $user = $row->Login;
-    echo $user."<br>";
+
+  $existLogin = false;
+  $findLogin = false;
+  
+  while ($row = $user->fetch() AND !$findLogin) {
+    $user = $row->Login;	// A voir avec le reste de ton code si ok
     if($user == $Identifiant){
-      echo "<p style='color:red;'>Erreur ! L'identifiant ou le mot de passe existe déja ! </p>";
-      $error = "Erreur ! L'identifiant ou le mot de passe existe déja !";
+      $findLogin = true;	// ie login existe déjà
+      $existLogin = true;
+      $libErr = "<p style=color:red;>Erreur ! L’identifiant ou le mot de passe existe déja ! </p>";
+      $error = "Erreur ! L’identifiant ou le mot de passe existe déja !";
+      // Tu fais les echo à l’extérieur
     }
-  endforeach;
+    else {
+      $existLogin = false;
+      $libErr = "";
+      $error = "";
+      try {
+        $connection->beginTransaction();
+    
+        $query = $connection->prepare("INSERT INTO user (Login, Pass, LastName, FirstName, EMail) VALUES (:Identifiant, :mdp, :Nom, :Prenom, :Email)");
+    
+        $query->execute(
+          array(
+            ':Identifiant' => $Identifiant,
+            ':mdp' => $mdp, 
+            ':Nom' => $Nom,
+            ':Prenom' => $Prenom,
+            ':Email' => $Email
+          )
+        );
+    
+        $connection->commit();
+        $query->closeCursor();
+    
+      }
+      catch (PDOException $e) {
+        die('Failed to insert Article : ' . $e->getMessage());
+        $connection->rollBack();
+      }
+    }
+  }
+  if ($existLogin) {
+    // alors tu fais tes echos ou tes autres traitements
+  }
 
-  try {
-    $connection->beginTransaction();
-
-    $query = $connection->prepare("INSERT INTO user (Login, Pass, LastName, FirstName, EMail) VALUES (:Identifiant, :mdp, :Nom, :Prenom, :Email)");
-
-    $query->execute(
-      array(
-        ':Identifiant' => $Identifiant,
-        ':mdp' => $mdp, 
-        ':Nom' => $Nom,
-        ':Prenom' => $Prenom,
-        ':Email' => $Email
-      )
-    );
-
-    $connection->commit();
-    $query->closeCursor();
 
   }
-  catch (PDOException $e) {
-    die('Failed to insert Article : ' . $e->getMessage());
-    $connection->rollBack();
-  }
 
-}
+  echo $error;
 ?>
 <?php require '../footer.php'; ?> <!-- Va chercher le fichier footer.php -->
