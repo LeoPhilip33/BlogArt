@@ -1,0 +1,21 @@
+h2,
+.h2 {
+    font-family: 'Montserrat', sans-serif;;
+    color: #72857F;
+} 
+
+p,
+.p {
+    font-family: 'Montserrat', sans-serif;
+    color: #DFFFF5;
+}
+
+.footer {
+    background-color: black;
+}
+
+.button {
+    color: #72857F
+    background-color black;
+    border: black;
+}
