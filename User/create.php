@@ -14,11 +14,10 @@
           <?= $message; ?> <!-- Echo de $message -->
         </div>
       <?php endif; ?>
-      <form class="container-contact-us" action="action-create.php" method="POST"> <!-- Si le formulaire est activé, on redirige vers action-create.php -->
+      <form class="container-contact-us" method="POST"> <!-- Si le formulaire est activé, on redirige vers action-create.php -->
         <div class="form-group">
             <?php
             $error = "";
-            $error = $_POST['error'];
             echo $error;
             ?>
             <span class="span-text">Identifiant :</span> 
@@ -52,4 +51,59 @@
     </div>            
   </div>
 </div>
+
+<?php
+require '../db.php';
+require '../controlerSaisies.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $Submit = isset($_POST['Submit']) ? $_POST['Submit'] : '';
+
+  $Identifiant = (ctrlSaisies($_POST["Identifiant"]));
+  $mdp = (ctrlSaisies($_POST["mdp"]));
+  $Nom = (ctrlSaisies($_POST["Nom"]));
+  $Prenom = (ctrlSaisies($_POST["Prenom"]));
+  $Email = (ctrlSaisies($_POST["Email"]));
+
+  $sql = 'SELECT * FROM user'; // Met dans la varaible toute la sélection de la table langue
+  $statement = $connection->prepare($sql);
+  $statement->execute();
+  $user = $statement->fetchAll(PDO::FETCH_OBJ);
+  foreach($user as $row):     
+    $user = $row->Login;
+    echo $user."<br>";
+    if($user == $Identifiant){
+      echo "<p style='color:red;'>Erreur ! L'identifiant ou le mot de passe existe déja ! </p>";
+      $error = "Erreur ! L'identifiant ou le mot de passe existe déja !";
+    }
+  endforeach;
+
+  try {
+    $connection->beginTransaction();
+
+    $query = $connection->prepare("INSERT INTO user (Login, Pass, LastName, FirstName, EMail) VALUES (:Identifiant, :mdp, :Nom, :Prenom, :Email)");
+
+    $query->execute(
+      array(
+        ':Identifiant' => $Identifiant,
+        ':mdp' => $mdp, 
+        ':Nom' => $Nom,
+        ':Prenom' => $Prenom,
+        ':Email' => $Email
+      )
+    );
+
+    $connection->commit();
+
+    $query->closeCursor();
+
+    //header("Location:index.php?#Langues");
+  }
+  catch (PDOException $e) {
+    die('Failed to insert Article : ' . $e->getMessage());
+    $connection->rollBack();
+  }
+
+}
+?>
 <?php require '../footer.php'; ?> <!-- Va chercher le fichier footer.php -->
