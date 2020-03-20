@@ -1,7 +1,6 @@
 <?php require '../header.php'; 
   require '../db.php';
-  $NumPays = "";
-  $frPays = "";   
+  $error = "";
 ?>
 <div class="container">
   <div class="card mt-5">
@@ -17,7 +16,6 @@
       <form class="container-contact-us" method="POST"> <!-- Si le formulaire est activé, on redirige vers action-create.php -->
         <div class="form-group">
             <?php
-            $error = "";
             echo $error;
             ?>
             <span class="span-text">Identifiant :</span> 
@@ -53,7 +51,6 @@
 </div>
 
 <?php
-require '../db.php';
 require '../controlerSaisies.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -69,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $statement = $connection->prepare($sql);
   $statement->execute();
   $user = $statement->fetchAll(PDO::FETCH_OBJ);
-  foreach($user as $row):     
+  foreach($user as $row):
     $user = $row->Login;
     echo $user."<br>";
     if($user == $Identifiant){
@@ -94,10 +91,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     );
 
     $connection->commit();
-
     $query->closeCursor();
 
-    //header("Location:index.php?#Langues");
   }
   catch (PDOException $e) {
     die('Failed to insert Article : ' . $e->getMessage());
