@@ -65,13 +65,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $sql = 'SELECT * FROM user'; // Met dans la varaible toute la sélection de la table langue
   $statement = $connection->prepare($sql);
   $statement->execute();
-  $user = $statement->fetchAll(PDO::FETCH_OBJ);
 
   $existLogin = false;
   $findLogin = false;
-  
-  while ($row = $user->fetch() AND !$findLogin) {
-    $user = $row->Login;	// A voir avec le reste de ton code si ok
+
+  while ($row = $statement->fetch() AND !$findLogin)
+    $user = $row["Login"];	// A voir avec le reste de ton code si ok
     if($user == $Identifiant){
       $findLogin = true;	// ie login existe déjà
       $existLogin = true;
@@ -100,6 +99,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
         $connection->commit();
         $query->closeCursor();
+
+        echo "L'identifiant ".$Identifiant." à bien été créé.";
     
       }
       catch (PDOException $e) {
@@ -107,12 +108,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $connection->rollBack();
       }
     }
-  }
-  if ($existLogin) {
-    // alors tu fais tes echos ou tes autres traitements
-  }
-
-
   }
 
   echo $error;
