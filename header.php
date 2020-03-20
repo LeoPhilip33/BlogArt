@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="fr"> <!-- Définition de la langue sur fr -->
-  <head>
+<head>
     <title>Blog'Art</title> <!-- Titre de l'onglet sur la page -->
     <meta charset="utf-8"> <!-- utf-8 pour avoir les accents -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
