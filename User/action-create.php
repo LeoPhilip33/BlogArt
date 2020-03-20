@@ -30,12 +30,6 @@
 	        die('Failed to connect : ' . $error->getMessage());
 	    }
 
-
-$NumLang = "";
-$Lib1Lang = "";
-$Lib2Lang = "";
-$NumPays = "";
-
 $Identifiant = $_POST['Identifiant'];
 $mdp = $_POST['mdp'];
 $Nom = $_POST['Nom'];
@@ -65,16 +59,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $statement = $connection->prepare($sql);
     $statement->execute();
     $user = $statement->fetchAll(PDO::FETCH_OBJ);
+    session_start ();
     foreach($user as $row):     
       $user = $row->Login;
       echo $user."<br>";
       if($user == $Identifiant){
-        ?>
-      <form method=POST action=create.php>
-        <input type="hidden" name="error" ></input>
-      </form>
-      <?php
         echo "Erreur ! L'identifiant ou le mot de passe existe déja !";
+        $error = "Erreur ! L'identifiant ou le mot de passe existe déja !";
       }
     endforeach;
 
