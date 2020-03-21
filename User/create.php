@@ -1,6 +1,61 @@
 <?php require '../header.php'; 
   require '../db.php';
-  $error = "";
+  $libErr = "";
+  $Send = "";
+
+  require '../controlerSaisies.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $Submit = isset($_POST['Submit']) ? $_POST['Submit'] : '';
+
+  $Identifiant = (ctrlSaisies($_POST["Identifiant"]));
+  $mdp = (ctrlSaisies($_POST["mdp"]));
+  $Nom = (ctrlSaisies($_POST["Nom"]));
+  $Prenom = (ctrlSaisies($_POST["Prenom"]));
+  $Email = (ctrlSaisies($_POST["Email"]));
+
+
+
+  $sql = 'SELECT COUNT(Login) FROM user WHERE Login = ?';
+  $sqlmdp = 'SELECT COUNT(Pass) FROM user WHERE Pass = ?';
+  $statement = $connection->prepare($sql);
+  $statementmdp = $connection->prepare($sqlmdp);
+  $statement->execute(array($Identifiant));
+  $statementmdp->execute(array($mdp));
+  if(!$statement->fetchColumn() || !$statementmdp->fetchColumn()){//on regarde si la valeur de la colonne COUNT(*) vaut 0 en vérifiant qu'elle vaut false = aucune entrée ne correspond à la recherche, donc...
+   //L'utilisateur n'existe pas, il est nouveau
+   try {
+    $connection->beginTransaction();
+
+    $query = $connection->prepare("INSERT INTO user (Login, Pass, LastName, FirstName, EMail) VALUES (:Identifiant, :mdp, :Nom, :Prenom, :Email)");
+
+    $query->execute(
+      array(
+        ':Identifiant' => $Identifiant,
+        ':mdp' => $mdp, 
+        ':Nom' => $Nom,
+        ':Prenom' => $Prenom,
+        ':Email' => $Email
+      )
+    );
+
+    $connection->commit();
+    $query->closeCursor();
+
+    $Send = "<p style=color:green;>L'identifiant ".$Identifiant." à bien été créé. </p>";
+
+    }
+    catch (PDOException $e) {
+      die('Failed to insert Article : ' . $e->getMessage());
+      $connection->rollBack();
+    }
+  } else {
+   //Identifiant déjà pris
+   $libErr = "<p style=color:red;>Erreur ! L’identifiant ou le mot de passe existe déja ! </p>";
+  }
+
+}
+
 ?>
 <div class="container">
   <div class="card mt-5">
@@ -16,7 +71,8 @@
       <form class="container-contact-us" method="POST"> <!-- Si le formulaire est activé, on redirige vers action-create.php -->
         <div class="form-group">
             <?php
-            echo $error;
+            echo $libErr;
+            echo $Send;
             ?>
             <span class="span-text">Identifiant :</span> 
             <input class="form-control" type="text" name="Identifiant" maxlength="30" required> <!-- Définition du taille max et impose à se que le champ soit complété -->
@@ -51,65 +107,5 @@
 </div>
 
 <?php
-require '../controlerSaisies.php';
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $Submit = isset($_POST['Submit']) ? $_POST['Submit'] : '';
-
-  $Identifiant = (ctrlSaisies($_POST["Identifiant"]));
-  $mdp = (ctrlSaisies($_POST["mdp"]));
-  $Nom = (ctrlSaisies($_POST["Nom"]));
-  $Prenom = (ctrlSaisies($_POST["Prenom"]));
-  $Email = (ctrlSaisies($_POST["Email"]));
-
-  $sql = 'SELECT * FROM user'; // Met dans la varaible toute la sélection de la table langue
-  $statement = $connection->prepare($sql);
-  $statement->execute();
-
-  $existLogin = false;
-  $findLogin = false;
-
-  while ($row = $statement->fetch() AND !$findLogin)
-    $user = $row["Login"];	// A voir avec le reste de ton code si ok
-    if($user == $Identifiant){
-      $findLogin = true;	// ie login existe déjà
-      $existLogin = true;
-      $libErr = "<p style=color:red;>Erreur ! L’identifiant ou le mot de passe existe déja ! </p>";
-      $error = "Erreur ! L’identifiant ou le mot de passe existe déja !";
-      // Tu fais les echo à l’extérieur
-    }
-    else {
-      $existLogin = false;
-      $libErr = "";
-      $error = "";
-      try {
-        $connection->beginTransaction();
-    
-        $query = $connection->prepare("INSERT INTO user (Login, Pass, LastName, FirstName, EMail) VALUES (:Identifiant, :mdp, :Nom, :Prenom, :Email)");
-    
-        $query->execute(
-          array(
-            ':Identifiant' => $Identifiant,
-            ':mdp' => $mdp, 
-            ':Nom' => $Nom,
-            ':Prenom' => $Prenom,
-            ':Email' => $Email
-          )
-        );
-    
-        $connection->commit();
-        $query->closeCursor();
-
-        echo "L'identifiant ".$Identifiant." à bien été créé.";
-    
-      }
-      catch (PDOException $e) {
-        die('Failed to insert Article : ' . $e->getMessage());
-        $connection->rollBack();
-      }
-    }
-  }
-
-  echo $error;
+  require '../footer.php';
 ?>
-<?php require '../footer.php'; ?> <!-- Va chercher le fichier footer.php -->
