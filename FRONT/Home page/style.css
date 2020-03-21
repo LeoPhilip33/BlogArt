@@ -30,16 +30,48 @@ header
     justify-content: center;
     align-items: flex-end;
     position: absolute;
-    display: grid;
-    grid-template-columns: ;
     top: 115%;
     left: 45%;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 15pt;
+    color: #72857F;
 
 }
 
 .arrow
 {
-    left: 70%;
 
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    top: 125%;
+    left: 51%;
+
+}
+
+nav ul
+{
+    list-style-type: none;
+    display: flex;
+}
+
+nav li
+{
+    margin-right: 15px;
+}
+
+nav a
+{
+    font-size: 1.3em;
+    color: #DFFFF5;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+
+nav a:hover
+{
+    color: #B93636;
+    border-bottom: 2px solid #B93636;
 }
