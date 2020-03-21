@@ -8,50 +8,48 @@
     </head>
     <body>
  <header>
-     <div class="decouvrir">
-        <h2>Découvrir</h2>
-     </div>
-     <div class="arrow"> <img src="/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/arrow.svg" alt="flèche"> </div>
+        <h2 class="decouvrir">Découvrir</h2>
+        <img class="arrow" src="/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/arrow.svg" alt="flèche"> 
     
     
  </header>
 
  <nav>
-    <ul>
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">Rédiger un article</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Connexion</a></li>
-        <li><a href="#">S'enregistrer</a></li>
+    <ul class="menu_nav">
+        <li class="a_accueil" ><a href="#">Accueil</a><div class="souligne_accueil"></div></li>
+        <li class="a_rediger"><a  href="#">Rédiger un article</a><div class="souligne_rediger"></div></li>
+        <li class="a_contact"><a  href="#">Contact</a><div class="souligne_contact"></div></li>
+        <li class="a_connexion"><a href="#">Connexion</a><div class="souligne_connexion"></div></li>
+        <li class="a_enregistrer"><a href="#">S'enregistrer</a><div class="souligne_enregistrer"></div></li>
     </ul>
 </nav>
 <div class="select_element"></div>
 
  <div class="dernieres_sorties">
-     <h1>Dernières sorties</h1>
+   <h1 class="titre_homepage">Dernières sorties</h1>
      <img src="photo_dernieres_sorties">
-     <h2>Les momies de la basique Saint-Michel</h2>
-     <h3>Annabelle a encore frappé! Découvrez si cela se passe près de chez vous</h3>
+     <h2 class="titre_derniere_sortie">Les momies de la basique Saint-Michel</h2>
+     <h3 class="sous_titre_ds">Annabelle a encore frappé! Découvrez si cela se passe près de chez vous</h3>
    
  </div>
 
  <div class="article_homepage_1">
      <img src="photo_article_homepage_1" alt="">
-     <h2>La dame blanche</h2>
-     <h3>Un automobiliste croise la dame blanche sur la route de Bordeaux!</h3>
+     <h2 class="titre_article">LA DAME BLANCHE</h2>
+     <h3 class="texte_article">Un automobiliste croise la dame blanche sur la route de Bordeaux!</h3>
     <div class="trait_article_homepage_1"></div>
-     <button>Voir plus ></button>
+     <button class="bouton_voirplus">Voir plus ></button>
  </div>
 
  <div class="article_homepage_2">
      <img src="photo_article_homepage_2" alt="">
-     <h2>La momie bordelaise</h2>
-     <h3>Légende urbaine ou réalité ? Découvrez l'histoire des momies bordelaises...</h3>
+     <h2 class="titre_article">LA MOMIE BORDELAISE</h2>
+     <h3 class="texte_article">Légende urbaine ou réalité ? Découvrez l'histoire des momies bordelaises...</h3>
      <div class="trait_article_homepage_2"></div>
-     <button>Voir plus ></button>
+     <button class="bouton_voirplus">Voir plus ></button>
 
  </div>
-
+<h1 class="titre_homepage">Tous nos terrifiants articles</h1>
  <div class="terrifiant_article">
      <div class="all">
          <div class="vignette1">
@@ -108,22 +106,18 @@
     
     
      <div class="trait_aside_1"></div>
-    <h1>Article récent</h1>
+    <h1 class="titre_aside">Article récent</h1>
     <img src="images_aside_1" alt="">
-    <h2>La bête du Gévaudan</h2>
+    <h2 class="titre2_aside">La bête du Gévaudan</h2>
     <div class="trait_aside_2"></div>
-    <h1>Playlist d'Horry'Bord</h1>
+    <h1 class="titre_aside">Playlist d'Horry'Bord</h1>
     <iframe height="400" width="50%" src="https://play.soundsgood.co/embed/5e754bed7381827590892c68?color=323733&hideCurator=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media" allowtransparency="true"></iframe>
 
-    <div class="twitter">
-        <img src="/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/twitter.svg" alt="">
-    </div>
-    <div class="insta">
-        <img src="/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/insta.svg" alt="">
-    </div>
-    <div class="medium">
-        <img src="/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/medium.svg" alt="">
-    </div>
+        <img class ="reseaux_sociaux" src="/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/twitter.svg" alt="twitter_logo">
+    
+        <img class="reseaux_sociaux" src="/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/insta.svg" alt="instagram_logo">
+    
+        <img class="reseaux_sociaux" src="/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/medium.svg" alt="medium_logo">
    
 </aside>
 <footer>
@@ -139,10 +133,10 @@
 
     <nav>
         <ul>
-            <li><a href="#">Mention légale</a></li>
-            <li><a href="#">CGU</a></li>
-            <li><a href="#">Nous contacter</a></li>
-            <li>Copyright ®</li>
+            <li class="rubrique_footer"><a href="#">Mention légale</a></li>
+            <li class="rubrique_footer"><a href="#">CGU</a></li>
+            <li class="rubrique_footer"><a href="#">Nous contacter</a></li>
+            <li class="rubrique_footer">Copyright ®</li>
         </ul>
         <div class="select_element"></div>
         <div class="remonter_haut"></div>

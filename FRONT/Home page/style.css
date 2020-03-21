@@ -2,13 +2,13 @@ html, body
 {
     margin: 0;
     padding: 0;
+    grid-template-columns: 20% 20% 20% 20% 20% 20% 20% 20% 20% 20% 20% 20%;
 }
 
 body
 {
     background-color: #000703;
 }
-
 
 header
 {
@@ -31,12 +31,11 @@ header
     align-items: flex-end;
     position: absolute;
     top: 115%;
-    left: 45%;
+    left: 46%;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
     font-size: 15pt;
     color: #72857F;
-
+    font-weight: 200;
 }
 
 .arrow
@@ -46,8 +45,10 @@ header
     justify-content: center;
     align-items: flex-end;
     position: absolute;
-    top: 125%;
-    left: 51%;
+    top: 123%;
+    left: 49.5%;
+    width: 20px;
+    height: 20px;
 
 }
 
@@ -55,6 +56,7 @@ nav ul
 {
     list-style-type: none;
     display: flex;
+    justify-content: space-around;
 }
 
 nav li
@@ -68,10 +70,90 @@ nav a
     color: #DFFFF5;
     padding-bottom: 3px;
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 10pt;
 }
 
-nav a:hover
+nav .navigation
 {
     color: #B93636;
-    border-bottom: 2px solid #B93636;
+    border-bottom: 1px solid #B93636;
+    transition: 0.4s;
+}
+
+.souligne_accueil, .souligne_rediger, .souligne_contact, .souligne_connexion
+{
+background-color: #B93636;
+height: 3px;
+width: 0;
+transition: 0.4s;
+margin-left: auto;
+margin-right: auto;
+}
+
+.a_accueil:hover .souligne_accueil, .a_rediger:hover .souligne_rediger, .a_contact:hover .souligne_contact, .a_connexion:hover .souligne_connexion
+{
+    width:17px;
+}
+.a_accueil:hover a, .a_rediger:hover a, .a_contact:hover a, .a_connexion:hover a
+{
+color: #B93636;
+}
+.menu_nav li
+{
+display: flex;
+flex-direction: column;
+}
+
+.titre_article
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 15pt;
+    color: #72857F;
+}
+
+.texte_article
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 8.5pt;
+    color: #DFFFF5;
+}
+
+.titre_homepage
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 14pt;
+    color: #72857F;
+}
+.bold
+{
+    font-weight: 500;
+}
+
+.a_enregistrer
+{
+    border-radius: 15%;
+    background-color: #B93636;
+    margin-block-end: auto;
+}
+
+.rubrique_footer
+{
+    font-size: 1.3em;
+    color: #DFFFF5;
+    padding-bottom: 3px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 10pt;
+}
+
+.reseaux_sociaux
+{
+    width: 30px;
+    height: 30px;
 }
