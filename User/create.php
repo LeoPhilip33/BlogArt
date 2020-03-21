@@ -14,14 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $Prenom = (ctrlSaisies($_POST["Prenom"]));
   $Email = (ctrlSaisies($_POST["Email"]));
 
-
-
   $sql = 'SELECT COUNT(Login) FROM user WHERE Login = ?';
-  $sqlmdp = 'SELECT COUNT(Pass) FROM user WHERE Pass = ?';
   $statement = $connection->prepare($sql);
-  $statementmdp = $connection->prepare($sqlmdp);
   $statement->execute(array($Identifiant));
-  $statementmdp->execute(array($mdp));
+
   if(!$statement->fetchColumn() || !$statementmdp->fetchColumn()){//on regarde si la valeur de la colonne COUNT(*) vaut 0 en vérifiant qu'elle vaut false = aucune entrée ne correspond à la recherche, donc...
    //L'utilisateur n'existe pas, il est nouveau
    try {

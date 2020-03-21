@@ -38,7 +38,8 @@
       </li>
       <li class="nav-item">
       <a class="nav-link" href="../User/index.php">Utilisateurs</a>
-        <a class="nav-link" href="../User/create.php">Ajouter un utilisateur</a>
+        <a class="nav-link" href="../User/create.php">S'inscrire</a>
+        <a class="nav-link" href="../User/connexion.php">Connexion</a>
       </li>
       <li class="nav-item">
       <a class="nav-link" href="../Article/index.php">Article</a>
