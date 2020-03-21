@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $statement = $connection->prepare($sql);
   $statement->execute(array($Identifiant));
 
-  if(!$statement->fetchColumn() || !$statementmdp->fetchColumn()){//on regarde si la valeur de la colonne COUNT(*) vaut 0 en vérifiant qu'elle vaut false = aucune entrée ne correspond à la recherche, donc...
+  if(!$statement->fetchColumn()){//on regarde si la valeur de la colonne COUNT(*) vaut 0 en vérifiant qu'elle vaut false = aucune entrée ne correspond à la recherche, donc...
    //L'utilisateur n'existe pas, il est nouveau
    try {
     $connection->beginTransaction();
@@ -38,7 +38,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $connection->commit();
     $query->closeCursor();
 
-    $Send = "<p style=color:green;>L'identifiant ".$Identifiant." à bien été créé. </p>";
+
+
+    $Send = "<p style=color:green;>Votre compte ".$Identifiant." à bien été créé. </p>";
+
+
 
     }
     catch (PDOException $e) {
