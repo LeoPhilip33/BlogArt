@@ -110,7 +110,7 @@ flex-direction: column;
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
-    font-size: 15pt;
+    font-size: 12pt;
     color: #72857F;
 }
 
@@ -134,11 +134,25 @@ flex-direction: column;
     font-weight: 500;
 }
 
+.bouton_voirplus
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 10pt;
+    color: #72857F;
+    background-color: #000703;
+    border-radius: 20px;
+    border-color: #72857F;
+}
 .a_enregistrer
 {
-    border-radius: 15%;
+    border-radius: 20px;
     background-color: #B93636;
     margin-block-end: auto;
+    padding-top: 2px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-bottom: 2px;
 }
 
 .rubrique_footer
