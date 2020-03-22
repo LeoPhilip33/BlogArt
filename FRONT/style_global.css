@@ -1,0 +1,8 @@
+.IlluHead{
+    width: 100vw;
+    height: 360px;
+    background-image: url("../FRONT/images/Illustration_header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center center;
+}

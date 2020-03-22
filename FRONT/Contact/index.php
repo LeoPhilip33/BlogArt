@@ -8,6 +8,7 @@
     <title>Contact</title>
 </head>
 <body>
+    <?php require '../Require_php/Illustration_header.php'; ?>
     <!-- mennu -->
     <div class="content">
         <div class="fichecontact">
