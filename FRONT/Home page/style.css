@@ -2,12 +2,18 @@ html, body
 {
     margin: 0;
     padding: 0;
-    grid-template-columns: 20% 20% 20% 20% 20% 20% 20% 20% 20% 20% 20% 20%;
 }
 
 body
 {
     background-color: #000703;
+}
+
+#container
+{
+    display: grid;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 header
@@ -51,12 +57,75 @@ header
     height: 20px;
 
 }
+.images_dernieressorties
+{
+    width: 40%;
+    height: 30%;
+}
+.image_homepage_part1
+{
+    width: 20%;
+    height: 15%;
+}
 
+.images_aside
+{
+    width: 15%;
+    height: 10%;
+}
+#part1
+{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(4,minmax(100px,auto));
+    border: 1px solid white;
+    grid-column-gap: 20px;
+}
+.part1_navbarre
+{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+
+}
+
+.part2_navbarre
+{
+    grid-column-start: 9;
+    grid-column-end: 12;
+}
+
+aside
+{
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 7;
+    grid-column-end: 12;
+}
+
+.dernieres_sorties
+{
+    grid-row-start: 2;
+    grid-row-end: 3; 
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+.article_homepage_1
+{
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.article_homepage_2
+{
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
 nav ul
 {
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
 }
 
 nav li
@@ -66,7 +135,6 @@ nav li
 
 nav a
 {
-    font-size: 1.3em;
     color: #DFFFF5;
     padding-bottom: 3px;
     text-decoration: none;
@@ -133,7 +201,31 @@ flex-direction: column;
 {
     font-weight: 500;
 }
+.titre_aside
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 12pt;
+    color: #72857F;
+}
 
+.titre_derniere_sortie
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14pt;
+    color: #181C1B;
+    background-color: #B93636;
+}
+.sous_titre_ds
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 9pt;
+    color: #181C1B;
+    background-color: #B93636;
+    
+}
 .bouton_voirplus
 {
     font-family: 'Montserrat', sans-serif;
