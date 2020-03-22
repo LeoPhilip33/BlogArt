@@ -39,7 +39,7 @@ p,
     float:left;
     width:50%;
     background-color: black;
-    grid-column: 8 / 12;
+    grid-column: 9 / 12;
     grid-row: 1;
 }
 
@@ -69,12 +69,12 @@ button:hover {
 }
 
 .buttonMentionsleg {
-    grid-column: 4 / 12;
+    grid-column: 5 / 12;
     grid-row: 2;
 }
 
 .buttonContact {
-    grid-column: 9 / 12;
+    grid-column: 7 / 12;
     grid-row: 2;
 }
 
