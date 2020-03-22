@@ -1,3 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="stylesheet.css">
+        <title>Horry Bord - Connexion</title>
+    </head>
+    <body>
+        <img src="../images/Illustration_header.jpg" alt="Image header" />
+    </body>
+</html>
+
 <?php
     session_start();
     require '../../db.php';
@@ -32,33 +45,13 @@
 
 ?>
 <form method="POST" >
-    <table>
-        <tr>
-            <td>
-                <label> Votre Login : </label>
-            </td>
-            <td>
-                <input type="text" name="Login">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <label> Votre Mot de passe : </label>
-            </td>
-            <td>
-                <input type="Password" name="Pass">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                
-            </td>
-            <td>
-                <button type ="submit" name="confirm_login"> Se connecter </button>
-            </td>
-        </tr>
-    </table>
+    <label> Votre Login : </label>
+    <input type="text" name="Login" maxlength="30" required>
 
+    <label> Votre Mot de passe : </label>
+    <input type="Password" name="Pass" maxlength="15" required>
+
+    <button type ="submit" name="confirm_login"> Se connecter </button>
 </form>
     <?php if(isset($error)){
         echo $error;
