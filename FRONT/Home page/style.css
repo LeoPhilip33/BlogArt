@@ -75,8 +75,11 @@ header
 }
 .images_dernieressorties
 {
-    width: 40%;
-    height: 30%;
+    width: 100%;
+    height: 80%;
+    margin: 0;
+    border-radius: 20px;
+
 }
 .image_homepage_part1
 {
@@ -93,9 +96,11 @@ header
 {
     display: grid;
     grid-template-columns: repeat(12,1fr);
-    grid-template-rows: 10% 30% 30% 30%;
+    grid-template-rows: 10% 45% 22.5% 22.5%;
     /*border: 1px solid white;*/
     grid-column-gap: 20px;
+    height: 800px;
+    grid-row-gap: 20px;
 }
 
 aside
@@ -116,17 +121,31 @@ aside
     grid-row-end: 3; 
     grid-column-start: 1;
     grid-column-end: 9;
+    background-image: url(/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/photo_dernieres_sorties.jpg);
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+
 }
 .article_homepage_1
 {
     grid-row-start: 3;
     grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    background-color: #092E2B;
+    border-radius: 20px;
 }
 
 .article_homepage_2
 {
     grid-row-start: 4;
     grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    background-color: #092E2B;
+    border-radius: 20px;
 }
 nav ul
 {
@@ -173,6 +192,11 @@ nav .navigation
     transition: 0.4s;
 }
 
+.titre_terrifiant
+{
+    margin-top: 20%;
+}
+
 .souligne_accueil, .souligne_rediger, .souligne_contact, .souligne_connexion
 {
 background-color: #B93636;
@@ -215,6 +239,9 @@ color: #B93636;
     font-weight: 100;
     font-size: 14pt;
     color: #72857F;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
 }
 .bold
 {
@@ -240,19 +267,21 @@ color: #B93636;
 .titre_derniere_sortie
 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 14pt;
     color: #181C1B;
     background-color: #B93636;
+    width: 60%;
+
 }
 .sous_titre_ds
 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 9pt;
     color: #181C1B;
     background-color: #B93636;
-    
+    width: 35%;
 }
 .bouton_voirplus
 {
@@ -260,7 +289,7 @@ color: #B93636;
     font-weight: 100;
     font-size: 10pt;
     color: #72857F;
-    background-color: #000703;
+    background-color: #092E2B;
     border-radius: 20px;
     border-color: #72857F;
 }
