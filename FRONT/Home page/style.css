@@ -83,8 +83,8 @@ header
 }
 .image_homepage_part1
 {
-    width: 20%;
-    height: 15%;
+    width: 55%;
+    height: 100%;
 }
 
 .images_aside
@@ -96,17 +96,20 @@ header
 {
     display: grid;
     grid-template-columns: repeat(12,1fr);
-    grid-template-rows: 10% 45% 22.5% 22.5%;
-    /*border: 1px solid white;*/
+    grid-template-rows: 7% 13% 34% 23% 23%;
     grid-column-gap: 20px;
-    height: 800px;
-    grid-row-gap: 20px;
+    height: 750px;
+    grid-row-gap: 10px;
 }
 
+#part2
+{
+    margin-top: 10%;
+}
 aside
 {
-    grid-row-start: 2;
-    grid-row-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 6;
     grid-column-start: 10;
     grid-column-end: 13;
     background-color: #092E2B;
@@ -114,24 +117,36 @@ aside
     padding: 5%;
 
 }
-
-.dernieres_sorties
+.titre_homepage1
 {
     grid-row-start: 2;
     grid-row-end: 3; 
     grid-column-start: 1;
-    grid-column-end: 9;
+    grid-column-end: 5;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 16pt;
+    color: #72857F;
+    margin: 0;
+    margin-top: 5%;
+}
+.dernieres_sorties
+{
+    grid-row-start: 3;
+    grid-row-end: 4; 
+    grid-column-start: 1;
+    grid-column-end: 10;
     background-image: url(/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/photo_dernieres_sorties.jpg);
     width: 100%;
-    height: 200px;
+    height: 250px;
     background-repeat: no-repeat;
     border-radius: 20px;
 
 }
 .article_homepage_1
 {
-    grid-row-start: 3;
-    grid-row-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 7;
     background-color: #092E2B;
@@ -140,8 +155,8 @@ aside
 
 .article_homepage_2
 {
-    grid-row-start: 4;
-    grid-row-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 6;
     grid-column-start: 1;
     grid-column-end: 7;
     background-color: #092E2B;
@@ -166,7 +181,7 @@ nav li
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
-    font-size: 12pt;
+    font-size: 10pt;
     color: #DFFFF5;
 }
 nav a
@@ -220,20 +235,33 @@ color: #B93636;
 .titre_article
 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
-    font-size: 12pt;
+    font-weight: 300;
+    font-size: 10pt;
     color: #72857F;
+    width: 40%;
+    margin: 0;
+    position: relative;
+    text-align: left;
+    left: 57%; 
+    bottom: 85%;
 }
 
 .texte_article
 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
+    font-weight: 200;
     font-size: 8.5pt;
     color: #DFFFF5;
+    position: relative;
+    text-align: left;
+    left: 57%;
+    bottom: 85%;
+    width : 30%;
+    margin: 0;
+    margin-top: 3%;
 }
 
-.titre_homepage
+.titre_homepage2
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
@@ -268,20 +296,29 @@ color: #B93636;
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 14pt;
+    font-size: 16pt;
     color: #181C1B;
     background-color: #B93636;
-    width: 60%;
+    width: 54%;
+    margin: 0;
+    position: relative;
+    left: 5%;
+    top: 67%
 
 }
 .sous_titre_ds
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 9pt;
+    font-size: 10pt;
     color: #181C1B;
     background-color: #B93636;
-    width: 35%;
+    width: 33%;
+    margin: 0;
+    position: relative;
+    left: 5%;
+    top: 70%
+
 }
 .bouton_voirplus
 {
@@ -292,6 +329,13 @@ color: #B93636;
     background-color: #092E2B;
     border-radius: 20px;
     border-color: #72857F;
+    position: relative;
+    text-align: left;
+    left: 83%;
+    bottom: 85%;
+    margin-top: 4.5%;
+   
+
 }
 .a_enregistrer
 {
