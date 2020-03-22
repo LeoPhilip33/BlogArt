@@ -21,7 +21,7 @@ p,
     padding-bottom: 15px;
 }
 
-.g {
+.a_propos {
     float:left;
     width:50%;
     background-color: black;
@@ -29,8 +29,13 @@ p,
     grid-row: 1;
 }
 
-
-.d {
+.email
+{
+    border-radius: 20px;
+    background-color: #000601;
+    border: none;
+}
+.newsletter {
     float:left;
     width:50%;
     background-color: black;

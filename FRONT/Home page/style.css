@@ -36,7 +36,7 @@ header
     grid-column-end: 6;
     justify-content: space-between;
     justify-content: flex-start;
-    margin-left: 0;
+
 }
 
 .part2_navbarre
@@ -93,19 +93,10 @@ header
 {
     display: grid;
     grid-template-columns: repeat(12,1fr);
-    grid-template-rows: repeat(4,minmax(100px,auto));
+    grid-template-rows: 10% 30% 30% 30%;
     /*border: 1px solid white;*/
     grid-column-gap: 20px;
 }
-.a_accueil
-{
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-
-}
-
 
 aside
 {
@@ -124,7 +115,7 @@ aside
     grid-row-start: 2;
     grid-row-end: 3; 
     grid-column-start: 1;
-    grid-column-end: 6;
+    grid-column-end: 9;
 }
 .article_homepage_1
 {
@@ -150,10 +141,15 @@ nav ul
 nav li
 {
     margin-right: 15px;
-    grid-row-start: 1;
-    grid-row-end: 2;
 }
 
+.titre2_aside
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 12pt;
+    color: #DFFFF5;
+}
 nav a
 {
     color: #DFFFF5;
@@ -189,17 +185,13 @@ margin-right: auto;
 
 .a_accueil:hover .souligne_accueil, .a_rediger:hover .souligne_rediger, .a_contact:hover .souligne_contact, .a_connexion:hover .souligne_connexion
 {
-    width:17px;
+   width:17px;
 }
 .a_accueil:hover a, .a_rediger:hover a, .a_contact:hover a, .a_connexion:hover a
 {
 color: #B93636;
 }
-.menu_nav li
-{
-display: flex;
-flex-direction: column;
-}
+
 
 .titre_article
 {
@@ -237,8 +229,11 @@ flex-direction: column;
 }
 .playlist
 {
+    display: flex;
     width: 90%;
     height: 30%;
+    align-self: center;
+
 
 }
 
@@ -291,7 +286,18 @@ flex-direction: column;
     font-size: 10pt;
 }
 
-.reseaux_sociaux
+.reseaux_sociauxt
+{
+    width: 30px;
+    height: 30px;
+}
+
+.reseaux_sociauxi
+{
+    width: 30px;
+    height: 30px;
+}
+.reseaux_sociauxm
 {
     width: 30px;
     height: 30px;
