@@ -13,7 +13,7 @@
 
 <?php
     session_start();
-    require '../../db.php';
+    require '../db.php';
 
     if (isset($_POST['confirm_login'])) {
         if(isset($_POST['Login']) AND isset($_POST['Pass'])) { 
