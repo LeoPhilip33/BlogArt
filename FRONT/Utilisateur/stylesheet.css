@@ -4,6 +4,46 @@ body,html{
     background-color: black;
     color:white;
 }
-img{
-    width: 100%;
+.connexionIMGhorror{
+    
+}
+.inscription{
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #092E2B;
+    width : 80%;
+    border-radius: 5px 5px 0px 5px;
+}
+.gauche_inscription{
+    margin :5%;
+}
+
+.droit_inscription{
+
+}
+
+.googlefacebook{
+    margin:5px;
+    border: 1px;
+    border-style:solid;
+    border-color: #F8F8F8;
+    border-radius:5px;
+    display:flex;
+}
+.connexion{
+    width:30px;
+    height:30px;
+}
+.centerreseau{
+    
+}
+.gaucheconnexion{
+    width:50%;
+}
+input{
+    width:100%;
+    background-color: #092E2B;
+    border-radius:5px;
+    border-width: 1px;
+    padding:10px;
 }
