@@ -2,12 +2,18 @@ html, body
 {
     margin: 0;
     padding: 0;
-    grid-template-columns: 20% 20% 20% 20% 20% 20% 20% 20% 20% 20% 20% 20%;
 }
 
 body
 {
     background-color: #000703;
+}
+
+#container
+{
+    display: grid;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 header
@@ -51,12 +57,15 @@ header
     height: 20px;
 
 }
+.part1_navbarre
+{
+    display: flex;
 
+}
 nav ul
 {
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
 }
 
 nav li
@@ -66,7 +75,6 @@ nav li
 
 nav a
 {
-    font-size: 1.3em;
     color: #DFFFF5;
     padding-bottom: 3px;
     text-decoration: none;
