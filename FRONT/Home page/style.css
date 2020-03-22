@@ -29,7 +29,23 @@ header
     
 
 }
+.part1_navbarre
+{
+    display: flex;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    justify-content: space-between;
+    justify-content: flex-start;
+    margin-left: 0;
+}
 
+.part2_navbarre
+{
+    display: flex;
+    justify-content: space-between;
+    grid-column-start: 8;
+    grid-column-end: 12;
+}
 .decouvrir
 {
     display: flex;
@@ -78,30 +94,29 @@ header
     display: grid;
     grid-template-columns: repeat(12,1fr);
     grid-template-rows: repeat(4,minmax(100px,auto));
-    border: 1px solid white;
+    /*border: 1px solid white;*/
     grid-column-gap: 20px;
 }
-.part1_navbarre
+.a_accueil
 {
     grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
 
 }
 
-.part2_navbarre
-{
-    grid-column-start: 9;
-    grid-column-end: 12;
-}
 
 aside
 {
     grid-row-start: 2;
-    grid-row-end: 4;
-    grid-column-start: 7;
-    grid-column-end: 12;
+    grid-row-end: 5;
+    grid-column-start: 10;
+    grid-column-end: 13;
+    background-color: #092E2B;
+    border-radius: 20px;
+    padding: 5%;
+
 }
 
 .dernieres_sorties
@@ -126,11 +141,17 @@ nav ul
 {
     list-style-type: none;
     display: flex;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 13;
 }
 
 nav li
 {
     margin-right: 15px;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
 
 nav a
@@ -142,7 +163,13 @@ nav a
     font-weight: 100;
     font-size: 10pt;
 }
-
+nav
+{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 13;
+}
 nav .navigation
 {
     color: #B93636;
@@ -207,6 +234,12 @@ flex-direction: column;
     font-weight: 100;
     font-size: 12pt;
     color: #72857F;
+}
+.playlist
+{
+    width: 90%;
+    height: 30%;
+
 }
 
 .titre_derniere_sortie
