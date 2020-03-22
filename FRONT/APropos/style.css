@@ -2,6 +2,7 @@ h2,
 .h2 {
     font-family: 'Montserrat', sans-serif;;
     color: #72857F;
+    text-align: center;
 } 
 
 p,
@@ -12,10 +13,43 @@ p,
 
 .footer {
     background-color: black;
+    flex-direction: row;
 }
 
-.button {
-    color: #72857F
-    background-color black;
-    border: black;
+.g {
+    float:left;
+    width:50%;
+    background-color: black;
+}
+
+
+.d {
+    float:left;
+    width:50%;
+    background-color: black;
+}
+
+.checkboxemail {
+    font-family: 'Montserrat', sans-serif;
+    color: #DFFFF5; 
+}
+
+label {
+    font-family: 'Montserrat', sans-serif;
+    color: #DFFFF5; 
+}
+
+button {
+    background-color: black;
+    border-color: #DFFFF5;
+    border-style:solid;
+    color: #DFFFF5;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+button:hover {
+    text-decoration: underline;
+    border-color: #72857F;
 }

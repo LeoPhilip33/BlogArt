@@ -8,13 +8,31 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="footer">
+
+        <div class="g">
         <h2>A propos</h2>
         <p>6 étudiants, dans une salle à Bordeaux (enfin plus vraiment), qui lisent des histoires toutes aussi terrifiantes les unes que les autres… Voici comment a été crée notre projet de blog sur les histoires terrifiantes de la belle-endormie. Si tu as déjà regardé l’intégrale de Saw ou si les threads de Squeezie n’ont aucun secret pour toi alors notre blog est fait pour toi. </p>
+        </div>
+
+        <div class="d">
         <h2>Newsletter</h2>
         <p>Abonne toi à notre newsletter</p>
-        <input type="button" value="Mentions légales">
+        <label for="EMail">E-Mail</label>
+        <input type="text" id="EMail" name="EMail">
+            <div class="checkboxemail">
+                <input type="checkbox" id="checkmail" name="checkmail" 
+                        checked>
+                <label for="checkmail">Je vous autorise à utiliser cet e-mail pour votre newsletter</label>
+            </div>
+            <br>
+            <div class="buttonEnvoyer">
+                <button type="Envoyer">Envoyer</button>
+            </div>
+        </div>
+        
     </div>
     
 </body>
