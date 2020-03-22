@@ -11,15 +11,22 @@ p,
     color: #DFFFF5;
 }
 
-.footer {
+
+.FooterWrapper {
     background-color: black;
     flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+    padding-bottom: 15px;
 }
 
 .g {
     float:left;
     width:50%;
     background-color: black;
+    grid-column: 2 / 12;
+    grid-row: 1;
 }
 
 
@@ -27,6 +34,8 @@ p,
     float:left;
     width:50%;
     background-color: black;
+    grid-column: 8 / 12;
+    grid-row: 1;
 }
 
 .checkboxemail {
@@ -53,3 +62,26 @@ button:hover {
     text-decoration: underline;
     border-color: #72857F;
 }
+
+.buttonMentionsleg {
+    grid-column: 4 / 12;
+    grid-row: 2;
+}
+
+.buttonContact {
+    grid-column: 9 / 12;
+    grid-row: 2;
+}
+
+input[type=button] {
+    background-color: black;
+    color: #DFFFF5;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+}
+
+input[type=button]:hover {
+    text-decoration: underline;
+    border-color: #72857F;
+}
+
