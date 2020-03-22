@@ -1,0 +1,174 @@
+html, body{
+    background-color: #000601;
+    margin: 0;
+    padding: 0;
+}
+.content{
+    display: flex;
+    margin-top: 105px;
+    margin-bottom: 105px;
+    margin-left: 9.84vw;
+    margin-right: 9.84vw;
+}
+.fichecontact{
+    width: 73.87%;
+    background-color: #092E2B;
+    border-radius: 20px;
+}
+.barlat{
+    margin-left: 2.84%;
+    width: 363px;
+    background-color: #092E2B;
+    border-radius: 20px;
+}
+.titrecont{
+    margin-left: 2.62%;
+    color: #F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 40px;
+    padding: 0;
+    margin-top: 42px;
+    margin-bottom: 0;
+}
+.phrasecont{
+    color: #F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0;
+    margin-top: 42px;
+    margin-bottom: 0;
+}
+.phrasecont2{
+    color: #F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0;
+    margin-top: 42px;
+    margin-bottom: 0;
+    margin-left: 11.44%;
+    width: 42.45%;
+}
+.formcont{
+    margin-left: 11.44%;
+    width: 42.45%;
+}
+.form-group textarea,.form-group input{
+    background-color: #092E2B;
+    border-color: #F8F8F8;
+    border-radius: 9px;
+    border-width: 2px;
+    height: 42px;
+    color: #72857F;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 17px;
+    padding-left: 10px;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+.form-group label{
+    padding: 0;
+    margin-top: 42px;
+    margin-bottom: 10px;
+    color: #F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 20px;
+}
+.form-row{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.form-row .form-group{
+    display: flex;
+    width: 45%;
+}
+.formcont button{
+    margin-bottom: 0;
+    color:#001003;
+    background-color: #F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 9px;
+    width: auto;
+    margin-left: auto;
+    margin-top: 42px;
+    padding: 0px 10px 0px 10px;
+    height: 42px;
+}
+.formcont button:hover{
+    margin-bottom: 0;
+    color:#F8F8F8;
+    background-color: #092E2B;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 9px;
+    width: auto;
+    margin-left: auto;
+    margin-top: 42px;
+    padding: 0px 10px 0px 10px;
+    height: 42px;
+}
+.icons{
+    display: flex;
+    margin-top: 42px;
+    margin-bottom: 42px;
+    width: 30%;
+    margin-right: auto;
+    margin-left: 11.44%;
+    justify-content: space-between;
+}
+.icon{
+    width: 50px;
+    height: 50px;
+}
+@media (max-width: 1500px){
+    .formcont{
+        margin-left: 11.44%;
+        width: auto;
+        margin-right: 11.44%;
+    }
+    .phrasecont2{
+        width: auto;
+    }
+}
+@media (max-width: 1080px){
+    .barlat{
+        display: none;
+    }
+    .fichecontact{
+        width: 100%;
+    }
+    .formcont{
+        margin-left: 11.44%;
+        margin-right: 11.44%;
+        width: 77.12%;
+    }
+    .phrasecont2{
+        width: 77.12%;
+    }
+    .icons{
+        width: 40%;
+    }
+}
+
+@media (max-width: 640px){
+    .form-row{
+        display: flex;
+        flex-direction: column;
+    }
+    .form-row .form-group{
+        width: 100%;
+    }
+    .icons{
+        width: 50%;
+    }
+}
