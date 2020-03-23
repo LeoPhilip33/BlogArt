@@ -11,7 +11,7 @@
 </head>
 <body>
     <?php require '../Require_php/Illustration_header.php'; ?><!--header-->
-    <?php require ('../Require_php/barnav.php'); ?><!--navbar-->
+    <?php require '../Require_php/barnav.php'; ?><!--navbar-->
     <!-- mennu -->
     <div class="content">
         <div class="fichecontact">
