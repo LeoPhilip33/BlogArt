@@ -5,8 +5,8 @@ html, body{
 }
 .content{
     display: flex;
-    margin-top: 105px;
-    margin-bottom: 105px;
+    margin-top: 42px;
+    margin-bottom: 42px;
     margin-left: 9.84vw;
     margin-right: 9.84vw;
 }
@@ -22,7 +22,7 @@ html, body{
     border-radius: 20px;
 }
 .titrecont{
-    margin-left: 2.62%;
+    margin-left: 11.44%;
     color: #F8F8F8;
     font-family: 'Montserrat';
     font-weight: 600;
@@ -93,15 +93,18 @@ html, body{
     margin-bottom: 0;
     color:#001003;
     background-color: #F8F8F8;
+    border-color: #F8F8F8;
     font-family: 'Montserrat';
     font-weight: 500;
     font-size: 20px;
-    border-radius: 9px;
+    border-radius: 45px;
     width: auto;
     margin-left: auto;
     margin-top: 42px;
-    padding: 0px 10px 0px 10px;
+    padding: 0px 15px 0px 15px;
     height: 42px;
+    transition: 0.4s;
+    cursor: pointer;
 }
 .formcont button:hover{
     margin-bottom: 0;
@@ -110,11 +113,11 @@ html, body{
     font-family: 'Montserrat';
     font-weight: 500;
     font-size: 20px;
-    border-radius: 9px;
+    border-radius: 45px;
     width: auto;
     margin-left: auto;
     margin-top: 42px;
-    padding: 0px 10px 0px 10px;
+    padding: 7px 15px 7px 15px;
     height: 42px;
 }
 .icons{
@@ -129,6 +132,15 @@ html, body{
 .icon{
     width: 50px;
     height: 50px;
+}
+.newmenu ul .li_con a{
+    color: #B93636;
+}
+.navbar ul .con a{
+    color: #B93636;
+}
+.s_con{
+    width: 20px;
 }
 @media (max-width: 1500px){
     .formcont{
@@ -171,4 +183,12 @@ html, body{
     .icons{
         width: 50%;
     }
+    .navbar ul{
+        display: none;
+    }
+    .traitnav{
+        display: block;
+    }
 }
+/* ///////////////////////////css navbar/////////////////////////// */
+
