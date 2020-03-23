@@ -15,6 +15,7 @@ body
     margin: 0 auto;
 }
 
+
 header
 {
     background-image: url(/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/illustration_principale.jpg);
@@ -106,10 +107,12 @@ header
 {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 10% 10% 26.67% 26.67% 26.67%;
+    grid-template-rows: 5% 5% 26.67% 26.67% 36.67%;
     grid-column-gap: 40px;
     grid-row-gap: 20px;
     height: 800px;
+    position: relative;
+    top: 90px;
 }
 aside
 {
@@ -142,7 +145,7 @@ aside
     grid-column-start: 1;
     grid-column-end: 10;
     background-image: url(/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/photo_dernieres_sorties.jpg);
-    width: 100%;
+    width: 95%;
     height: 250px;
     background-repeat: no-repeat;
     border-radius: 15px;
@@ -290,8 +293,8 @@ color: #B93636;
 .titre_homepage2
 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
-    font-size: 14pt;
+    font-weight: 300;
+    font-size: 16pt;
     color: #72857F;
 }
 
@@ -621,6 +624,31 @@ color: #B93636;
 
 }
 
+.all
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 12pt;
+    color: #72857F;
+    margin-right: 8%;
+}
+
+.les_plus_lus
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 12pt;
+    color: #72857F;
+    margin-right: 8%;
+}
+
+.les_mieux_notes
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 12pt;
+    color: #72857F;
+}
 .titre_aside
 {
     font-family: 'Montserrat', sans-serif;
@@ -749,4 +777,70 @@ color: #B93636;
 {
     width: 30px;
     height: 30px;
+}
+
+.search
+{
+    width: 30%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.titre_apropos
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 15pt;
+    color: #72857F;
+    margin-bottom: 1%;
+}
+
+.texte_apropos
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 8.5pt;
+    width: 30%;
+    line-height: 150%;
+    text-align: left;
+    color: #DFFFF5;
+}
+.a_propos
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.remonte
+{
+    width: 40px;
+    height: 40px;
+}
+
+.bouton_envoyer
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 10pt;
+    color: #72857F;
+    background-color: #000703;
+    border-radius: 20px;
+    border-color: #72857F;
+    text-align: left;
+    width: 5.5%;
+}
+
+footer
+{
+    position: relative;
+    top: 90px;
 }
