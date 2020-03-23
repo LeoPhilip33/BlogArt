@@ -15,20 +15,6 @@
  <?php require '../Require_php/barnav.php'; ?><!--navbar-->
  <div id="container">
 <div id="part1">
- <nav>
-    <ul class="menu_nav">
-        <div class="part1_navbarre">
-        <li class="a_accueil" ><a href="#">Accueil</a><div class="souligne_accueil"></div></li>
-        <li class="a_rediger"><a  href="#">Rédiger un article</a><div class="souligne_rediger"></div></li>
-        <li class="a_contact"><a  href="#">Contact</a><div class="souligne_contact"></div></li> 
-        </div>
-
-        <div class="part2_navbarre">
-        <li class="a_connexion"><a href="#">Connexion</a><div class="souligne_connexion"></div></li>
-        <li class="a_enregistrer"><a href="#">S'enregistrer</a> <div class="souligne_enregistrer"></div></li> 
-        </div>
-    </ul>
-</nav>
 <div class="select_element"></div>
 
 <h1 class="titre_homepage1">Dernières sorties</h1>

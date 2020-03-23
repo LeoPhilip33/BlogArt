@@ -139,7 +139,10 @@ html, body{
     color: #B93636;
 }
 .s_con{
-    width: 20px;
+    width:20px;
+}
+.tir_con{
+    background-color: #B93636;
 }
 @media (max-width: 1500px){
     .formcont{

@@ -170,9 +170,6 @@
 .li_ac:hover a, .li_re:hover a, .li_co:hover a, .li_con:hover a, .li_si:hover a{
     color: #B93636;
 }
-.tir_con{
-    background-color: #B93636;
-}
 .li_ac:hover .tir_ac, .li_re:hover .tir_re, .li_co:hover .tir_co, .li_con:hover .tir_con, .li_si:hover .tir_si{
     background-color: #B93636;
 }

@@ -14,7 +14,18 @@ body
     max-width: 83%;
     margin: 0 auto;
 }
-
+.navbar ul .ac a{
+    color: #B93636;
+}
+.s_ac{
+    width: 20px !important;
+}
+.newmenu ul .li_ac a{
+    color: #B93636;
+}
+.tir_ac{
+    background-color: #B93636;
+}
 
 header
 {
