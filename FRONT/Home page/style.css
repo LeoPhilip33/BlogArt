@@ -11,7 +11,6 @@ body
 
 #container
 {
-    display: grid;
     max-width: 83%;
     margin: 0 auto;
 }
@@ -78,14 +77,14 @@ header
     width: 100%;
     height: 80%;
     margin: 0;
-    border-radius: 20px;
+    border-radius: 15px;
 
 }
 .image_homepage_part1
 {
     width: 55%;
     height: 100%;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
 .images_aside
@@ -110,6 +109,7 @@ header
     grid-template-rows: 10% 10% 26.67% 26.67% 26.67%;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
+    height: 800px;
 }
 aside
 {
@@ -145,7 +145,7 @@ aside
     width: 100%;
     height: 250px;
     background-repeat: no-repeat;
-    border-radius: 20px;
+    border-radius: 15px;
 
 }
 .article_homepage_1
@@ -343,15 +343,158 @@ color: #B93636;
     color: #72857F;
 }
 
+.image_vignette1
+{
+    width: 100%;
+    height: 80%;
+    border-radius: 15px;
+}
+
+.image_vignette2
+{
+    width: 100%;
+    height: 80%;
+    border-radius: 15px;
+}
+.image_vignette3
+{
+    width: 100%;
+    height: 80%;
+    border-radius: 15px;
+}
+.image_vignette4
+{
+    width: 100%;
+    height: 80%;
+    border-radius: 15px;
+}
+.image_vignette5
+{
+    width: 100%;
+    height: 80%;
+    border-radius: 15px;
+}
+.image_vignette6
+{
+    width: 100%;
+    height: 80%;
+    border-radius: 15px;
+}
 .vignette1
 {
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 2;
     background-color: #092E2B;
+    border-radius: 15px;
 
 }
+
+.vignette2
+{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: #092E2B;
+    border-radius: 15px;
+
+}
+
+.vignette3
+{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background-color: #092E2B;
+    border-radius: 15px;
+
+}
+
+.vignette4
+{
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: #092E2B;
+    border-radius: 15px;
+
+}
+
+.vignette5
+{
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: #092E2B;
+    border-radius: 15px;
+
+}
+
+.voirplus_vignette1
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 10pt;
+    color: #72857F;
+    background-color: #092E2B;
+    border-radius: 20px;
+    border-color: #72857F;
+    text-align: left;
+}
+
+.voirplus_vignette2
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 10pt;
+    color: #72857F;
+    background-color: #092E2B;
+    border-radius: 20px;
+    border-color: #72857F;
+    text-align: left;
+}
+
+.voirplus_vignette3
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 10pt;
+    color: #72857F;
+    background-color: #092E2B;
+    border-radius: 20px;
+    border-color: #72857F;
+    text-align: left;
+}
+
+.voirplus_vignette4
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 10pt;
+    color: #72857F;
+    background-color: #092E2B;
+    border-radius: 20px;
+    border-color: #72857F;
+    text-align: left;
+}
+
+.voirplus_vignette5
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 10pt;
+    color: #72857F;
+    background-color: #092E2B;
+    border-radius: 20px;
+    border-color: #72857F;
+    text-align: left;
+}
+
 .menu_part2
 {
     grid-row-start: 2;
@@ -416,61 +559,7 @@ color: #B93636;
 
 
 }
-#fakebox-input
-{
-    bottom: 0;
-    box-sizing: border-box;
-    left: 0;
-    margin: 0;
-    opacity: 0;
-    padding-inline-start: 20px;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-#fakebox-text
-{
-    bottom: 0;
-    color: #EAFAF5;
-    font-size: 16px;
-    height: 44px;
-    left: 0;
-    line-height: 44px;
-    margin: auto 0;
-    overflow: hidden;
-    position: absolute;
-    right: 44px;
-    text-align: initial;
-    text-overflow: ellipsis;
-    top: 0;
-    user-select: none;
-    vertical-align: middle;
-    visibility: inherit;
-    white-space: nowrap;
-}
-.loupe
-{
-    position: relative;
-    left: 7%;
-    bottom: 10%
-}
 
-.barre_recherche
-{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
-    font-size: 10pt;
-    color: #EAFAF5;
-    text-align: center;
-    background-color: #72857F;
-    border-radius: 20px;
-    border: none;
-    width: 95%;
-    height: 5%;
-    position: relative;
-    left: 3%;
-    bottom: 30%;
-}
 .texte_article1
 {
     position: relative;
