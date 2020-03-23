@@ -11,10 +11,8 @@
  <header>
         <h2 class="decouvrir">Découvrir</h2>
         <img class="arrow" src="../images/arrow.svg" alt="flèche"> 
-    
-    
  </header>
-
+ <?php require '../Require_php/barnav.php'; ?><!--navbar-->
  <div id="container">
 <div id="part1">
  <nav>
@@ -133,34 +131,8 @@
 
 
  </div>
- <footer>
-     <div class="a_propos">
-     <h1 class="titre_apropos">À propos</h1>
-     <p class="texte_apropos">6 étudiants, dans une salle à Bordeaux (enfin plus vraiment), qui lisent des histoires toutes aussi terrifiantes les unes que les autres… Voici comment a été crée notre projet de blog sur les histoires terrifiantes de la belle-endormie. Si tu as déjà regardé l’intégrale de Saw ou si les threads de Squeezie n’ont aucun secret pour toi alors notre blog est fait pour toi. </p>
-    </div>
-    <div class="newsletter">
-        <h1 class="titre_newsletter">Newsletter</h1>
-        <h3 class="sous_titre_newsletter">Abonne toi à notre newsletter</h3>
-        <div class="search">
-            <input type="text" class="searchTerm" placeholder="Rechercher">
-        
-         </div>
-      
-
-
-        <div class="checkbox">
-          <input type="checkbox" value="None" id="checkbox" name="check" checked />
-          <label for="Coche la case"></label>
-          <p class="newsletter">Je vous autorise à utiliser cet email 
-            pour votre newsletter</p>
-        </div>
-        <button class="bouton_envoyer">Envoyer</button>
-        
-      
-      </section>
-    </div>
-    <img class ="remonte" src="../images/remonte.svg" alt="remonte en haut de la page">
- </footer>
   </div>
+  <!-- footer -->
+ <?php require '../Require_php/footer.php'; ?>
     </body>
 </html>
