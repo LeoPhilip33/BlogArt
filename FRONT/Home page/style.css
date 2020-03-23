@@ -105,7 +105,11 @@ header
 
 #part2
 {
-    margin-top: 10%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 10% 10% 26.67% 26.67% 26.67%;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
 }
 aside
 {
@@ -210,7 +214,10 @@ nav .navigation
 
 .titre_terrifiant
 {
-    margin-top: 20%;
+    grid-column-start: 1;
+    grid-column-end: auto;
+    grid-row-start: 2;
+    grid-row-end: auto;
 }
 
 .souligne_accueil, .souligne_rediger, .souligne_contact, .souligne_connexion
@@ -286,8 +293,77 @@ color: #B93636;
     font-weight: 100;
     font-size: 14pt;
     color: #72857F;
+}
+
+.texte_vignette
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 10pt;
+    color: #72857F;
+}
+
+.texte_vignette1
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 10pt;
+    color: #72857F;
+}
+
+.texte_vignette2
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 10pt;
+    color: #72857F;
+}
+
+.texte_vignette3
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 10pt;
+    color: #72857F;
+}
+
+.texte_vignette4
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 10pt;
+    color: #72857F;
+}
+
+.texte_vignette5
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 10pt;
+    color: #72857F;
+}
+
+.vignette1
+{
     grid-row-start: 2;
     grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: #092E2B;
+
+}
+.menu_part2
+{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 10pt;
+    color: #72857F;
 
 }
 .bold
