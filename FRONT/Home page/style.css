@@ -12,7 +12,7 @@ body
 
 #container
 {
-    width: 80.32%;
+    width: 79.73%;
     margin: 0 auto;
 }
 .navbar ul .ac a{
@@ -61,7 +61,7 @@ header
 .decouvrir
 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 15pt;
+    font-size: 17px;
     color: #72857F;
     font-weight: 200;
 }
@@ -71,7 +71,7 @@ header
     width: 20px;
     height: 20px;
     position: relative;
-    left: 3%;
+    left: 100%;
 
 }
 
@@ -80,6 +80,7 @@ header
     position: relative;
     left: 46%;
     top: 87%;
+    width: 30px;
 }
 .images_dernieressorties
 {
@@ -99,7 +100,7 @@ header
 .images_aside
 {
     width: 90%;
-    height: 20%;
+    height: 14.61%;
     position: relative;
     left: 13px;
     border-radius: 10px;
@@ -107,11 +108,10 @@ header
 #part1
 {
     display: grid;
-    grid-template-columns: repeat(12,1fr);
-    grid-template-rows: 7% 13% 34% 23% 23%;
-    grid-column-gap: 10px;
-    height: 750px;
-    grid-row-gap: 10px;
+    grid-template-columns: 48.63% 22.43% 22.43%;
+    grid-template-rows: 4.1% 31% 22.59% 22.59%;
+    grid-column-gap: 7%;
+    grid-row-gap: 5%;
 }
 
 #part2
@@ -128,36 +128,38 @@ header
 }
 aside
 {
-    grid-row-start: 3;
-    grid-row-end: 6;
-    grid-column-start: 10;
-    grid-column-end: 13;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    grid-column-start: 3;
+    grid-column-end: 4;
     background-color: #092E2B;
     border-radius: 20px;
     padding: 5%;
+    width: 100%;
+    height: 99%;
+    padding-bottom: 0%;
 
 }
 .titre_homepage1
 {
-    grid-row-start: 2;
-    grid-row-end: 3; 
+    grid-row-start: 1;
+    grid-row-end: 2; 
     grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column-end: 3;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 16pt;
+    font-size: 140%;
     color: #72857F;
     margin: 0;
-    margin-top: 5%;
 }
 .dernieres_sorties
 {
-    grid-row-start: 3;
-    grid-row-end: 4; 
+    grid-row-start: 2;
+    grid-row-end: 3; 
     grid-column-start: 1;
-    grid-column-end: 10;
+    grid-column-end: 3;
     background-image: url(../images/photo_dernieres_sorties.jpg);
-    width: 95%;
+    width: 100%;
     height: 250px;
     background-repeat: no-repeat;
     border-radius: 15px;
@@ -165,20 +167,20 @@ aside
 }
 .article_homepage_1
 {
-    grid-row-start: 4;
-    grid-row-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
     grid-column-start: 1;
-    grid-column-end: 7;
+    grid-column-end: 2;
     background-color: #092E2B;
     border-radius: 20px;
 }
 
 .article_homepage_2
 {
-    grid-row-start: 5;
-    grid-row-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 5;
     grid-column-start: 1;
-    grid-column-end: 7;
+    grid-column-end: 2;
     background-color: #092E2B;
     border-radius: 20px;
 }
@@ -201,33 +203,11 @@ nav li
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
-    font-size: 10pt;
+    font-size: 100%;
     color: #DFFFF5;
     position: relative;
     left: 40px;
     bottom: 40px;
-}
-nav a
-{
-    color: #DFFFF5;
-    padding-bottom: 3px;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
-    font-size: 10pt;
-}
-nav
-{
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 13;
-}
-nav .navigation
-{
-    color: #B93636;
-    border-bottom: 1px solid #B93636;
-    transition: 0.4s;
 }
 
 .titre_terrifiant
@@ -262,7 +242,7 @@ color: #B93636;
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 10pt;
+    font-size: 100%;
     color: #72857F;
     width: 40%;
     margin: 0;
@@ -294,7 +274,7 @@ color: #B93636;
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
-    font-size: 9.5pt;
+    font-size: 85%;
     color: #DFFFF5;
     position: relative;
     text-align: left;
@@ -309,7 +289,7 @@ color: #B93636;
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 16pt;
+    font-size: 140%;
     color: #72857F;
 }
 
@@ -320,7 +300,7 @@ color: #B93636;
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 11pt;
+    font-size: 100%;
     color: #72857F;
     width: 53%;
     margin: 0;
@@ -337,7 +317,7 @@ color: #B93636;
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 11pt;
+    font-size: 100%;
     color: #72857F;
     width: 53%;
     margin: 0;
@@ -354,7 +334,7 @@ color: #B93636;
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 10pt;
+    font-size: 100%;
     color: #72857F;
     width: 53%;
     margin: 0;
@@ -371,7 +351,7 @@ color: #B93636;
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 11pt;
+    font-size: 100%;
     color: #72857F;
     width: 53%;
     margin: 0;
@@ -388,7 +368,7 @@ color: #B93636;
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 11pt;
+    font-size: 100%;
     color: #72857F;
     width: 53%;
     margin: 0;
@@ -397,7 +377,7 @@ color: #B93636;
     margin-block-start: 0.5px; 
     margin-block-end: 0.5px; 
     writing-mode: horizontal-tb;
-    top: 3px;
+    top: 2%;
 }
 
 .trait_vignette1
@@ -406,7 +386,7 @@ color: #B93636;
     height: 2px;
     background-color: #A43F3E;
     position: relative;
-    top: 10%;
+    top: 14%;
 }
 
 .trait_vignette2
@@ -415,7 +395,7 @@ color: #B93636;
     height: 2px;
     background-color: #A43F3E;
     position: relative;
-    top: 10%;
+    top: 14%;
 }
 
 .trait_vignette3
@@ -424,7 +404,7 @@ color: #B93636;
     height: 2px;
     background-color: #A43F3E;
     position: relative;
-    top: 10%;
+    top: 14%;
 }
 
 .trait_vignette4
@@ -433,7 +413,7 @@ color: #B93636;
     height: 2px;
     background-color: #A43F3E;
     position: relative;
-    top: 10%;
+    top: 14%;
 }
 
 .trait_vignette5
@@ -442,7 +422,7 @@ color: #B93636;
     height: 2px;
     background-color: #A43F3E;
     position: relative;
-    top: 10%;
+    top: 14%;
 }
 
 
@@ -450,7 +430,7 @@ color: #B93636;
 {
     background-image: url(../images/images_vignette1.jpg);
     width: 100%;
-    height: 75%;
+    height: 70%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -459,7 +439,7 @@ color: #B93636;
 {
     background-image: url(../images/images_vignette2.jpg);
     width: 100%;
-    height: 75%;
+    height: 70%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -467,7 +447,7 @@ color: #B93636;
 {
     background-image: url(../images/images_vignette3.jpg);
     width: 100%;
-    height: 75%;
+    height: 70%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -475,7 +455,7 @@ color: #B93636;
 {
     background-image: url(../images/images_vignette4.jpg);
     width: 100%;
-    height: 75%;
+    height: 70%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -483,7 +463,7 @@ color: #B93636;
 {
     background-image: url(../images/images_vignette5.jpg);
     width: 100%;
-    height: 75%;
+    height: 70%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -497,7 +477,7 @@ color: #B93636;
     background-color: #092E2B;
     border-radius: 15px;
     width: 100%;
-    height: 85%;
+    height: 110%;
 }
 
 .vignette2
@@ -509,7 +489,7 @@ color: #B93636;
     background-color: #092E2B;
     border-radius: 15px;
     width: 100%;
-    height: 85%;
+    height: 110%;
 }
 
 .vignette3
@@ -521,7 +501,7 @@ color: #B93636;
     background-color: #092E2B;
     border-radius: 15px;
     width: 100%;
-    height: 85%;
+    height: 110%;
 }
 
 .vignette4
@@ -533,7 +513,7 @@ color: #B93636;
     background-color: #092E2B;
     border-radius: 15px;
     width: 100%;
-    height: 85%;
+    height: 110%;
 
 }
 
@@ -546,14 +526,14 @@ color: #B93636;
     background-color: #092E2B;
     border-radius: 15px;
     width: 100%;
-    height: 85%;
+    height: 110%;
 }
 
 .voirplus_vignette1
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
-    font-size: 8pt;
+    font-size: 90%;
     color: #72857F;
     background-color: #092E2B;
     border-radius: 20px;
@@ -561,7 +541,7 @@ color: #B93636;
     text-align: left;
     position: relative;
     left: 21%;
-    bottom: 6px;
+    bottom: 6%;
     
 }
 
@@ -570,7 +550,7 @@ color: #B93636;
    
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
-    font-size: 8pt;
+    font-size: 90%;
     color: #72857F;
     background-color: #092E2B;
     border-radius: 20px;
@@ -578,7 +558,7 @@ color: #B93636;
     text-align: left;
     position: relative;
     left: 21%;
-    bottom: 6px;
+    bottom: 6%;
     
 }
 
@@ -586,7 +566,7 @@ color: #B93636;
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
-    font-size: 8pt;
+    font-size: 90%;
     color: #72857F;
     background-color: #092E2B;
     border-radius: 20px;
@@ -594,7 +574,7 @@ color: #B93636;
     text-align: left;
     position: relative;
     left: 21%;
-    bottom: 6px;
+    bottom: 6%;
 }
 
 .voirplus_vignette4
@@ -602,7 +582,7 @@ color: #B93636;
    
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
-    font-size: 8pt;
+    font-size: 90%;
     color: #72857F;
     background-color: #092E2B;
     border-radius: 20px;
@@ -610,7 +590,7 @@ color: #B93636;
     text-align: left;
     position: relative;
     left: 21%;
-    bottom: 6px;
+    bottom: 6%;
 }
 
 .voirplus_vignette5
@@ -618,7 +598,7 @@ color: #B93636;
 
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
-    font-size: 8pt;
+    font-size: 90%;
     color: #72857F;
     background-color: #092E2B;
     border-radius: 20px;
@@ -626,7 +606,7 @@ color: #B93636;
     text-align: left;
     position: relative;
     left: 21%;
-    bottom: 6px;
+    bottom: 6%;
 }
 
 .menu_part2
@@ -640,7 +620,7 @@ color: #B93636;
     align-content: flex-start;
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
-    font-size: 10pt;
+    font-size: 100%;
     color: #72857F;
 
 }
@@ -649,7 +629,7 @@ color: #B93636;
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
-    font-size: 12pt;
+    font-size: 100%;
     color: #72857F;
     margin-right: 8%;
 }
@@ -658,7 +638,7 @@ color: #B93636;
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
-    font-size: 12pt;
+    font-size: 100%;
     color: #72857F;
     margin-right: 8%;
 }
@@ -667,14 +647,14 @@ color: #B93636;
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
-    font-size: 12pt;
+    font-size: 100%;
     color: #72857F;
 }
 .titre_aside
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
-    font-size: 12pt;
+    font-size: 100%;
     color: #72857F;
     position: relative;
     left: 25%;
@@ -684,7 +664,7 @@ color: #B93636;
 {
     display: flex;
     width: 90%;
-    height: 40%;
+    height: 38.68%;
     position: relative;
     left: 13px;
     align-self: center;
@@ -697,28 +677,28 @@ color: #B93636;
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 16pt;
+    font-size: 100%s;
     color: #181C1B;
     background-color:rgba(185, 54, 54, 0.75);
     width: 60%;
     margin: 0;
     position: relative;
     left: 5%;
-    top: 62%
+    top: 58%
 
 }
 .sous_titre_ds
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 10pt;
+    font-size: 90%;
     color: #181C1B;
     background-color: rgba(185, 54, 54, 0.75);
     width: 37%;
     margin: 0;
     position: relative;
     left: 5%;
-    top: 64%
+    top: 66%
 
 
 }
@@ -740,7 +720,7 @@ color: #B93636;
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
-    font-size: 10pt;
+    font-size: 100%;
     color: #72857F;
     background-color: #092E2B;
     border-radius: 20px;
@@ -756,7 +736,7 @@ color: #B93636;
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
-    font-size: 10pt;
+    font-size: 100%;
     color: #72857F;
     background-color: #092E2B;
     border-radius: 20px;
@@ -766,27 +746,6 @@ color: #B93636;
     left: 80%;
     margin-top: 6%;
 
-}
-.a_enregistrer
-{
-    border-radius: 20px;
-    background-color: #B93636;
-    margin-block-end: auto;
-    padding-top: 2px;
-    padding-left: 7px;
-    padding-right: 7px;
-    padding-bottom: 2px;
-}
-
-.rubrique_footer
-{
-    font-size: 1.3em;
-    color: #DFFFF5;
-    padding-bottom: 3px;
-    text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
-    font-size: 10pt;
 }
 
 .reseaux_sociauxt
@@ -804,64 +763,6 @@ color: #B93636;
 {
     width: 30px;
     height: 30px;
-}
-
-
-.titre_apropos
-{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
-    font-size: 15pt;
-    color: #72857F;
-    margin-bottom: 1%;
-}
-
-.texte_apropos
-{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
-    font-size: 8.5pt;
-    width: 30%;
-    line-height: 150%;
-    text-align: left;
-    color: #DFFFF5;
-}
-.a_propos
-{
-    display: flex;
-    flex-direction: column;
-}
-
-.newsletter
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-
-.remonte
-{
-    width: 40px;
-    height: 40px;
-}
-
-.bouton_envoyer
-{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
-    font-size: 10pt;
-    color: #72857F;
-    background-color: #000703;
-    border-radius: 20px;
-    border-color: #72857F;
-    text-align: left;
-    width: 5.5%;
-}
-
-footer
-{
-    position: relative;
-    top: 90px;
 }
 
 
