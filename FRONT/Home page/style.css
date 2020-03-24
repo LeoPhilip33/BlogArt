@@ -1,3 +1,4 @@
+
 html, body
 {
     margin: 0;
@@ -59,12 +60,6 @@ header
 }
 .decouvrir
 {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    position: absolute;
-    top: 115%;
-    left: 46%;
     font-family: 'Montserrat', sans-serif;
     font-size: 15pt;
     color: #72857F;
@@ -73,16 +68,18 @@ header
 
 .arrow
 {
-
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    position: absolute;
-    top: 123%;
-    left: 49.5%;
     width: 20px;
     height: 20px;
+    position: relative;
+    left: 3%;
 
+}
+
+.decouvrir_arrow
+{
+    position: relative;
+    left: 46%;
+    top: 87%;
 }
 .images_dernieressorties
 {
@@ -147,7 +144,7 @@ aside
     grid-column-start: 1;
     grid-column-end: 5;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 16pt;
     color: #72857F;
     margin: 0;
@@ -676,11 +673,11 @@ color: #B93636;
 .titre_aside
 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 100;
+    font-weight: 200;
     font-size: 12pt;
     color: #72857F;
     position: relative;
-    left: 70px;
+    left: 25%;
 
 }
 .playlist

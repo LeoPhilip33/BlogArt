@@ -9,8 +9,10 @@
     <body>
         
  <header>
+    <div class="decouvrir_arrow">
         <h2 class="decouvrir">Découvrir</h2>
-        <img class="arrow" src="../images/arrow.svg" alt="flèche"> 
+        <img class="arrow" src="../images/arrow.svg" alt="flèche">
+    </div> 
  </header>
  <?php require '../Require_php/barnav.php'; ?><!--navbar-->
  <div id="container">
