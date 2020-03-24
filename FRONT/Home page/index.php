@@ -82,7 +82,7 @@
 </div>
      
          <div class="vignette1">
-            <img class="image_vignette1" src="../images/images_vignette1.jpg" alt="">
+            <div class="image_vignette1"> </div>
              <div class="trait_vignette1"></div>
              <h1 class="texte_vignette1">L'HISTOIRE DE LA MOMIE BORDELAISE</h1>
              <button class="voirplus_vignette1">Voir plus ></button>
@@ -90,14 +90,14 @@
      
 
          <div class="vignette2">
-       <img class="image_vignette2" src="../images/images_vignette2.jpg" alt="">
+         <div class="image_vignette2"> </div>
         <div class="trait_vignette2"></div>
         <h2 class="texte_vignette2">LE VILLAGE CACHÉ DE LA DUNE DU PILAT</h2>
         <button class="voirplus_vignette2">Voir plus ></button>
         </div>
 
         <div class="vignette5">
-            <img class="image_vignette5" src="../images/images_vignette5.jpeg" alt="">
+        <div class="image_vignette5"> </div>
             <div class="trait_vignette5"></div>
             <h1 class="texte_vignette5">L'EFFROYABLE HISTOIRE DE LA RUE DU MIRAIL</h1>
             <button class="voirplus_vignette5">Voir plus ></button>
@@ -106,14 +106,14 @@
 
 
          <div class="vignette3">
-         <img class="image_vignette3" src="../images/images_vignette3.jpg" alt="">
+         <div class="image_vignette3"> </div>
         <div class="trait_vignette3"></div>
         <h1 class="texte_vignette3">LES TERRIFIANTES MOMIES DE SAINT MICHEL</h1>
         <button class="voirplus_vignette3">Voir plus ></button>
         </div>
 
         <div class="vignette4">
-            <img class="image_vignette4" src="../images/images_vignette4.jpg" alt="">
+        <div class="image_vignette4"> </div>
             <div class="trait_vignette4"></div>
             <h1 class="texte_vignette4">LA BASE NAUTIQUE DE BORDEAUX</h1>
             <button class="voirplus_vignette4">Voir plus ></button>
