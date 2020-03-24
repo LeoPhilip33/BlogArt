@@ -1,3 +1,6 @@
+li{
+    list-style: none;
+}
 .IlluHead{
     height: 360px;
     background-image: url("../FRONT/images/Illustration_header.jpg");
