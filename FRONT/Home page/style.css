@@ -11,7 +11,7 @@ body
 
 #container
 {
-    max-width: 83%;
+    width: 83%;
     margin: 0 auto;
 }
 .navbar ul .ac a{
@@ -122,11 +122,12 @@ header
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
     grid-template-rows: 5% 5% 26.67% 26.67% 36.67%;
-    grid-column-gap: 40px;
-    grid-row-gap: 20px;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
     height: 800px;
     position: relative;
     top: 90px;
+    width: 93.5%;
 }
 aside
 {
