@@ -29,7 +29,7 @@ body
 
 header
 {
-    background-image: url(/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/illustration_principale.jpg);
+    background-image: url(../images/illustration_principale.jpg);
     background-attachment: scroll;
     background-size: contain;
     background-repeat: no-repeat;
