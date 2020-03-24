@@ -1,5 +1,132 @@
+<?php
+  $message_envoye = " ";
+  $message_non_envoye = " ";
+  $message_erreur_formulaire = " ";
+
+  if ($_SERVER["REQUEST_METHOD"] == "POST"){
+  $nom = $_POST['nom'];
+  $prenom = $_POST['prenom'];
+  $email = $_POST['email'];
+  $objet = $_POST['objet'];
+  $message = $_POST['message'];
+  /*
+  ********************************************************************************************
+  CONFIGURATION
+  ********************************************************************************************
+  */
+  // destinataire est votre adresse mail. Pour envoyer ? plusieurs ? la fois, s?parez-les par une virgule
+  $destinataire = 'horry.bord@gmail.com';
+
+  // copie ? (envoie une copie au visiteur)
+  $copie = 'oui'; // 'oui' ou 'non'
+
+  /*
+  ********************************************************************************************
+  FIN DE LA CONFIGURATION
+  ********************************************************************************************
+  */
+
+  // on teste si le formulaire a ?t? soumis
+  if (isset($_POST['envoyer']))
+  {
+  // formulaire non envoy?
+      $message_erreur_formulaire = "<p style='color:red;'> Vous devez d'abord envoyer le formulaire. </p>";
+  }
+  else
+  {
+  /*
+      * cette fonction sert ? nettoyer et enregistrer un texte
+      */
+  function Rec($text)
+  {
+      $text = htmlspecialchars(trim($text), ENT_QUOTES);
+      if (1 === get_magic_quotes_gpc()){
+          $text = stripslashes($text);
+      }
+
+      $text = nl2br($text);
+      return $text;
+  };
+
+  /*
+      * Cette fonction sert ? v?rifier la syntaxe d'un email
+      */
+  function IsEmail($email)
+  {
+      $value = preg_match('/^(?:[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+\.)*[\w\!\#\$\%\&\'\*\+\-\/\=\?\^\`\{\|\}\~]+@(?:(?:(?:[a-zA-Z0-9_](?:[a-zA-Z0-9_\-](?!\.)){0,61}[a-zA-Z0-9_-]?\.)+[a-zA-Z0-9_](?:[a-zA-Z0-9_\-](?!$)){0,61}[a-zA-Z0-9_]?)|(?:\[(?:(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\.){3}(?:[01]?\d{1,2}|2[0-4]\d|25[0-5])\]))$/', $email);
+      return (($value === 0) || ($value === false)) ? false : true;
+  }
+
+  // formulaire envoy?, on r?cup?re tous les champs.
+  $nom     = (isset($_POST['nom']))     ? Rec($_POST['nom'])     : '';
+  $prenom  = (isset($_POST['prenom']))  ? Rec($_POST['prenom'])  : '';
+  $email   = (isset($_POST['email']))   ? Rec($_POST['email'])   : '';
+  $objet   = (isset($_POST['objet']))   ? Rec($_POST['objet'])   : '';
+  $message = (isset($_POST['message'])) ? Rec($_POST['message']) : '';
+
+  // On va v?rifier les variables et l'email ...
+  $email = (IsEmail($email)) ? $email : ''; // soit l'email est vide si erron?, soit il vaut l'email entr?
+
+  if (($nom != '') && ($email != '') && ($objet != '') && ($message != ''))
+  {
+      // les 4 variables sont remplies, on g?n?re puis envoie le mail
+      $headers  = 'MIME-Version: 1.0' . "\r\n";
+      $headers .= 'From:'.$nom.' Léo le plus beau '.$prenom.' <'.$email.'>' . "\r\n" .
+              'Reply-To:'.$email. "\r\n" .
+              'Content-Type: text/plain; charset="utf-8"; DelSp="Yes"; format=flowed '."\r\n" .
+              'Content-Disposition: inline'. "\r\n" .
+              'Content-Transfer-Encoding: 7bit'." \r\n" .
+              'X-Mailer:PHP/'.phpversion();
+
+      // envoyer une copie au visiteur ?
+      if ($copie == 'oui')
+      {
+          $cible = $destinataire.';'.$email;
+      }
+      else
+      {
+          $cible = $destinataire;
+      };
+
+      // Remplacement de certains caract?res sp?ciaux
+      $caracteres_speciaux     = array('&#039;', '&#8217;', '&quot;', '<br>', '<br />', '&lt;', '&gt;', '&amp;', '?',   '&rsquo;', '&lsquo;');
+      $caracteres_remplacement = array("'",      "'",        '"',      '',    '',       '<',    '>',    '&',     '...', '>>',      '<<'     );
+
+      $objet = html_entity_decode($objet);
+      $objet = str_replace($caracteres_speciaux, $caracteres_remplacement, $objet);
+
+      $message = html_entity_decode($message);
+      $message = str_replace($caracteres_speciaux, $caracteres_remplacement, $message);
+
+      // Envoi du mail
+      $num_emails = 0;
+      $tmp = explode(';', $cible);
+      foreach($tmp as $email_destinataire)
+      {
+        if (mail($email_destinataire, $objet, $message, $headers))
+            $num_emails++;
+      }
+
+      if ((($copie == 'oui') && ($num_emails == 2)) || (($copie == 'non') && ($num_emails == 1)))
+      {
+          $message_envoye = "<p style='color:green;'> Votre message a bien été envoyé ! </p>";
+      }
+      else
+      {
+          $message_non_envoye = "<p style='color:red;> L'envoi du mail a échoué, veuillez réessayer. <p>";
+      };
+  }
+  else
+  {
+      $message_formulaire_invalide = "<p style='color:red;'>Vérifier que tous les champs soient bien remplis et que l'email soit sans erreur. </p>";
+  };
+  }; // fin du if (!isset($_POST['envoi']))
+
+  }
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,40 +143,41 @@
     <div class="content">
         <div class="fichecontact">
             <h3 class="titrecont">Contact</h3>
-            <form class="formcont" action="sendmail.php" method="POST">
+            <form class="formcont" method="POST">
                 <p class="phrasecont">Si la terreur ne te fais pas peur… Contacte-nous!</p>
+                <?= $message_envoye ?>
+                <?= $message_non_envoye ?>
+                <?= $$message_erreur_formulaire ?>
                 <div class="form-row">
                   <div class="form-group">
                     <label for="nom">Nom:</label>
-                    <input type="text" id="nom" name="nom" class="form-control" placeholder="Nom" required>
+                    <input type="text" name="nom" class="form-control" placeholder="Nom" maxlength="25" required>
                   </div>
                   <div class="form-group">
                     <label for="prenom">Prénom:</label>
-                    <input type="text" id="prenom" name="prenom" class="form-control" placeholder="Prénom" required>
+                    <input type="text" name="prenom" class="form-control" placeholder="Prénom" maxlength="30" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="email">Email:</label>
-                  <input type="text" id="email" name="email" class="form-control" placeholder="Adresse Email" required>
+                  <input type="email" name="email" class="form-control" placeholder="Adresse Email" maxlength="45" required>
                 </div>
                 <div class="form-group">
                   <label for="objet">Objet:</label>
-                  <input type="text" id="objet" name="objet" class="form-control" placeholder="Objet" required>
+                  <input type="text" name="objet" class="form-control" placeholder="Objet" maxlength="45" required>
                 </div>
                 <div class="form-group">
                   <label for="message">Message:</label>
-                  <textarea class="form-control" id="message" name="message" rows="5" placeholder="..." required></textarea>
+                  <textarea class="form-control" id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
                 </div>
                 <div class="form-group">
                 <button type="envoyer" value="ok"class="btn btn-primary">S’inscrire</button>
                 </div>
               </form>
-              <p class="phrasecont2">Si la terreur ne te fais pas peur… Contacte-nous!</p>
               <div class="icons">
-                <img src="../images/twitter.svg" class="icon" alt="">
-                <img src="../images/medium.svg" class="icon" alt="">
-                <img src="../images/insta.svg" class="icon" alt="">
-                <svg id="twittersvg" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.06 192.07"><defs><style>.cls-1{fill:#72857f;}.cls-2{fill:#fff;fill-rule:evenodd;}</style></defs><title>twitter</title><circle class="cls-1" cx="150" cy="147.81" r="96.03" transform="translate(-73.97 220.31) rotate(-80.75)"/><path class="cls-2" d="M132.49,176.26a22.63,22.63,0,0,1-21-15.67,22.57,22.57,0,0,0,9.68-.29c.08,0,.16-.08.32-.15a22.55,22.55,0,0,1-14.66-10.36,22,22,0,0,1-3.31-12,22.28,22.28,0,0,0,10,2.74,22.75,22.75,0,0,1-9.3-13.7,22.4,22.4,0,0,1,2.43-16.36c12.22,14.4,27.7,22.3,46.57,23.6-.14-.89-.27-1.68-.37-2.47a21.89,21.89,0,0,1,3.31-14.76,21.67,21.67,0,0,1,15.31-10.21,22,22,0,0,1,19.76,6.29,1.14,1.14,0,0,0,1.2.36,45.53,45.53,0,0,0,13.14-5,2.1,2.1,0,0,1,.3-.15s.05,0,.15,0a23.1,23.1,0,0,1-9.67,12.29A43.43,43.43,0,0,0,209,117a.41.41,0,0,1,.09.1c-.86,1.13-1.69,2.29-2.59,3.39a44.61,44.61,0,0,1-8.21,7.8.75.75,0,0,0-.37.71,63.31,63.31,0,0,1-.42,10,66.56,66.56,0,0,1-5.82,20.11,65.26,65.26,0,0,1-12.21,17.8,60.4,60.4,0,0,1-31,17.29,68.28,68.28,0,0,1-12.58,1.49A63.75,63.75,0,0,1,99.69,186l-.53-.34a45.66,45.66,0,0,0,22.59-3.11A44.91,44.91,0,0,0,132.49,176.26Z" transform="translate(-53.97 -51.78)"/></svg>
+                <a href="https://twitter.com/BordHorry" target="_blank"> <img src="../images/twitter.png" class="icon" alt="Logo de twitter" > </a>
+                <a href="https://medium.com/@horry.bord" target="_blank"> <img src="../images/medium.png" class="icon" alt="Logo de medium"> </a>
+                <a href="https://www.instagram.com/horry_bord/" target="_blank"> <img src="../images/instagram.png" class="icon" alt="Logo d'instagram"> </a>
               </div>
         </div>
         <div class="barlat"></div>
