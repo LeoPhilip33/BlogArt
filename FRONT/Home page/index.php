@@ -45,7 +45,12 @@
     <div class="trait_article_homepage_2"></div>
 </div>
 <aside>
-    
+
+<div class="search">
+				<form class="search-form">
+					<input type="text" placeholder="Rechercher">
+				</form>
+			</div>
         
         
          <div class="trait_aside_1"></div>
@@ -55,12 +60,14 @@
         <div class="trait_aside_2"></div>
         <h1 class="titre_aside">Playlist d'Horry'Bord</h1>
         <iframe class="playlist" src="https://play.soundsgood.co/embed/5e754bed7381827590892c68?color=323733&hideCurator=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media" allowtransparency="true"></iframe>
-    
+        
+         <div class="reseaux-sociaux">
             <img class ="reseaux_sociauxt" src="../images/twitter.svg" alt="twitter_logo">
         
             <img class="reseaux_sociauxi" src="../images/insta.svg" alt="instagram_logo">
         
             <img class="reseaux_sociauxm" src="../images/medium.svg" alt="medium_logo">
+        </div>
        
 </aside>
 </div>
