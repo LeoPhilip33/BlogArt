@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,30 +21,29 @@
                 <div class="form-row">
                   <div class="form-group">
                     <label for="nom">Nom:</label>
-                    <input type="text" id="nom" name="nom" class="form-control" placeholder="Nom" required>
+                    <input type="text" id="nom" name="nom" class="form-control" placeholder="Nom" maxlength="25" required>
                   </div>
                   <div class="form-group">
                     <label for="prenom">Prénom:</label>
-                    <input type="text" id="prenom" name="prenom" class="form-control" placeholder="Prénom" required>
+                    <input type="text" id="prenom" name="prenom" class="form-control" placeholder="Prénom" maxlength="30" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="email">Email:</label>
-                  <input type="text" id="email" name="email" class="form-control" placeholder="Adresse Email" required>
+                  <input type="text" id="email" name="email" class="form-control" placeholder="Adresse Email" maxlength="45" required>
                 </div>
                 <div class="form-group">
                   <label for="objet">Objet:</label>
-                  <input type="text" id="objet" name="objet" class="form-control" placeholder="Objet" required>
+                  <input type="text" id="objet" name="objet" class="form-control" placeholder="Objet" maxlength="45" required>
                 </div>
                 <div class="form-group">
                   <label for="message">Message:</label>
-                  <textarea class="form-control" id="message" name="message" rows="5" placeholder="..." required></textarea>
+                  <textarea class="form-control" id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
                 </div>
                 <div class="form-group">
                 <button type="envoyer" value="ok"class="btn btn-primary">S’inscrire</button>
                 </div>
               </form>
-              <p class="phrasecont2">Si la terreur ne te fais pas peur… Contacte-nous!</p>
               <div class="icons">
                 <img src="../images/twitter.svg" class="icon" alt="">
                 <img src="../images/medium.svg" class="icon" alt="">
