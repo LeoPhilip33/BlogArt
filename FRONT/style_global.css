@@ -1,5 +1,7 @@
+li{
+    list-style: none;
+}
 .IlluHead{
-    width: 100vw;
     height: 360px;
     background-image: url("../FRONT/images/Illustration_header.jpg");
     background-repeat: no-repeat;
@@ -171,9 +173,6 @@
 .li_ac:hover a, .li_re:hover a, .li_co:hover a, .li_con:hover a, .li_si:hover a{
     color: #B93636;
 }
-.tir_con{
-    background-color: #B93636;
-}
 .li_ac:hover .tir_ac, .li_re:hover .tir_re, .li_co:hover .tir_co, .li_con:hover .tir_con, .li_si:hover .tir_si{
     background-color: #B93636;
 }
@@ -199,4 +198,212 @@
     .traitnav{
         display: block;
     }
+}
+.contfoot{
+    margin-top: 42px;
+    margin-bottom: 42px;
+}
+.part1foot{
+    display: flex;
+    margin-left: 9.84vw;
+    margin-right: 9.84vw;
+}
+.divapp{
+    width: 43.97%;
+}
+.divnewslt{
+    width: 40.52%;
+}
+.divnewsltcontent{
+    width: 48.56%;
+    margin-right: 0;
+    margin-left: auto;
+}
+.divhdp{
+    width: 15.56%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.remontereh{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.remonterehdiv{
+    margin-right: 0;
+    margin-left: auto;
+    width: 100px;
+    height: 100px;
+    border: solid;
+    border-radius: 50px;
+    border-width: 3px;
+    border-color: #6B7D77;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+.part2foot{
+    
+}
+.part2foot ul{
+    display: flex;
+    justify-content: center;
+}
+.part2foot ul li{
+    display: flex;
+}
+.footertitre{
+    color: #72857F;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 40px;
+    text-decoration: none;
+}
+.footerapp{
+    color: #DFFFF5;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    margin-bottom: 0;
+}
+.rowformfooter{
+    display: flex;
+    margin-left: 0;
+}
+#check{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#mailnews{
+    background-color: #000601;
+    border-bottom: solid;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-color: #72857F;
+    
+    color: #72857F;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    width: 100%;
+}
+.formcontfooter{
+    margin-top: 42px;
+    margin-bottom: 42px;
+}
+.newscondi{
+    color: #DFFFF5;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    width: 100%;
+}
+@media (max-width: 1120px){
+    .divhdp{
+        display: none;
+    }
+    .divnewsltcontent{
+        height: 100%;
+        margin-left: auto;
+        margin-right: 0;
+        width: auto;
+    }
+    .divnewslt{
+        width: 50%;
+        margin-left: calc(9.84vw / 2);
+    }
+    .divapp{
+        width: 50%;
+        margin-right: calc(9.84vw / 2);
+    }
+    
+}
+@media (max-width: 640px){
+    .divhdp{
+        display: none;
+    }
+    .part1foot{
+        display: flex;
+        flex-direction: column;
+    }
+    .divnewsltcontent{
+        height: 100%;
+        margin-left: auto;
+        margin-right: 0;
+        width: auto;
+    }
+    .divnewslt{
+        width: 100%;
+        margin-left: auto;
+    }
+    .divapp{
+        width: 100%;
+        margin-right: auto;
+    }
+}
+.part2foot ul li a{
+    color: #DFFFF5;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.4s ease-in-out;
+}
+.part2foot ul li:hover a{
+    color: #B93636;
+}
+.nous{
+    margin-left: 14px;
+}
+.part2foot ul li{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+}
+.part2foot ul{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.s_men,.s_nous{
+    width: 0;
+    height: 2px;
+    background-color: #B93636;
+    transition: 0.4s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+}
+.men:hover .s_men, .nous:hover .s_nous{
+    width: 20px;
+}
+.btnabo{
+    border: solid;
+    border-radius: 45px;
+    border-width: 2px;
+    border-color: #72857F;
+    background-color: #000601;
+    padding: 7px;
+    color: #72857F;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 42px;
+    box-shadow:none;
+    appearance:none;
+    transform: translate(-100%);
+    cursor: pointer;
+}
+.btnabo:hover{
+    color: #000601;
+    background-color: #72857F;
+}
+.contentbtn{
+    padding-left: 100%;
 }

@@ -54,6 +54,6 @@
         <div class="barlat"></div>
     </div>
     <!-- footer -->
-    
+    <?php require '../Require_php/footer.php'; ?>
 </body>
 </html>

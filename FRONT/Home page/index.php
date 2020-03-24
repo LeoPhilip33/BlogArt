@@ -10,27 +10,11 @@
         
  <header>
         <h2 class="decouvrir">Découvrir</h2>
-        <img class="arrow" src="/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/arrow.svg" alt="flèche"> 
-    
-    
+        <img class="arrow" src="../images/arrow.svg" alt="flèche"> 
  </header>
-
+ <?php require '../Require_php/barnav.php'; ?><!--navbar-->
  <div id="container">
 <div id="part1">
- <nav>
-    <ul class="menu_nav">
-        <div class="part1_navbarre">
-        <li class="a_accueil" ><a href="#">Accueil</a><div class="souligne_accueil"></div></li>
-        <li class="a_rediger"><a  href="#">Rédiger un article</a><div class="souligne_rediger"></div></li>
-        <li class="a_contact"><a  href="#">Contact</a><div class="souligne_contact"></div></li> 
-        </div>
-
-        <div class="part2_navbarre">
-        <li class="a_connexion"><a href="#">Connexion</a><div class="souligne_connexion"></div></li>
-        <li class="a_enregistrer"><a href="#">S'enregistrer</a> <div class="souligne_enregistrer"></div></li> 
-        </div>
-    </ul>
-</nav>
 <div class="select_element"></div>
 
 <h1 class="titre_homepage1">Dernières sorties</h1>
@@ -41,7 +25,7 @@
  </div>
 
  <div class="article_homepage_1">
-     <img class="image_homepage_part1" src="/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/photo_article_homepage_1.jpeg" alt="La dune du pilat">
+     <img class="image_homepage_part1" src="../images/photo_article_homepage_1.jpeg" alt="La dune du pilat">
      <div class="texte_article1">
      <h2 class="titre_article">LA DAME BLANCHE</h2>
      <h3 class="texte_article">Un automobiliste croise la dame blanche sur la route de Bordeaux!</h3>
@@ -52,7 +36,7 @@
  
 
  <div class="article_homepage_2">
-     <img class="image_homepage_part1" src="/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/photo_article_homepage_2.png" alt="Stranger Things">
+     <img class="image_homepage_part1" src="../images/photo_article_homepage_2.png" alt="Stranger Things">
      <div class="texte_article2">
      <h2 class="titre_article">LA MOMIE BORDELAISE</h2>
      <h3 class="texte_article">Légende urbaine ou réalité ? Découvrez l'histoire des momies bordelaises...</h3>
@@ -66,17 +50,17 @@
         
          <div class="trait_aside_1"></div>
         <h1 class="titre_aside">Article récent</h1>
-        <img class="images_aside" src="/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/images_aside_1.jpg" alt="Aside photo">
+        <img class="images_aside" src="../images/images_aside_1.jpg" alt="Aside photo">
         <h2 class="titre2_aside">La bête du Gévaudan</h2>
         <div class="trait_aside_2"></div>
         <h1 class="titre_aside">Playlist d'Horry'Bord</h1>
         <iframe class="playlist" src="https://play.soundsgood.co/embed/5e754bed7381827590892c68?color=323733&hideCurator=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media" allowtransparency="true"></iframe>
     
-            <img class ="reseaux_sociauxt" src="/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/twitter.svg" alt="twitter_logo">
+            <img class ="reseaux_sociauxt" src="../images/twitter.svg" alt="twitter_logo">
         
-            <img class="reseaux_sociauxi" src="/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/insta.svg" alt="instagram_logo">
+            <img class="reseaux_sociauxi" src="../images/insta.svg" alt="instagram_logo">
         
-            <img class="reseaux_sociauxm" src="/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/medium.svg" alt="medium_logo">
+            <img class="reseaux_sociauxm" src="../images/medium.svg" alt="medium_logo">
        
 </aside>
 </div>
@@ -91,7 +75,7 @@
 </div>
      
          <div class="vignette1">
-            <img class="image_vignette1" src="/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/images_vignette1.jpg" alt="">
+            <img class="image_vignette1" src="../images/images_vignette1.jpg" alt="">
              <div class="trait_vignette1"></div>
              <h1 class="texte_vignette1">L'HISTOIRE DE LA MOMIE BORDELAISE</h1>
              <button class="voirplus_vignette1">Voir plus ></button>
@@ -99,14 +83,14 @@
      
 
          <div class="vignette2">
-       <img class="image_vignette2" src="/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/images_vignette2.jpg" alt="">
+       <img class="image_vignette2" src="../images/images_vignette2.jpg" alt="">
         <div class="trait_vignette2"></div>
         <h2 class="texte_vignette2">LE VILLAGE CACHÉ DE LA DUNE DU PILAT</h2>
         <button class="voirplus_vignette2">Voir plus ></button>
         </div>
 
         <div class="vignette5">
-            <img class="image_vignette5" src="/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/images_vignette5.jpeg" alt="">
+            <img class="image_vignette5" src="../images/images_vignette5.jpeg" alt="">
             <div class="trait_vignette5"></div>
             <h1 class="texte_vignette5">L'EFFROYABLE HISTOIRE DE LA RUE DU MIRAIL</h1>
             <button class="voirplus_vignette5">Voir plus ></button>
@@ -115,14 +99,14 @@
 
 
          <div class="vignette3">
-         <img class="image_vignette3" src="/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/images_vignette3.jpg" alt="">
+         <img class="image_vignette3" src="../images/images_vignette3.jpg" alt="">
         <div class="trait_vignette3"></div>
         <h1 class="texte_vignette3">LES MOMIES DE SAINT MICHEL</h1>
         <button class="voirplus_vignette3">Voir plus ></button>
         </div>
 
         <div class="vignette4">
-            <img class="image_vignette4" src="/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/images_vignette4.jpg" alt="">
+            <img class="image_vignette4" src="../images/images_vignette4.jpg" alt="">
             <div class="trait_vignette4"></div>
             <h1 class="texte_vignette4">LA BASE NAUTIQUE DE BORDEAUX</h1>
             <button class="voirplus_vignette4">Voir plus ></button>
@@ -133,34 +117,8 @@
 
 
  </div>
- <footer>
-     <div class="a_propos">
-     <h1 class="titre_apropos">À propos</h1>
-     <p class="texte_apropos">6 étudiants, dans une salle à Bordeaux (enfin plus vraiment), qui lisent des histoires toutes aussi terrifiantes les unes que les autres… Voici comment a été crée notre projet de blog sur les histoires terrifiantes de la belle-endormie. Si tu as déjà regardé l’intégrale de Saw ou si les threads de Squeezie n’ont aucun secret pour toi alors notre blog est fait pour toi. </p>
-    </div>
-    <div class="newsletter">
-        <h1 class="titre_newsletter">Newsletter</h1>
-        <h3 class="sous_titre_newsletter">Abonne toi à notre newsletter</h3>
-        <div class="search">
-            <input type="text" class="searchTerm" placeholder="Rechercher">
-        
-         </div>
-      
-
-
-        <div class="checkbox">
-          <input type="checkbox" value="None" id="checkbox" name="check" checked />
-          <label for="Coche la case"></label>
-          <p class="newsletter">Je vous autorise à utiliser cet email 
-            pour votre newsletter</p>
-        </div>
-        <button class="bouton_envoyer">Envoyer</button>
-        
-      
-      </section>
-    </div>
-    <img class ="remonte" src="/Applications/MAMP/htdocs/Blogart/BlogArt/FRONT/images/remonte.svg" alt="twitter_logo">
- </footer>
   </div>
+  <!-- footer -->
+ <?php require '../Require_php/footer.php'; ?>
     </body>
 </html>
