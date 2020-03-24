@@ -101,8 +101,11 @@ header
 
 .images_aside
 {
-    width: 15%;
-    height: 10%;
+    width: 90%;
+    height: 20%;
+    position: relative;
+    left: 13px;
+    border-radius: 10px;
 }
 #part1
 {
@@ -202,6 +205,9 @@ nav li
     font-weight: 100;
     font-size: 10pt;
     color: #DFFFF5;
+    position: relative;
+    left: 40px;
+    bottom: 40px;
 }
 nav a
 {
@@ -548,7 +554,7 @@ color: #B93636;
     color: #72857F;
     background-color: #092E2B;
     border-radius: 20px;
-    border-color: #72857F;
+    border: solid 1px #72857F;
     text-align: left;
     position: relative;
     left: 21%;
@@ -564,7 +570,7 @@ color: #B93636;
     color: #72857F;
     background-color: #092E2B;
     border-radius: 20px;
-    border-color: #72857F;
+    border: solid 1px #72857F;
     text-align: left;
     position: relative;
     left: 21%;
@@ -580,7 +586,7 @@ color: #B93636;
     color: #72857F;
     background-color: #092E2B;
     border-radius: 20px;
-    border-color: #72857F;
+    border: solid 1px #72857F;
     text-align: left;
     position: relative;
     left: 21%;
@@ -596,7 +602,7 @@ color: #B93636;
     color: #72857F;
     background-color: #092E2B;
     border-radius: 20px;
-    border-color: #72857F;
+    border: solid 1px #72857F;
     text-align: left;
     position: relative;
     left: 21%;
@@ -612,7 +618,7 @@ color: #B93636;
     color: #72857F;
     background-color: #092E2B;
     border-radius: 20px;
-    border-color: #72857F;
+    border: solid 1px #72857F;
     text-align: left;
     position: relative;
     left: 21%;
@@ -666,13 +672,19 @@ color: #B93636;
     font-weight: 100;
     font-size: 12pt;
     color: #72857F;
+    position: relative;
+    left: 40px;
+
 }
 .playlist
 {
     display: flex;
     width: 90%;
-    height: 30%;
+    height: 40%;
+    position: relative;
+    left: 13px;
     align-self: center;
+    border-radius: 10px;
 
 
 }
@@ -728,7 +740,7 @@ color: #B93636;
     color: #72857F;
     background-color: #092E2B;
     border-radius: 20px;
-    border-color: #72857F;
+    border-color: solid 3px #72857F;
     text-align: left;
     position: relative;
     left: 80%;
@@ -744,7 +756,7 @@ color: #B93636;
     color: #72857F;
     background-color: #092E2B;
     border-radius: 20px;
-    border-color: #72857F;
+    border-color: solid 3px #72857F;
     text-align: left;
     position: relative;
     left: 80%;
@@ -790,14 +802,6 @@ color: #B93636;
     height: 30px;
 }
 
-.search
-{
-    width: 30%;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 
 .titre_apropos
 {
@@ -854,4 +858,69 @@ footer
 {
     position: relative;
     top: 90px;
+}
+
+
+.search
+{
+	overflow: auto;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    position: relative;
+    left: 13px;
+}
+.search input
+{
+    color: #FFFFF2 ;
+}
+
+.search input[type="text"]
+{
+	border: none;
+    width: 85%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 10pt;
+    color: #FFFFF2;
+    background-color: #72857F;
+    border-radius: 20px;
+    padding: 7px;
+
+    
+}
+
+.search input[type="text"]:focus
+{
+	outline: 0;
+}
+
+.reseaux-sociaux
+{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: 40px;
+    top: 30px;
+}
+
+.trait_aside_1
+{
+    width: 30px;
+    height: 2px;
+    background-color: #B93636;
+    position: relative;
+    top: 23px;
+   
+}
+
+.trait_aside_2
+{
+    width: 30px;
+    height: 2px;
+    background-color: #B93636;
+    position: relative;
+    top: 23px;
+   
 }
