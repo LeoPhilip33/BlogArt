@@ -3,11 +3,7 @@
 	<title></title>
 </head>
 <body>
-
-
-
-	<?php 
-
+<?php 
 	function ctrlSaisies($saisie) {
 
 	  // Suppression des espaces (ou d'autres caractères) en début et fin de chaîne
@@ -34,22 +30,22 @@
 	    }
 
 
-$NumLang = "";
-$Lib1Lang = "";
-$Lib2Lang = "";
-$NumPays = "";
+  $NumLang = "";
+  $Lib1Lang = "";
+  $Lib2Lang = "";
+  $NumPays = "";
 
-$Lib1Lang = $_POST['Lib1Lang'];
-$Lib2Lang = $_POST['Lib2Lang'];
-$NumPays = $_POST['NumPays'];
+  $Lib1Lang = $_POST['Lib1Lang'];
+  $Lib2Lang = $_POST['Lib2Lang'];
+  $NumPays = $_POST['NumPays'];
 
-echo "Informations reçus : ".$Lib1Lang." ".$Lib2Lang." ".$NumPays;
+  echo "Informations reçus : ".$Lib1Lang." ".$Lib2Lang." ".$NumPays;
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     echo "<br/>Passage de condition 1 : ".$Lib1Lang." ".$Lib2Lang." ".$NumPays;
 
-  $Submit = isset($_POST['Submit']) ? $_POST['Submit'] : '';
+    $Submit = isset($_POST['Submit']) ? $_POST['Submit'] : '';
 
     echo "<br>"."Passage de condition2 : ".$Lib1Lang." ".$Lib2Lang." ".$NumPays;
 
@@ -119,12 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       die('Failed to insert Article : ' . $e->getMessage());
       $connection->rollBack();
     }
-  
-
-}
-
-	
-
+  }
 ?>
 
 

@@ -29,7 +29,7 @@
             <span class="span-text">Quel pays</span>
             <input type="hidden" id="idTypPays" name="idTypPays" value="<?php echo $NumPays; ?>" />
 						<select size="1" name="TypPays" id="TypPays"  class="form-control form-control-create" tabindex="30" >
-<?php 
+          <?php 
             $NumPays = "";
             $frPays = "";  
 
@@ -48,14 +48,14 @@
                         $ListnumPays = $tuple["numPays"];
                         $ListfrPays = $tuple["frPays"];
                         echo $ListfrPays;
-?>
+          ?>
                         <option value="<?= $ListnumPays; ?>" >
                             <?php echo $ListfrPays; ?>
                         </option>
-<?php 
+          <?php 
                     } // End of while
             }   // if ($result)
-?>
+          ?>
           </select>
 				  <span class="line"></span>            
         </div>

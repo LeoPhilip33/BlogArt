@@ -1,16 +1,13 @@
 <?php 
 require '../header.php';
 require '../db.php';
+$NumAngl="";
+$NumThem="";
+$NumLang="";
 ?>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.js"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<!-- //////////////////////////////////////////////////////////////////////// -->
-
-
-
-
-<!-- //////////////////////////////////////////////////////////////////////////////////////: -->
 
 <div class="container">
   <div class="card mt-5">
@@ -23,7 +20,7 @@ require '../db.php';
           <?= $message; ?> <!-- Echo de $message -->
         </div>
       <?php endif; ?>
-      <form class="container-contact-us" method="POST"> <!-- Si le formulaire est activé, on redirige vers action-create.php -->
+      <form class="container-contact-us" action="action-create.php" method="POST"> <!-- Si le formulaire est activé, on redirige vers action-create.php -->
         <div class="form-group">
             <span class="span-text">Titre article</span> 
             <input class="form-control" type="text" name="LibTitrA" maxlength="100" placeholder="100 caractères maximum" required> <!-- Définition du taille max et impose à se que le champ soit complété -->
@@ -78,9 +75,10 @@ require '../db.php';
         </div>
         <div class="form-group">
             <span class="span-text">Angle</span>
-            <input type="hidden" id="idTypPays" name="idTypPays" value="<?php echo $NumAngl; ?>" />
-            <select size="1" name="TypPays" id="TypPays"  class="form-control form-control-create" tabindex="30" >
+            <input type="hidden" name="NumAngl" value="<?php echo $NumAngl; ?>" />
+            <select size="1" name="NumAngl" id="SlectBox"  class="form-control form-control-create" tabindex="30" >
               <?php 
+              $NumAngl="";
               // 2. Preparation requete NON PREPAREE
               // Récupération de l'occurrence pays à partir de l'id
               $queryText = 'SELECT * FROM angle';
@@ -103,9 +101,10 @@ require '../db.php';
         </div>
         <div class="form-group">
             <span class="span-text">Thèmatique</span>
-            <input type="hidden" id="idTypPays" name="idTypPays" value="<?php echo $NumAngl; ?>" />
-            <select size="1" name="SlectBox" id="SlectBox"  class="form-control form-control-create SlectBox" tabindex="30" >
+            <input type="hidden"name="NumThem" value="<?php echo $NumThem; ?>" />
+            <select size="1" name="NumThem" id="SlectBox"  class="form-control form-control-create SlectBox" tabindex="30" >
               <?php 
+              $NumThem="";
               // 2. Preparation requete NON PREPAREE
               // Récupération de l'occurrence pays à partir de l'id
               $queryText = 'SELECT * FROM thematique';
@@ -128,9 +127,10 @@ require '../db.php';
         </div>
         <div class="form-group">
             <span class="span-text">Langue</span>
-            <input type="hidden" id="idTypPays" name="idTypPays" value="<?php echo $NumAngl; ?>" />
-            <select size="1" name="SlectBox" id="SlectBox"  class="form-control form-control-create SlectBox" tabindex="30" >
+            <input type="hidden"name="NumLang" value="<?php echo $NumLang; ?>" />
+            <select size="1" name="NumLang" id="SlectBox"  class="form-control form-control-create SlectBox" tabindex="30" >
               <?php 
+              $NumLang="";
               // 2. Preparation requete NON PREPAREE
               // Récupération de l'occurrence pays à partir de l'id
               $queryText = 'SELECT * FROM langue';
@@ -218,152 +218,3 @@ require '../db.php';
   </div>
 </div>
 <?php require '../footer.php'; ?> <!-- Va chercher le fichier footer.php -->
-
-
-
-
-<?php
-function ctrlSaisies($saisie) {
-
-  // Suppression des espaces (ou d'autres caractères) en début et fin de chaîne
-  $saisie = trim($saisie);
-  // Suppression des antislashs d'une chaîne
-  $saisie = stripslashes($saisie);
-  // Conversion des caractères spéciaux en entités HTML 
-  $saisie = htmlentities($saisie);
-
-  return $saisie;
-}
-
-$hostBD = "localhost";
-$nomBD = "blogart20";
-$userBD = 'root';
-$passBD = '';
-try {
-        $connection = new PDO("mysql:dbname=$nomBD;host=$hostBD;charset=utf8", $userBD, $passBD);
-        $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    } 
-    catch (PDOException $error) {
-        die('Failed to connect : ' . $error->getMessage());
-    }
-
-$NumArt = " ";
-$DtCreA = " ";
-$LibTitrA = $_POST['LibTitrA'];
-$LibChapoA = $_POST['LibChapoA'];
-$LibAccrochA = $_POST['LibAccrochA'];
-$Parag1A = $_POST['Parag1A'];
-$LibSsTitr1 = $_POST['LibSsTitr1'];
-$Parag2A = $_POST['Parag2A'];
-$LibSsTitr2 = $_POST['LibSsTitr2'];
-$Parag3A = $_POST['Parag3A'];
-$LibConclA = $_POST['LibConclA'];
-$UrlPhotA = $_POST['UrlPhotA'];
-$Likes = 0;
-$NumAngl = " ";
-$NumThem = " ";
-$NumLang = $_POST['NumLang'];
-
-if (isset($_POST['Submit'])) {
-  $erreur = false;
-  $NumLang = 0;
-
-  $PseudoAuteur = (ctrlSaisies($_POST["PseudoAuteur"]));
-  $EmailAuteur = (ctrlSaisies($_POST["EmailAuteur"]));
-  $TitrCom = (ctrlSaisies($_POST["TitrCom"]));
-  $LibCom = (ctrlSaisies($_POST["LibCom"]));
-
-  $requete = "SELECT MAX(NumArt) AS NumArt FROM ARTICLE";
-  $result = $connection->query($requete);
-  $tuple = $result->fetch();
-  $tuple = (int)end($tuple);
-  $tuple++;
-  $NumArt = $tuple;
-
-  $DtCreA = date("Y-m-d");
-  $DtCreAd = date("H-i-s");
-  $DtCreA = $DtCreA." ".$DtCreAd;
-  $requete = "SELECT MAX(NumAngl) AS NumAngl FROM ANGLE";
-  $result = $connection->query($requete);
-  $tuple = $result->fetch();
-  $tuple = explode("L", $tuple);
-  $tuple = $tuple[1];
-  echo $tuple;
-  $tuple = (int)end($tuple);
-  $tuple++;
-  if( $tuple < 1000){
-    $NumAngl = "ANGL0".$tuple;
-  }else{
-    $NumAngl = "ANGL".$tuple;
-  }
-  echo $NumAngl;
-
-  // $requete = "SELECT MAX(NumThem) AS NumThem FROM THEMATQUE";
-  // $result = $connection->query($requete);
-  // $tuple = $result->fetch();
-  // $tuple = explode("E", $tuple);
-  // $tuple = $tuple[1];
-  // $tuple = (int)end($tuple);
-  // $tuple++;
-  // if( $tuple < 1000){
-  //   $tuple = "THE0".$tuple;
-  // }else{
-  //   $tuple = "THE".$tuple;
-  // }
-  // $NumAngl = $tuple;
- 
-  try {
-    $connection->beginTransaction();
-
-    echo "<br>"."Dernier echo avant le SEND : ".$NumArt." ".$DtCreA." ".$LibTitrA." ".$LibChapoA." ".$LibAccrochA." ".$Parag1A." ".$LibSsTitr1." ".$Parag2A." ".$LibSsTitr2." ".$Parag3A." ".$LibConclA." ".$UrlPhotA." ".$Likes." ".$NumAngl." ".$NumThem." ".$NumLang."<br><br>";
-    $query = $connection->prepare("INSERT INTO ARTICLE (NumArt, DtCreA, LibTitrA, LibChapoA, LibAccrochA, Parag1A, LibSsTitr1, Parag2A, LibSsTitr2, Parag3A, LibConclA, UrlPhotA, Likes, NumAngl, NumThem, NumLang) VALUES (:NumArt, :DtCreA, :LibTitrA, :LibChapoA, :LibAccrochA, :Parag1A, :LibSsTitr1, :Parag2A, :LibSsTitr2, :Parag3A, :LibConclA, :UrlPhotA, :Likes, :NumAngl, :NumThem, :NumLang)");
-
-    $query->execute(
-      array(
-        ':NumArt' => $NumArt,
-        ':DtCreA' => $DtCreA, 
-        ':LibTitrA' => $LibTitrA,
-        ':LibChapoA' => $LibChapoA,
-        ':LibAccrochA' => $LibAccrochA,
-        ':Parag1A' => $Parag1A,
-        ':LibSsTitr1' => $LibSsTitr1,
-        ':Parag2A' => $Parag2A,
-        ':LibSsTitr2' => $LibSsTitr2,
-        ':Parag3A' => $Parag3A,
-        ':LibConclA' => $LibConclA,
-        ':UrlPhotA' => $UrlPhotA,
-        ':Likes' => $Likes,
-        ':NumAngl' => $NumAngl,
-        ':NumThem' => $NumThem,
-        ':NumLang' => $NumLang
-      )
-    );
-
-    $Col1_Array = $_POST['MotsCleSelect'];
-    print_r($Col1_Array);
-    $connection->beginTransaction();
-    foreach($Col1_Array as $selectValue){ //affichage des valeurs sélectionnées
-
-      $sql = "SELECT NumMocle FROM motcle WHERE LibMoCle = '$selectValue'";
-      $statement = $connection->prepare($sql);
-      $statement->execute();
-      $NumMocle = $statement->fetch();
-      
-      echo "<br>"."Dernier echo avant le SEND : ".$NumArt." ".$NumMoCle."<br><br>";
-      $query = $connection->prepare("INSERT INTO ARTICLE (NumArt, NumMoCle) VALUES (:NumArt, :NumMoCle)");
-      $query->execute(array(':NumArt' => $NumArt, ':NumMoCle' => $NumMoCle));
-    }
-
-    $langid = $NumCom;
-    $connection->commit();
-    $query->closeCursor();
-    header("Location:index.php");
-  }
-  catch (PDOException $e) {
-    die('Failed to insert Commentaire : ' . $e->getMessage());
-    $connection->rollBack();
-  }
-}
-
-?>
