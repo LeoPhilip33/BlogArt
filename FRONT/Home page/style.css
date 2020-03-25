@@ -258,7 +258,7 @@ color: #B93636;
     background-color: #B93636;
     position: relative;
     left: 55%;
-    bottom: 110%;
+    bottom: 92%;
 }
 
 .trait_article_homepage_1
@@ -268,7 +268,7 @@ color: #B93636;
     background-color: #B93636;
     position: relative;
     left: 55%;
-    bottom: 110%;
+    bottom: 92%;
 }
 .texte_article
 {
@@ -644,6 +644,7 @@ color: #B93636;
     
 }
 
+
 .voirplus_vignette2
 {
    
@@ -809,10 +810,10 @@ color: #B93636;
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
-    font-size: 100%s;
+    font-size: 110%;
     color: #181C1B;
     background-color:rgba(185, 54, 54, 0.75);
-    width: 60%;
+    width: 48%;
     margin: 0;
     position: relative;
     left: 5%;
@@ -823,7 +824,7 @@ color: #B93636;
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 90%;
+    font-size: 80%;
     color: #181C1B;
     background-color: rgba(185, 54, 54, 0.75);
     width: 37%;
@@ -856,11 +857,12 @@ color: #B93636;
     color: #72857F;
     background-color: #092E2B;
     border-radius: 20px;
-    border-color: solid 2px #72857F;
+    border-color: #72857F;
+    border-width: 2%;
     text-align: left;
     position: relative;
-    left: 80%;
-    margin-top: 6%;
+    left: 75%;
+    top: 70px;
 
 }
 
@@ -872,11 +874,12 @@ color: #B93636;
     color: #72857F;
     background-color: #092E2B;
     border-radius: 20px;
-    border-color: solid 2px #72857F;
+    border-color: #72857F;
+    border-width: 2%;
     text-align: left;
     position: relative;
-    left: 80%;
-    margin-top: 6%;
+    left: 75%;
+    top: 90%;
 
 }
 
@@ -1007,3 +1010,308 @@ color: #B93636;
     text-decoration: underline;
     border-color: #72857F; 
 }
+
+
+@media screen and (max-width: 1024px)
+{
+    .bouton_voirplus1
+    {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 100%;
+    color: #72857F;
+    background-color: #092E2B;
+    border-radius: 20px;
+    border-color: #72857F;
+    border-width: 2%;
+    text-align: left;
+    position: relative;
+    left: 55%;
+    top: 90%;
+    margin-top: 6%;
+
+    }
+
+    .bouton_voirplus2
+    {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 100%;
+    color: #72857F;
+    background-color: #092E2B;
+    border-radius: 20px;
+    border-color: #72857F;
+    border-width: 2%;
+    text-align: left;
+    position: relative;
+    top: 90%;
+    left: 55%;
+    }
+    .article_homepage_1
+    {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        background-color: #092E2B;
+        border-radius: 20px;
+        
+    }
+
+
+    .image_homepage_part1
+    {
+    display: none;
+    }
+
+    .article_homepage_2
+    {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        background-color: #092E2B;
+        border-radius: 20px;
+    }
+    
+    #part1
+    {
+        display: grid;
+        grid-template-columns: 31% 31% 31%;
+        grid-template-rows: 4.1% 30% 30% 30%;
+        grid-column-gap: 7%;
+        grid-row-gap: 5%;
+        height: 500px;
+    
+    }
+    .dernieres_sorties
+    {
+    grid-row-start: 2;
+    grid-row-end: 3; 
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-image: url(../images/photo_dernieres_sorties.jpg);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    }
+    
+    .titre_derniere_sortie
+    {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 100%;
+    color: #181C1B;
+    background-color:rgba(185, 54, 54, 0.75);
+    width: 48%;
+    margin: 0;
+    position: relative;
+    left: 5%;
+    top: 40%;
+    }
+    .sous_titre_ds
+    {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 80%;
+    color: #181C1B;
+    background-color: rgba(185, 54, 54, 0.75);
+    width: 37%;
+    margin: 0;
+    position: relative;
+    left: 5%;
+    top: 46%;
+    }
+    .titre_article
+    {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 100%;
+    color: #72857F;
+    width: 100%;
+    margin: 0;
+    position: relative;
+    text-align: left;
+    left: 12%; 
+    top: 100%;
+    }
+    .trait_article_homepage_2
+    {
+    width: 40px;
+    height: 2px;
+    background-color: #B93636;
+    position: relative;
+    left: 10%;
+    bottom: 15%;
+    }
+
+    .trait_article_homepage_1
+    {
+    width: 40px;
+    height: 2px;
+    background-color: #B93636;
+    position: relative;
+    left: 10%;
+    bottom: 15%;
+    }
+    .texte_article
+    {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 85%;
+    color: #DFFFF5;
+    position: relative;
+    text-align: left;
+    left: 8%;
+    top: 30%;
+    width : 100%;
+    margin: 0;
+    margin-top: 3%;
+    }
+
+    .titre_homepage2
+    {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 100%;
+    color: #72857F;
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    }
+
+    aside
+    {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: #092E2B;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    }
+
+    .trait_aside_1
+    {
+    background-color: #B93636;
+    position: relative;
+    top: -50px;
+    width: 30%;
+    left: 35%;
+   
+    }
+
+    .trait_aside_2
+    {
+        display: none;
+   
+    }   
+    .images_aside
+    {
+    display: none;
+    /*width: 90%;
+    height: 14.61%;
+    /*position: relative;
+    left: 13px;
+    border-radius: 10px;*/
+    }
+    .titre2_aside
+    {
+        display: none;
+    }      
+    .playlist
+    {
+    /*display: flex;
+    width: 90%;
+    height: 38.68%;
+    position: relative;
+    left: 13px;
+    align-self: center;
+    border-radius: 10px;*/
+    width: 0;
+    height: 0;
+
+    }
+    .titre_aside
+    {
+    /*font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 100%;
+    color: #72857F;
+    position: relative;
+    left: 25%;*/
+    display: none;
+    }
+
+    .reseaux_sociauxt
+    {
+    width: 30px;
+    height: 30px;
+    }
+
+    .reseaux_sociauxi
+    {
+    width: 30px;
+    height: 30px;
+    }
+    .reseaux_sociauxm
+    {
+    width: 30px;
+    height: 30px;
+    }
+
+
+    .search
+    {
+	overflow: auto;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    position: relative;
+    left: 8%;
+    width: 95%;
+    height: 40%;
+    top: 25%;
+    }
+    .search input
+    {
+    color: #FFFFF2 ;
+    }
+
+    .search input[type="text"]
+    {
+	border: none;
+    width: 85%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 10pt;
+    color: #FFFFF2;
+    background-color: #72857F;
+    border-radius: 20px;
+    padding: 7px;
+
+    
+    }
+
+    .search input[type="text"]:focus
+    {
+	outline: 0;
+    }
+
+    .reseaux-sociaux
+    {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: 20%;
+    top: 30%;
+}
+    
+}
+
