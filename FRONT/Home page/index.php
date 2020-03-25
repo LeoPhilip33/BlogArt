@@ -89,6 +89,13 @@
              <h1 class="texte_vignette1">L'HISTOIRE DE LA MOMIE BORDELAISE</h1>
              <button class="voirplus_vignette1">Voir plus ></button>
          </div>
+
+         <div class="vignette7">
+            <div class="image_vignette7"> </div>
+             <div class="trait_vignette7"></div>
+             <h1 class="texte_vignette7">L'HISTOIRE DE LA MOMIE BORDELAISE</h1>
+             <button class="voirplus_vignette7">Voir plus ></button>
+         </div>
      
 
          <div class="vignette2">
@@ -119,6 +126,13 @@
             <div class="trait_vignette4"></div>
             <h1 class="texte_vignette4">LA BASE NAUTIQUE DE BORDEAUX</h1>
             <button class="voirplus_vignette4">Voir plus ></button>
+            </div>
+
+            <div class="vignette6">
+        <div class="image_vignette6"> </div>
+            <div class="trait_vignette6"></div>
+            <h1 class="texte_vignette6">L'EFFROYABLE HISTOIRE DE LA RUE DU MIRAIL</h1>
+            <button class="voirplus_vignette5">Voir plus ></button>
             </div>
     
     

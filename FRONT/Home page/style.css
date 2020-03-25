@@ -117,10 +117,10 @@ header
 #part2
 {
     display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
-    grid-template-rows: 5% 5% 26.67% 26.67% 36.67%;
-    grid-column-gap: 50px;
-    grid-row-gap: 50px;
+    grid-template-columns: 32.55% 32.55% 32.55%;
+    grid-template-rows: 5.61% 26.61% 26.61% 26.61%;
+    grid-column-gap: 2.86%;
+    grid-row-gap: 5.33%;
     height: 800px;
     position: relative;
     top: 90px;
@@ -289,8 +289,13 @@ color: #B93636;
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 140%;
+    font-size: 100%;
     color: #72857F;
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
 
 
@@ -300,7 +305,7 @@ color: #B93636;
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 100%;
+    font-size: 85%;
     color: #72857F;
     width: 53%;
     margin: 0;
@@ -317,7 +322,7 @@ color: #B93636;
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 100%;
+    font-size: 85%;
     color: #72857F;
     width: 53%;
     margin: 0;
@@ -334,7 +339,7 @@ color: #B93636;
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 100%;
+    font-size: 85%;
     color: #72857F;
     width: 53%;
     margin: 0;
@@ -351,7 +356,7 @@ color: #B93636;
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 100%;
+    font-size: 85%;
     color: #72857F;
     width: 53%;
     margin: 0;
@@ -368,7 +373,41 @@ color: #B93636;
     display: inline-block;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
-    font-size: 100%;
+    font-size: 85%;
+    color: #72857F;
+    width: 53%;
+    margin: 0;
+    position: relative;
+    left: 14%;
+    margin-block-start: 0.5px; 
+    margin-block-end: 0.5px; 
+    writing-mode: horizontal-tb;
+    top: 2%;
+}
+
+.texte_vignette6
+{
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 85%;
+    color: #72857F;
+    width: 53%;
+    margin: 0;
+    position: relative;
+    left: 14%;
+    margin-block-start: 0.5px; 
+    margin-block-end: 0.5px; 
+    writing-mode: horizontal-tb;
+    top: 2%;
+}
+
+.texte_vignette7
+{
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 85%;
     color: #72857F;
     width: 53%;
     margin: 0;
@@ -386,7 +425,7 @@ color: #B93636;
     height: 2px;
     background-color: #A43F3E;
     position: relative;
-    top: 14%;
+    top: 11%;
 }
 
 .trait_vignette2
@@ -395,7 +434,7 @@ color: #B93636;
     height: 2px;
     background-color: #A43F3E;
     position: relative;
-    top: 14%;
+    top: 11%;
 }
 
 .trait_vignette3
@@ -404,7 +443,7 @@ color: #B93636;
     height: 2px;
     background-color: #A43F3E;
     position: relative;
-    top: 14%;
+    top: 11%;
 }
 
 .trait_vignette4
@@ -413,7 +452,7 @@ color: #B93636;
     height: 2px;
     background-color: #A43F3E;
     position: relative;
-    top: 14%;
+    top: 11%;
 }
 
 .trait_vignette5
@@ -422,7 +461,25 @@ color: #B93636;
     height: 2px;
     background-color: #A43F3E;
     position: relative;
-    top: 14%;
+    top: 11%;
+}
+
+.trait_vignette6
+{
+    width: 10%;
+    height: 2px;
+    background-color: #A43F3E;
+    position: relative;
+    top: 11%;
+}
+
+.trait_vignette7
+{
+    width: 10%;
+    height: 2px;
+    background-color: #A43F3E;
+    position: relative;
+    top: 11%;
 }
 
 
@@ -430,7 +487,7 @@ color: #B93636;
 {
     background-image: url(../images/images_vignette1.jpg);
     width: 100%;
-    height: 70%;
+    height: 76.58%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -439,7 +496,7 @@ color: #B93636;
 {
     background-image: url(../images/images_vignette2.jpg);
     width: 100%;
-    height: 70%;
+    height: 76.58%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -447,7 +504,7 @@ color: #B93636;
 {
     background-image: url(../images/images_vignette3.jpg);
     width: 100%;
-    height: 70%;
+    height: 76.58%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -455,7 +512,7 @@ color: #B93636;
 {
     background-image: url(../images/images_vignette4.jpg);
     width: 100%;
-    height: 70%;
+    height: 76.58%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -463,12 +520,66 @@ color: #B93636;
 {
     background-image: url(../images/images_vignette5.jpg);
     width: 100%;
-    height: 70%;
+    height: 76.58%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.image_vignette6
+{
+    background-image: url(../images/images_vignette5.jpg);
+    width: 100%;
+    height: 76.58%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.image_vignette7
+{
+    background-image: url(../images/images_vignette5.jpg);
+    width: 100%;
+    height: 76.58%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
 
 .vignette1
+{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: #092E2B;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.vignette2
+{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: #092E2B;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.vignette3
+{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background-color: #092E2B;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.vignette4
 {
     grid-row-start: 3;
     grid-row-end: 4;
@@ -477,10 +588,11 @@ color: #B93636;
     background-color: #092E2B;
     border-radius: 15px;
     width: 100%;
-    height: 110%;
+    height: 100%;
+
 }
 
-.vignette2
+.vignette5
 {
     grid-row-start: 3;
     grid-row-end: 4;
@@ -489,10 +601,10 @@ color: #B93636;
     background-color: #092E2B;
     border-radius: 15px;
     width: 100%;
-    height: 110%;
+    height: 100%;
 }
 
-.vignette3
+.vignette6
 {
     grid-row-start: 3;
     grid-row-end: 4;
@@ -501,10 +613,10 @@ color: #B93636;
     background-color: #092E2B;
     border-radius: 15px;
     width: 100%;
-    height: 110%;
+    height: 100%;
 }
 
-.vignette4
+.vignette7
 {
     grid-row-start: 4;
     grid-row-end: 5;
@@ -513,34 +625,21 @@ color: #B93636;
     background-color: #092E2B;
     border-radius: 15px;
     width: 100%;
-    height: 110%;
-
-}
-
-.vignette5
-{
-    grid-row-start: 4;
-    grid-row-end: 5;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    background-color: #092E2B;
-    border-radius: 15px;
-    width: 100%;
-    height: 110%;
+    height: 100%;
 }
 
 .voirplus_vignette1
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
-    font-size: 90%;
+    font-size: 80%;
     color: #72857F;
     background-color: #092E2B;
     border-radius: 20px;
     border: solid 1px #72857F;
     text-align: left;
     position: relative;
-    left: 21%;
+    left: 14%;
     bottom: 6%;
     
 }
@@ -550,15 +649,15 @@ color: #B93636;
    
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
-    font-size: 90%;
+    font-size: 80%;
     color: #72857F;
     background-color: #092E2B;
     border-radius: 20px;
     border: solid 1px #72857F;
     text-align: left;
     position: relative;
-    left: 21%;
-    bottom: 6%;
+    left: 14%;
+    bottom: 14px;
     
 }
 
@@ -566,15 +665,15 @@ color: #B93636;
 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
-    font-size: 90%;
+    font-size: 80%;
     color: #72857F;
     background-color: #092E2B;
     border-radius: 20px;
     border: solid 1px #72857F;
     text-align: left;
     position: relative;
-    left: 21%;
-    bottom: 6%;
+    left: 14%;
+    bottom: 14px;
 }
 
 .voirplus_vignette4
@@ -582,15 +681,15 @@ color: #B93636;
    
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
-    font-size: 90%;
+    font-size: 80%;
     color: #72857F;
     background-color: #092E2B;
     border-radius: 20px;
     border: solid 1px #72857F;
     text-align: left;
     position: relative;
-    left: 21%;
-    bottom: 6%;
+    left: 14%;
+   bottom: 7%;
 }
 
 .voirplus_vignette5
@@ -598,21 +697,53 @@ color: #B93636;
 
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
-    font-size: 90%;
+    font-size: 80%;
     color: #72857F;
     background-color: #092E2B;
     border-radius: 20px;
     border: solid 1px #72857F;
     text-align: left;
     position: relative;
-    left: 21%;
+    left: 14%;
+    bottom: 14px;
+}
+
+.voirplus_vignette6
+{
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 80%;
+    color: #72857F;
+    background-color: #092E2B;
+    border-radius: 20px;
+    border: solid 1px #72857F;
+    text-align: left;
+    position: relative;
+    left: 14%;
+    bottom: 14px;
+}
+
+.voirplus_vignette7
+{
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 80%;
+    color: #72857F;
+    background-color: #092E2B;
+    border-radius: 20px;
+    border: solid 1px #72857F;
+    text-align: left;
+    position: relative;
+    left: 14%;
     bottom: 6%;
 }
 
 .menu_part2
 {
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 3;
     display: flex;
@@ -620,8 +751,9 @@ color: #B93636;
     align-content: flex-start;
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
-    font-size: 100%;
+    font-size: 90%;
     color: #72857F;
+    margin-top: 4%;
 
 }
 
