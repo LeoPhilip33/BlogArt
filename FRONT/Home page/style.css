@@ -1018,7 +1018,7 @@ color: #B93636;
     {
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
-    font-size: 100%;
+    font-size: 90%;
     color: #72857F;
     background-color: #092E2B;
     border-radius: 20px;
@@ -1036,7 +1036,7 @@ color: #B93636;
     {
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
-    font-size: 100%;
+    font-size: 90%;
     color: #72857F;
     background-color: #092E2B;
     border-radius: 20px;
@@ -1044,8 +1044,8 @@ color: #B93636;
     border-width: 2%;
     text-align: left;
     position: relative;
-    top: 90%;
-    left: 55%;
+    top: 100%;
+    left: 70%;
     }
     .article_homepage_1
     {
@@ -1143,7 +1143,7 @@ color: #B93636;
     background-color: #B93636;
     position: relative;
     left: 10%;
-    bottom: 15%;
+    bottom: 3%;
     }
 
     .trait_article_homepage_1
@@ -1153,7 +1153,7 @@ color: #B93636;
     background-color: #B93636;
     position: relative;
     left: 10%;
-    bottom: 15%;
+    bottom: 3%;
     }
     .texte_article
     {
@@ -1164,10 +1164,21 @@ color: #B93636;
     position: relative;
     text-align: left;
     left: 8%;
-    top: 30%;
     width : 100%;
-    margin: 0;
-    margin-top: 3%;
+    }
+
+    .texte_article1
+    {
+    position: relative;
+    top: 5px;
+    width: 80%;
+    }
+
+    .texte_article2
+    {
+    position: relative;
+    top: 5px;
+    width: 80%;
     }
 
     .titre_homepage2
