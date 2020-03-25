@@ -1,11 +1,3 @@
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-
-
-
 	<?php 
 
 	function ctrlSaisies($saisie) {
