@@ -209,6 +209,9 @@ body,html{
     width: 29.74%;
     background-color: white;
     border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center center;
 }
 .titreartrech{
     margin: 0;
