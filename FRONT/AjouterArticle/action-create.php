@@ -103,7 +103,7 @@
       $langid = $NumCom;
       $connection->commit();
       $query->closeCursor();
-      header("Location:index.php");
+      header("Location:sent.php?id=".$NumArt);
     }
     catch (PDOException $e) {
       die('Failed to insert Commentaire : ' . $e->getMessage());

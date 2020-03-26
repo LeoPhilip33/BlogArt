@@ -164,7 +164,7 @@ $NumLang="";
                     <div class="list1">
 
                         <span class="span-text">Mots clés disponibles</span>
-                        <select class="form-control" id ="features" name="Features[]" multiple="multiple" style="height:200px;">
+                        <select class="form-control" id ="features" name="Features[]" multiple="multiple" style="height:150px;">
                             <?php 
                             // 2. Preparation requete NON PREPAREE
                             // Récupération de l'occurrence pays à partir de l'id
@@ -191,7 +191,7 @@ $NumLang="";
                     </div>
                     <div class="btnsaddsuppr">
                         <div class="input-group btnadd">
-                            <button type="button" value="" class="btn btn-xs btn-primary" id="add">Ajouter >></button>
+                            <button type="button" value="" class="btn btn-xs btn-primary " id="add">Ajouter >></button>
                         </div>
                         <div class="input-group btnspr">
                             <button type="button" value="" class="btn btn-xs btn-danger" id="remove"><< Supprimer</button> 
@@ -199,30 +199,30 @@ $NumLang="";
                     </div>
                     <div class="list2">
                         <span class="span-text">Mots clés ajoutés</span>
-                        <select class="form-control" name="MotsCleSelect[]" required size="9" id="selected_features" multiple="multiple" style="height:200px;">
+                        <select class="form-control" name="MotsCleSelect[]" required size="9" id="selected_features" multiple="multiple" style="height:150px;">
                         </select>
                     </div>
                 </div>
             <script type="text/javascript">
                 $(document).ready(function(){
-                $('#add').click(function() {  
-                    return !$('#features option:selected')
-                .remove().appendTo('#selected_features');  
-                });  
-                $('#remove').click(function() {  
-                    return !$('#selected_features option:selected')
-                .remove().appendTo('#features');  
-                });  
-                    
-                function selectall()  {  
-                $('#selected_features').find('option').each(function() {  
-                $(this).attr('selected', 'selected');  
-                });  
-                }  
+                    $('#add').click(function() {  
+                        return !$('#features option:selected')
+                        .remove().appendTo('#selected_features');  
+                    });  
+                    $('#remove').click(function() {  
+                        return !$('#selected_features option:selected')
+                        .remove().appendTo('#features');  
+                    });  
+                        
+                    function selectall()  {  
+                        $('#selected_features').find('option').each(function() {  
+                            $(this).attr('selected', 'selected');  
+                        });  
+                    }  
                 });
             </script>
-            <div class="form-group">
-            <button type="submit" value="submit" class="btn btn-info">Ajouter l'article</button>
+            <div class="form-group formsub">
+                <button type="submit" value="submit" class="btnsub">Ajouter l'article</button>
             </div>
         </form>
         </div>
