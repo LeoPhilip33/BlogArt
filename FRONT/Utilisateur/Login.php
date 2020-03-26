@@ -33,6 +33,9 @@
                     }
                 ?>
             </div>
+            <div class="barlat">
+                <?php require '../Require_php/barlat.php'; ?>
+            </div>
         </div>
         <?php require '../Require_php/footer.php'; ?>
     </body>
