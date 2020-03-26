@@ -34,11 +34,11 @@
                 ?>
             </div>
         </div>
+        <?php require '../Require_php/footer.php'; ?>
     </body>
 </html>
 
 <?php
-    session_start();
     require '../db.php';
 
     if (isset($_POST['confirm_login'])) {
