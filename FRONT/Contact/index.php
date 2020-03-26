@@ -147,7 +147,7 @@
                 <p class="phrasecont">Si la terreur ne te fais pas peur… Contacte-nous!</p>
                 <?= $message_envoye ?>
                 <?= $message_non_envoye ?>
-                <?= $$message_erreur_formulaire ?>
+                <?= $message_erreur_formulaire ?>
                 <div class="form-row">
                   <div class="form-group">
                     <label for="nom">Nom:</label>
