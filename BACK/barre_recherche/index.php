@@ -19,7 +19,7 @@ if(isset($_GET['q']) AND !empty($_GET['q'])) {
 <?php if($articles->rowCount() > 0) { ?>
    <ul>
    <?php while($a = $articles->fetch()) { ?>
-      <li><?= $a['LibTitrA'] ?></li>
+      <li><?= "<a href=''>".$a['LibTitrA']."</a>" ?></li>
    <?php } ?>
    </ul>
 <?php } else { ?>
