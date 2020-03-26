@@ -9,11 +9,26 @@
     background-color: #092E2B;
     border-radius: 20px;
 }
+.monformlaire{
+    width: 77.12%;
+    margin-top: 37px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .barlat{
     margin-left: 2.84%;
     width: 300px;
     background-color: #092E2B;
     border-radius: 20px;
+}
+.form-group span{
+    color: #F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 17px;
+    padding: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 .titrecont{
     margin-left: 11.44%;
@@ -49,18 +64,75 @@
     margin-left: 11.44%;
     width: 42.45%;
 }
-.form-group textarea,.form-group input{
+.form-group textarea,.form-group input,.form-group select{
     background-color: #092E2B;
     border: solid;
     border-color: #F8F8F8;
     border-radius: 9px;
     border-width: 2px;
-    height: 30px;
+    height: 40px;
     color: #72857F;
     font-family: 'Montserrat';
     font-weight: 400;
     font-size: 17px;
     padding-left: 10px;
+}
+.list1{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.list1 span{
+    color: #F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 17px;
+}
+.list2 span{
+    color: #F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 17px;
+}
+.list1 select{
+    background-color: #092E2B;
+    border: solid;
+    border-color: #F8F8F8;
+    border-radius: 9px;
+    border-width: 2px;
+}
+.list2 select{
+    background-color: #092E2B;
+    border: solid;
+    border-color: #F8F8F8;
+    border-radius: 9px;
+    bor
+    der-width: 2px;
+}
+option{
+    color: #72857F;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 17px;
+}
+.list2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+}
+.btnsaddsuppr{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.selectmotcle{
+    margin-left: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 .form-group{
     display: flex;
@@ -129,16 +201,16 @@
     width: 40px;
     height: 40px;
 }
-.newmenu ul .li_con a{
+.newmenu ul .li_re a{
     color: #B93636;
 }
-.navbar ul .con a{
+.navbar ul .re a{
     color: #B93636;
 }
-.s_con{
-    width:17px;
+.s_re{
+    width:17px !important;
 }
-.tir_con{
+.tir_re{
     background-color: #B93636;
 }
 @media (max-width: 1500px){
