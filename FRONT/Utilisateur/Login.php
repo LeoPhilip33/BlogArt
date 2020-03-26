@@ -12,16 +12,15 @@
         <!-- mennu -->
         <div class="content">
             <div class="fichecontact">
-                <h3 class="titrecont">Contact</h3>
+                <h3 class="titrecont">Login</h3>
                 <form class="formcont" method="POST">
-                    <p class="phrasecont">Si la terreur ne te fais pas peur… Connecte-nous!</p>
                     <div class="form-group">
                         <label for="email">Identifiant :</label>
                         <input type="email" name="email" class="form-control" placeholder="Adresse Email" maxlength="45" required>
                     </div>
                     <div class="form-group">
                         <label for="objet">Mot de passe :</label>
-                        <input type="text" name="objet" class="form-control" placeholder="Objet" maxlength="45" required>
+                        <input type="text" name="objet" class="form-control" placeholder="Mot de passe" maxlength="45" required>
                     </div>
                     <div class="form-group">
                         <button type="envoyer" value="ok"class="btn btn-primary">Envoyer</button>

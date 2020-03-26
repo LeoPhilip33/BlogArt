@@ -14,6 +14,7 @@ body,html{
     width: 73.87%;
     background-color: #092E2B;
     border-radius: 20px;
+    margin-bottom: auto;
 }
 .barlat{
     margin-left: 2.84%;
@@ -54,6 +55,7 @@ body,html{
 .formcont{
     margin-left: 11.44%;
     width: 42.45%;
+    margin-bottom: 42px;
 }
 .form-group textarea,.form-group input{
     background-color: #092E2B;
