@@ -4,21 +4,9 @@
             <img src="../images/search.png" alt="" class="louperech">
         </div>
         <form class="search-form" method="GET">
-            <input type="search" name="search" placeholder="Rechercher">
+            <input type="search" action="recherche.php" class="searchbarlat" name="searchbarlat" id="searchbarlat" onsubmit="handle" placeholder="Rechercher">
         </form>
-        <?php
- 
-            require '../db.php';
-            
-            $articles = $connection->query('SELECT LibTitrA FROM article ORDER BY NumArt DESC');
-            if(isset($_GET['search']) AND !empty($_GET['search'])) {
-                $q = htmlspecialchars($_GET['q']);
-                $articles = $connection->query('SELECT LibTitrA FROM article WHERE LibTitrA LIKE "%'.$q.'%" ORDER BY NumArt DESC');
-                    if($articles->rowCount() == 0) {
-                        $articles = $connection->query('SELECT LibTitrA FROM article WHERE CONCAT(LibTitrA, LibChapoA) LIKE "%'.$q.'%" ORDER BY NumArt DESC');
-                    }
-            }
-        ?>
+        
 
     </div>
     <div class="div_titre_barlat">
