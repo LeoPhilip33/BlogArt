@@ -28,6 +28,7 @@ html, body{
     width: 300px;
     background-color: #092E2B;
     border-radius: 20px;
+    margin-bottom: auto;
 }
 .titrecont{
     margin-left: 11.44%;
@@ -451,4 +452,172 @@ li{
 }
 .contentbtn{
     padding-left: 100%;
+}
+/* ////////////////bar lat///////////////////: */
+
+.search
+{
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    background-color: #72857F;
+    border-radius: 20px;
+    display: flex;
+    height: 35px;
+}
+.divloupe{
+    height: 35px;
+    width: 15%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.louperech{
+    height: 15px;
+    width: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+    fill: white;
+}
+.search-form
+{
+    color: #FFFFF2 ;
+    width: 85%;
+    height: 35px;
+}
+.search-form input{
+    color: thistle;
+    background-color: #72857F;
+    height: 100%;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    border-top-right-radius:20px;
+    border-bottom-right-radius:20px;
+    border-right: ;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #FFFFF2;
+}
+.search-form input::placeholder{
+    color: thistle;
+    background-color: #72857F;
+    height: 100%;
+    border: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #092E2B;
+}
+
+.search input[type="text"]:focus
+{
+	outline: 0;
+}
+.reseaux-sociaux
+{
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+    display: flex;
+    margin-top: 17px;
+    justify-content: space-around;
+
+}
+
+.trait_aside
+{
+    width: 30px;
+    height: 2px;
+    background-color: #B93636;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+   
+}
+.div_titre_barlat{
+    width: 90%;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 17px;
+    margin-bottom: 5px;
+}
+.reseaux_sociauxt
+{
+    width: 30px;
+    height: 30px;
+}
+
+.reseaux_sociauxi
+{
+    width: 30px;
+    height: 30px;
+}
+.reseaux_sociauxm
+{
+    width: 30px;
+    height: 30px;
+}
+.images_aside
+{
+    width: 90%;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+.titre2_aside
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: #DFFFF5;
+    margin-top: auto;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+aside
+{
+    grid-row-start: 2;
+    grid-row-end: 5;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background-color: #092E2B;
+    border-radius: 20px;
+    padding: 5%;
+
+}
+.playlist
+{
+    display: flex;
+    width: 90%;
+    height: 250px;
+    position: relative;
+    left: 13px;
+    align-self: center;
+    border-radius: 10px;
+}
+
+.titre_aside
+{
+    margin: 0;
+    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: #72857F;
+    margin-left: 5px;
+
 }

@@ -46,32 +46,7 @@
     </div>
     <div class="trait_article_homepage_2"></div>
 </div>
-<aside>
-
-<div class="search">
-				<form class="search-form">
-					<input type="text" placeholder="Rechercher">
-				</form>
-			</div>
-        
-        
-         <div class="trait_aside_1"></div>
-        <h1 class="titre_aside">Article récent</h1>
-        <img class="images_aside" src="../images/images_aside_1.jpg" alt="Aside photo">
-        <h2 class="titre2_aside">La bête du Gévaudan</h2>
-        <div class="trait_aside_2"></div>
-        <h1 class="titre_aside">Playlist d'Horry'Bord</h1>
-        <iframe class="playlist" src="https://play.soundsgood.co/embed/5e754bed7381827590892c68?color=323733&hideCurator=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media" allowtransparency="true"></iframe>
-        
-         <div class="reseaux-sociaux">
-            <img class ="reseaux_sociauxt" src="../images/twitter1.png" alt="twitter_logo">
-        
-            <img class="reseaux_sociauxi" src="../images/insta1.png" alt="instagram_logo">
-        
-            <img class="reseaux_sociauxm" src="../images/medium1.png" alt="medium_logo">
-        </div>
-       
-</aside>
+<?php require '../Require_php/barlat.php'; ?>
 </div>
  
 <div id="part2">
