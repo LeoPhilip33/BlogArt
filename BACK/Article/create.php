@@ -12,7 +12,7 @@ $NumLang="";
 <div class="container">
   <div class="card mt-5">
     <div class="card-header">
-    <h2>Ajoutez un article</h2>
+    <h2>Rédiger un article</h2>
     </div>
     <div class="card-body">
       <?php if(!empty($message)): ?> <!-- Si $message n'est pas vide -->
@@ -155,7 +155,7 @@ $NumLang="";
           <div class="row text-center">
             <div class="col-xs-4">
               <span class="span-text">Mots clés disponibles</span>
-              <select class="form-control" id ="features" name="Features[]" multiple="multiple" style="height:200px;">
+              <select class="form-control" id ="features" name="Features[]" multiple="multiple" style="height:150px;">
                 <?php 
                   // 2. Preparation requete NON PREPAREE
                   // Récupération de l'occurrence pays à partir de l'id
@@ -187,7 +187,7 @@ $NumLang="";
             </div>
             <div class="col-xs-4">
               <span class="span-text">Mots clés ajoutés</span>
-              <select class="form-control" name="MotsCleSelect[]" required size="9" id="selected_features" multiple="multiple" style="height:200px;">
+              <select class="form-control" name="MotsCleSelect[]" required size="9" id="selected_features" multiple="multiple" style="height:150px;">
               </select>
             </div>
           </div>

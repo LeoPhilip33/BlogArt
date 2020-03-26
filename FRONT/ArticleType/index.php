@@ -70,24 +70,6 @@
         </div>
         <div class="barlat"></div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <div class="container"> <!-- Code bootstrap -->
-            <div class="card mt-5 bkcard">
-                
-            </div>
-        </div>
         <?php require '../Require_php/footer.php'; ?>
     </body>
 </html>

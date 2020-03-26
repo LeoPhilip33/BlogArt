@@ -9,13 +9,13 @@
     </div>
     <div class="traitnav" id="traitnav"></div>
     <ul id="menunav">
-    <li class="ac"><a href="">Accueil</a>
+    <li class="ac"><a href="../Home%20page/index.php">Accueil</a>
     <div class="s_ac"></div>
     </li>
-    <li class="re"><a href="">Rédiger un article</a>
+    <li class="re"><a href="../AjouterArticle/index.php">Rédiger un article</a>
     <div class="s_re"></div>
     </li>
-    <li class="co"><a href="">Contact</a>
+    <li class="co"><a href="../Contact/index.php">Contact</a>
     <div class="s_co"></div>
     </li>
     </ul>
@@ -36,15 +36,15 @@
     <ul>
     <li class="li_ac">
         <div class="tir_ac"></div>
-        <a href="">Accueil</a>
+        <a href="../Home%20page/index.php">Accueil</a>
     </li>
     <li class="li_re">
         <div class="tir_re"></div>
-        <a href="">Rédiger un article</a>
+        <a href="../AjouterArticle/index.php">Rédiger un article</a>
     </li>
     <li class="li_co">
         <div class="tir_co"></div>
-        <a href="">Contact</a>
+        <a href="../Contact/index.php">Contact</a>
     </li>
     <li class="li_con">
         <div class="tir_con"></div>

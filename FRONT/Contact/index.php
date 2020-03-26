@@ -171,7 +171,7 @@
                   <textarea class="form-control" id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
                 </div>
                 <div class="form-group">
-                <button type="envoyer" value="ok"class="btn btn-primary">S’inscrire</button>
+                <button type="envoyer" value="ok"class="btn btn-primary">Envoyer</button>
                 </div>
               </form>
               <div class="icons">
