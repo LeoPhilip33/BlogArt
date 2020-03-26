@@ -3,8 +3,8 @@
         <div class="divloupe">
             <img src="../images/search.png" alt="" class="louperech">
         </div>
-        <form class="search-form" method="GET">
-            <input type="search" action="recherche.php" class="searchbarlat" name="searchbarlat" id="searchbarlat" onsubmit="handle" placeholder="Rechercher">
+        <form class="search-form" method="GET" action="../Recherche/index.php">
+            <input type="search"name="search" placeholder="Rechercher">
         </form>
         
 
