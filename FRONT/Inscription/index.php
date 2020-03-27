@@ -3,6 +3,7 @@
 <head>
     <title>page inscription horry bord</title>
     <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
 </head>
 <body>
 <?php require '../Require_php/Illustration_header.php'; ?><!--header-->
