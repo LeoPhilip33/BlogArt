@@ -15,16 +15,19 @@
                 <h3 class="titrecont">Connexion</h3>
                 <form class="formcont" method="POST">
                     <div class="form-group">
+                        <p>Si la terreur ne te fais pas peur… Connecte-toi ! </p>
                         <label for="email">Identifiant :</label>
                         <input type="email" name="email" class="form-control" placeholder="Adresse Email" maxlength="45" required>
                     </div>
                     <div class="form-group">
                         <label for="objet">Mot de passe :</label>
                         <input type="text" name="objet" class="form-control" placeholder="Mot de passe" maxlength="45" required>
+                        <span class="mpdoublie" > Mot de passe oublié ? </span>
                     </div>
                     <div class="form-group">
-                        <button type="envoyer" value="ok"class="btn btn-primary">Envoyer</button>
+                        <button type="envoyer" value="ok"class="">Connexion</button>
                     </div>
+                    <p > <a href="" class="pasdecompte"> Vous n'avez pas de compte ? Inscription </a> </p>
                 </form>
                 <?php 
                     if(isset($error)){
