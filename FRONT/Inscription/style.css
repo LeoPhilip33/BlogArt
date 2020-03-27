@@ -148,10 +148,10 @@
     {
         display: none;
     }
-    .formcont
-    {
+    .form-row{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
         flex-direction: column;
-        margin-left: 11.44%;
-        width: 80%;
-    }
+    
 }
