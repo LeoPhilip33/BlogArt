@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<?php require '../Require_php/barnav.php'; ?><!--navbar-->
+<?php require '../Require_php/barnav_dashbord.php'; ?><!--navbar-->
 
 <div class="container">
     <div class="fiche_creat">
@@ -26,7 +26,7 @@
                 <div class="form-group">
                   <label for="pays"> Quel pays :</label>
                   <select name="pays" id="pet-select">
-                <option value="">--Choisi un pays--</option>
+                <option value="">- Choisi un pays -</option>
                 <option value="dog">Allemagne</option>
                 <option value="cat">France</option>
                 <option value="hamster">Italie</option>
