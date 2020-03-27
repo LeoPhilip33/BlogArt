@@ -133,14 +133,25 @@
     padding: 7px 12px 7px 12px;
     height: 42px;
 }
-.formulaire
-{
-    width: 27%%;
-}
+
 
 .illu_connexion
 {
     width: 45%;
     height: 100%;
     margin-right: 3%;
+}
+
+@media screen and (max-width: 1024px)
+{
+    .illu_connexion
+    {
+        display: none;
+    }
+    .formcont
+    {
+        flex-direction: column;
+        margin-left: 11.44%;
+        width: 80%;
+    }
 }
