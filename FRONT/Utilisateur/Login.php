@@ -1,3 +1,37 @@
+<?php
+    require '../db.php';
+
+    $erreur = " ";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if(isset($_POST['Login']) AND isset($_POST['Pass'])) { 
+            if (!empty($_POST['Login']) AND !empty($_POST['Pass'])) {
+                
+                $Login = htmlspecialchars($_POST['Login']);
+                $Pass = htmlspecialchars($_POST['Pass']);
+
+                $req = $connection->prepare("SELECT * FROM user WHERE Login = ? AND Pass = ?");
+                $req->execute(array($Login, $Pass));
+
+                if($req->rowCount() == 1) {
+                    $user = $req->fetch();
+                    $_SESSION['user'] = $user;
+                    
+                    die('Bonjour '.$_SESSION['user']['Login']);
+                    
+                } else {
+                    $erreur = "Nom d'utilisateur ou mot de passe incorrecte";
+                }
+            }
+        } else {
+            $erreur = "Erreur, L'identifiant ou le mot de passe n'eswt pas complété";
+            echo $erreur;
+
+        }
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -16,13 +50,14 @@
                 <form class="formcont" method="POST">
                     <div class="form-group">
                         <p>Si la terreur ne te fais pas peur… Connecte-toi ! </p>
-                        <label for="email">Identifiant :</label>
-                        <input type="email" name="email" class="form-control" placeholder="Adresse Email" maxlength="45" required>
+                        <?= $erreur ?>
+                        <label for="Login">Identifiant :</label>
+                        <input type="text" name="Login" class="form-control" placeholder="Identifiant" maxlength="45" required>
                     </div>
                     <div class="form-group">
-                        <label for="objet">Mot de passe :</label>
-                        <input type="text" name="objet" class="form-control" placeholder="Mot de passe" maxlength="45" required>
-                        <span class="mpdoublie" > Mot de passe oublié ? </span>
+                        <label for="Pass">Mot de passe :</label>
+                        <input type="password" name="Pass" class="form-control" placeholder="Mot de passe" maxlength="45" required>
+                        <a href="#" class="mpdoublie" > Mot de passe oublié ? </a>
                     </div>
                     <div class="form-group">
                         <button type="envoyer" value="ok"class="">Connexion</button>
@@ -42,36 +77,3 @@
         <?php require '../Require_php/footer.php'; ?>
     </body>
 </html>
-
-<?php
-    require '../db.php';
-
-    if (isset($_POST['confirm_login'])) {
-        if(isset($_POST['Login']) AND isset($_POST['Pass'])) { 
-            if (!empty($_POST['Login']) AND !empty($_POST['Pass'])) {
-                
-                $Login = htmlspecialchars($_POST['Login']);
-                $Pass = htmlspecialchars($_POST['Pass']);
-
-                $req = $connection->prepare("SELECT * FROM user WHERE Login = ? AND Pass = ?");
-                $req->execute(array($Login, $Pass));
-
-                if($req->rowCount() == 1) {
-                    $user = $req->fetch();
-                    $_SESSION['user'] = $user;
-                    
-                    die('Bonjour '.$_SESSION['user']['Login']);
-                    
-                } else {
-                    $erreur = "Nom d'utilisateur ou mot de passe incorrecte";
-                    echo $erreur;
-                }
-            }
-        } else {
-            $erreur = "Erreur, L'identifiant ou le mot de passe n'eswt pas complété";
-            echo $erreur;
-
-        }
-    }
-
-?>
