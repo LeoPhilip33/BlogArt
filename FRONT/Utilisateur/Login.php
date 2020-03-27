@@ -62,7 +62,7 @@
                     <div class="form-group">
                         <button type="envoyer" value="ok"class="">Connexion</button>
                     </div>
-                    <p > <a href="" class="pasdecompte"> Vous n'avez pas de compte ? Inscription </a> </p>
+                    <p > <a href="inscription.php" class="pasdecompte"> Vous n'avez pas de compte ? Inscription </a> </p>
                 </form>
                 <?php 
                     if(isset($error)){
