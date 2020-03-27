@@ -121,7 +121,7 @@ select#pet-select
     border-radius: 8px;
     width: auto;
     margin-left: auto;
-    margin-top: 42px;
+    margin-top: 10%;
     padding: 0px 12px 0px 12px;
     height: 42px;
     transition: 0.4s;
@@ -137,7 +137,7 @@ select#pet-select
     border-radius: 8px;
     width: auto;
     margin-left: auto;
-    margin-top: 42px;
+    margin-top: 10%;
     padding: 7px 12px 7px 12px;
     height: 42px;
 }
@@ -150,4 +150,51 @@ select#pet-select
     margin-right: 3%;
 }
 
-@media 
+@media screen and (max-width: 1124px)
+{
+    .illu_connexion
+    {
+        display: none;
+    }
+    .form-row{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .formcont button{
+        margin-bottom: 0;
+        color:#001003;
+        border: solid;
+        background-color: #F8F8F8;
+        border-color: #F8F8F8;
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: 17px;
+        border-radius: 8px;
+        width: auto;
+        margin-left: auto;
+        margin-top: 5%;
+        padding: 0px 12px 0px 12px;
+        height: 30px;
+        transition: 0.4s;
+        cursor: pointer;
+    }
+    .formcont button:hover{
+        margin-bottom: 0;
+        color:#F8F8F8;
+        background-color: #092E2B;
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: 17px;
+        border-radius: 8px;
+        width: auto;
+        margin-left: auto;
+        margin-top: 5%;
+        padding: 7px 12px 7px 12px;
+        height: 30px;
+    }
+    
+    
+    
+}

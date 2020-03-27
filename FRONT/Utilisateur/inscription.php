@@ -19,11 +19,11 @@
         <div class="form-row">
           <div class="form-group">
             <label for="nom">Nom:</label>
-            <input type="text" name="nom" class="inputinscription" placeholder="Nom" maxlength="25" required>
+            <input type="text" name="nom" class="inputinscription1" placeholder="Nom" maxlength="25" required>
           </div>
           <div class="form-group">
             <label for="prenom">Prénom:</label>
-            <input type="text" name="prenom" class="inputinscription" placeholder="Prénom" maxlength="30" required>
+            <input type="text" name="prenom" class="inputinscription1" placeholder="Prénom" maxlength="30" required>
           </div>
         </div>
         <div class="form-group">
