@@ -1,8 +1,6 @@
 <?php
     require '../db.php';
-
     $erreur = " ";
-
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if(isset($_POST['Login']) AND isset($_POST['Pass'])) { 
             if (!empty($_POST['Login']) AND !empty($_POST['Pass'])) {
