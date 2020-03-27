@@ -1,9 +1,3 @@
-body,html{
-    margin:0;
-    padding:0;
-    background-color: black;
-    color:white;
-}
 .content{
     display: flex;
     margin-top: 42px;
@@ -14,7 +8,6 @@ body,html{
     width: 73.87%;
     background-color: #092E2B;
     border-radius: 20px;
-    margin-bottom: auto;
 }
 .barlat{
     margin-left: 2.84%;
@@ -55,7 +48,6 @@ body,html{
 .formcont{
     margin-left: 11.44%;
     width: 42.45%;
-    margin-bottom: 42px;
 }
 .form-group textarea,.form-group input{
     background-color: #092E2B;
@@ -96,12 +88,12 @@ body,html{
     margin-bottom: 0;
     color:#001003;
     border: solid;
-    background-color: #BCC5C5;
-    border-color: #BCC5C5;
+    background-color: #F8F8F8;
+    border-color: #F8F8F8;
     font-family: 'Montserrat';
     font-weight: 500;
     font-size: 17px;
-    border-radius: 8px;
+    border-radius: 45px;
     width: auto;
     margin-left: auto;
     margin-top: 42px;
@@ -137,31 +129,18 @@ body,html{
     width: 40px;
     height: 40px;
 }
-.newmenu ul .li_con a{
+.newmenu ul .li_co a{
     color: #B93636;
 }
-.navbar ul .con a{
+.navbar ul .co a{
     color: #B93636;
 }
-.s_con{
+.s_co{
     width:17px !important;
 }
-.tir_con{
+.tir_co{
     background-color: #B93636;
 }
-.mpdoublie{
-    text-decoration: none;
-    margin-top:4px;
-    color:#72857F;
-}
-.pasdecompte{
-    text-decoration: none;
-    color:#CBEDE2;
-}
-
-
-
-
 @media (max-width: 1500px){
     .formcont{
         margin-left: 11.44%;
@@ -210,13 +189,4 @@ body,html{
         display: block;
     }
 }
-.limitcont{
-    margin-left: 11.44%;
-    margin-right: 11.44%;
-}
-.titrepage{
-    color: #F8F8F8;
-    font-family: 'Montserrat';
-    font-weight: 600;
-    font-size: 30px;
-}
+
