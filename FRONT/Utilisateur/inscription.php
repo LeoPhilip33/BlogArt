@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
     <title>page inscription horry bord</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleinscription.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <?php require '../Require_php/Illustration_header.php'; ?><!--header-->
