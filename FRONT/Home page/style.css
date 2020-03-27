@@ -38,8 +38,6 @@ header
     width: 100vw;
     height: 100vh;
     background-position:center center;
-    
-
 }
 .part1_navbarre
 {
@@ -48,7 +46,6 @@ header
     grid-column-end: 6;
     justify-content: space-between;
     justify-content: flex-start;
-
 }
 
 .part2_navbarre
@@ -72,7 +69,6 @@ header
     height: 20px;
     position: relative;
     left: 100%;
-
 }
 
 .decouvrir_arrow
@@ -88,7 +84,6 @@ header
     height: 80%;
     margin: 0;
     border-radius: 15px;
-
 }
 .image_homepage_part1
 {
@@ -163,7 +158,6 @@ aside
     height: 250px;
     background-repeat: no-repeat;
     border-radius: 15px;
-
 }
 .article_homepage_1
 {
@@ -297,8 +291,6 @@ color: #B93636;
     grid-row-start: 1;
     grid-row-end: 2;
 }
-
-
 
 .texte_vignette1
 {
@@ -482,7 +474,6 @@ color: #B93636;
     top: 11%;
 }
 
-
 .image_vignette1
 {
     background-image: url(../images/images_vignette1.jpg);
@@ -500,6 +491,7 @@ color: #B93636;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
+
 .image_vignette3
 {
     background-image: url(../images/images_vignette3.jpg);
@@ -508,6 +500,7 @@ color: #B93636;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
+
 .image_vignette4
 {
     background-image: url(../images/images_vignette4.jpg);
@@ -516,6 +509,7 @@ color: #B93636;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
+
 .image_vignette5
 {
     background-image: url(../images/images_vignette5.jpg);
@@ -644,7 +638,6 @@ color: #B93636;
     
 }
 
-
 .voirplus_vignette2
 {
    
@@ -658,8 +651,7 @@ color: #B93636;
     text-align: left;
     position: relative;
     left: 14%;
-    bottom: 14px;
-    
+    bottom: 14px; 
 }
 
 .voirplus_vignette3
@@ -754,8 +746,7 @@ color: #B93636;
     font-weight: 100;
     font-size: 90%;
     color: #72857F;
-    margin-top: 4%;
-
+    margin-top: 4%
 }
 
 .all
@@ -783,6 +774,7 @@ color: #B93636;
     font-size: 100%;
     color: #72857F;
 }
+
 .titre_aside
 {
     font-family: 'Montserrat', sans-serif;
@@ -793,6 +785,7 @@ color: #B93636;
     left: 25%;
 
 }
+
 .playlist
 {
     display: flex;
@@ -820,6 +813,7 @@ color: #B93636;
     top: 58%
 
 }
+
 .sous_titre_ds
 {
     font-family: 'Montserrat', sans-serif;
@@ -832,8 +826,6 @@ color: #B93636;
     position: relative;
     left: 5%;
     top: 66%
-
-
 }
 
 .texte_article1
@@ -843,12 +835,14 @@ color: #B93636;
     margin-top: 4.5%;
 
 }
+
 .texte_article2
 {
     position: relative;
     bottom: 100%;
     margin-top: 4.5%;
 }
+
 .bouton_voirplus1
 {
     font-family: 'Montserrat', sans-serif;
@@ -863,7 +857,6 @@ color: #B93636;
     position: relative;
     left: 75%;
     top: 70px;
-
 }
 
 .bouton_voirplus2
@@ -880,7 +873,6 @@ color: #B93636;
     position: relative;
     left: 75%;
     top: 90%;
-
 }
 
 .reseaux_sociauxt
@@ -894,6 +886,7 @@ color: #B93636;
     width: 30px;
     height: 30px;
 }
+
 .reseaux_sociauxm
 {
     width: 30px;
@@ -910,6 +903,7 @@ color: #B93636;
     position: relative;
     left: 13px;
 }
+
 .search input
 {
     color: #FFFFF2 ;
@@ -926,8 +920,6 @@ color: #B93636;
     background-color: #72857F;
     border-radius: 20px;
     padding: 7px;
-
-    
 }
 
 .search input[type="text"]:focus
@@ -953,7 +945,6 @@ color: #B93636;
     position: relative;
     top: 23px;
     left: 16px;
-   
 }
 
 .trait_aside_2
@@ -964,10 +955,7 @@ color: #B93636;
     position: relative;
     top: 23px;
     left: 16px;
-   
 }
-
-
 
 .voirplus_vignette1:hover
 {
@@ -1011,7 +999,6 @@ color: #B93636;
     border-color: #72857F; 
 }
 
-
 @media screen and (max-width: 1024px)
 {
     .bouton_voirplus1
@@ -1029,7 +1016,6 @@ color: #B93636;
     left: 55%;
     top: 90%;
     margin-top: 6%;
-
     }
 
     .bouton_voirplus2
@@ -1047,6 +1033,7 @@ color: #B93636;
     top: 100%;
     left: 70%;
     }
+
     .article_homepage_1
     {
         grid-row-start: 3;
@@ -1054,10 +1041,8 @@ color: #B93636;
         grid-column-start: 1;
         grid-column-end: 2;
         background-color: #092E2B;
-        border-radius: 20px;
-        
+        border-radius: 20px; 
     }
-
 
     .image_homepage_part1
     {
@@ -1082,8 +1067,8 @@ color: #B93636;
         grid-column-gap: 7%;
         grid-row-gap: 5%;
         height: 500px;
-    
     }
+
     .dernieres_sorties
     {
     grid-row-start: 2;
@@ -1110,6 +1095,7 @@ color: #B93636;
     left: 5%;
     top: 40%;
     }
+
     .sous_titre_ds
     {
     font-family: 'Montserrat', sans-serif;
@@ -1123,6 +1109,7 @@ color: #B93636;
     left: 5%;
     top: 46%;
     }
+
     .titre_article
     {
     font-family: 'Montserrat', sans-serif;
@@ -1136,6 +1123,7 @@ color: #B93636;
     left: 12%; 
     top: 100%;
     }
+
     .trait_article_homepage_2
     {
     width: 40px;
@@ -1155,6 +1143,7 @@ color: #B93636;
     left: 10%;
     bottom: 3%;
     }
+
     .texte_article
     {
     font-family: 'Montserrat', sans-serif;
@@ -1214,14 +1203,13 @@ color: #B93636;
     top: -50px;
     width: 30%;
     left: 35%;
-   
     }
 
     .trait_aside_2
     {
         display: none;
-   
     }   
+
     .images_aside
     {
     display: none;
@@ -1231,10 +1219,12 @@ color: #B93636;
     left: 13px;
     border-radius: 10px;*/
     }
+
     .titre2_aside
     {
         display: none;
-    }      
+    }     
+
     .playlist
     {
     /*display: flex;
@@ -1244,10 +1234,9 @@ color: #B93636;
     left: 13px;
     align-self: center;
     border-radius: 10px;*/
-    width: 0;
-    height: 0;
-
+    display: none;
     }
+
     .titre_aside
     {
     /*font-family: 'Montserrat', sans-serif;
@@ -1270,13 +1259,13 @@ color: #B93636;
     width: 30px;
     height: 30px;
     }
+
     .reseaux_sociauxm
     {
     width: 30px;
     height: 30px;
     }
-
-
+    
     .search
     {
 	overflow: auto;
@@ -1289,6 +1278,7 @@ color: #B93636;
     height: 40%;
     top: 25%;
     }
+
     .search input
     {
     color: #FFFFF2 ;
@@ -1305,8 +1295,6 @@ color: #B93636;
     background-color: #72857F;
     border-radius: 20px;
     padding: 7px;
-
-    
     }
 
     .search input[type="text"]:focus
@@ -1322,7 +1310,7 @@ color: #B93636;
     position: relative;
     left: 20%;
     top: 30%;
-}
+    }
     
 }
 
