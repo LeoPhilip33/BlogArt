@@ -147,7 +147,7 @@
                 <p class="phrasecont">Si la terreur ne te fais pas peur… Contacte-nous!</p>
                 <?= $message_envoye ?>
                 <?= $message_non_envoye ?>
-                <?= $$message_erreur_formulaire ?>
+                <?= $message_erreur_formulaire ?>
                 <div class="form-row">
                   <div class="form-group">
                     <label for="nom">Nom:</label>
@@ -180,7 +180,9 @@
                 <a href="https://www.instagram.com/horry_bord/" target="_blank"> <img src="../images/instagram.png" class="icon" alt="Logo d'instagram"> </a>
               </div>
         </div>
-        <div class="barlat"></div>
+        <div class="barlat">
+          <?php require '../Require_php/barlat.php'; ?>
+        </div>
     </div>
     <!-- footer -->
     <?php require '../Require_php/footer.php'; ?>

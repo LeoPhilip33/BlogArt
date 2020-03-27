@@ -32,11 +32,11 @@
     <div class="part2foot">
         <ul>
             <li class="men">
-                <a href="">Mentions légales</a>
+                <a href="../MentionsLegales/index.php">Mentions légales</a>
                 <div class="s_men"></div>
             </li>
             <li class="nous">
-                <a href="">Nous contacter</a>
+                <a href="../Contact/index.php">Nous contacter</a>
                 <div class="s_nous"></div>
             </li>
         </ul>
