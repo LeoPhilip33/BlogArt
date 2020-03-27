@@ -4,7 +4,7 @@
     margin-left: 9.5vw;
     margin-right: 9.5vw;
 }
-.fiche_inscription{
+.fiche_creat{
     width: 100%;
     background-color: #092E2B;
     border-radius: 20px;
@@ -12,7 +12,7 @@
     justify-content: space-between;
 }
 
-.inscription{
+.creat_php{
     margin-left: 11.44%;
     color: #F8F8F8;
     font-family: 'Montserrat';
@@ -32,22 +32,30 @@
     margin-bottom: 0;
     margin-left: 11.7%;
 }
-.phrase_connect{
-    color: #F8F8F8;
-    font-family: 'Montserrat';
-    font-weight: 300;
-    font-size: 13px;
-    padding: 0;
-    margin-top: 42px;
-    margin-bottom: 5%;
-    margin-left: 11.4%;
-    position: relative;
-    bottom: 15px;
-
+.formulaire
+{
+    width: 100%;
 }
+
 .formcont{
     margin-left: 11.44%;
     width: 80%;
+}
+
+select#pet-select
+{
+    background-color: #092E2B;
+    border: solid;
+    border-color: #F8F8F8;
+    border-radius: 9px;
+    border-width: 1.5px;
+    height: 30px;
+    color: #72857F;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 17px;
+    padding-left: 10px;
+    width: 103%;
 }
 .form-group textarea,.form-group input
 {
@@ -142,16 +150,4 @@
     margin-right: 3%;
 }
 
-@media screen and (max-width: 1024px)
-{
-    .illu_connexion
-    {
-        display: none;
-    }
-    .formcont
-    {
-        flex-direction: column;
-        margin-left: 11.44%;
-        width: 80%;
-    }
-}
+@media 

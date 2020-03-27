@@ -1,0 +1,158 @@
+.container{
+    display: flex;
+    margin-top: 42px;
+    margin-left: 9.5vw;
+    margin-right: 9.5vw;
+}
+.fiche_inscription{
+    width: 100%;
+    background-color: #092E2B;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inscription{
+    margin-left: 11.44%;
+    color: #F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 30px;
+    padding: 0;
+    margin-top: 42px;
+    margin-bottom: 0;
+}
+.texte1{
+    color: #F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0;
+    margin-top: 42px;
+    margin-bottom: 0;
+    margin-left: 11.7%;
+}
+.phrase_connect{
+    color: #F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 13px;
+    padding: 0;
+    margin-top: 42px;
+    margin-bottom: 5%;
+    margin-left: 11.4%;
+    position: relative;
+    bottom: 15px;
+
+}
+.formcont{
+    margin-left: 11.44%;
+    width: 80%;
+}
+.form-group textarea,.form-group input
+{
+    background-color: #092E2B;
+    border: solid;
+    border-color: #F8F8F8;
+    border-radius: 9px;
+    border-width: 1.5px;
+    height: 30px;
+    color: #72857F;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 17px;
+    padding-left: 10px;
+    width: 100%;
+}
+.password input
+{
+    background-color: #092E2B;
+    border: solid;
+    border-color: #F8F8F8;
+    border-radius: 9px;
+    border-width: 1.5px;
+    height: 30px;
+    color: #72857F;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 17px;
+    padding-left: 10px;
+
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+.form-group label{
+    padding: 0;
+    margin-top: 42px;
+    margin-bottom: 10px;
+    color: #F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 17px;
+}
+.form-row{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.form-row .form-group{
+    display: flex;
+    width: 45%;
+}
+.formcont button{
+    margin-bottom: 0;
+    color:#001003;
+    border: solid;
+    background-color: #F8F8F8;
+    border-color: #F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 17px;
+    border-radius: 8px;
+    width: auto;
+    margin-left: auto;
+    margin-top: 42px;
+    padding: 0px 12px 0px 12px;
+    height: 42px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.formcont button:hover{
+    margin-bottom: 0;
+    color:#F8F8F8;
+    background-color: #092E2B;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 17px;
+    border-radius: 8px;
+    width: auto;
+    margin-left: auto;
+    margin-top: 42px;
+    padding: 7px 12px 7px 12px;
+    height: 42px;
+}
+
+
+.illu_connexion
+{
+    width: 45%;
+    height: 100%;
+    margin-right: 3%;
+}
+
+@media screen and (max-width: 1024px)
+{
+    .illu_connexion
+    {
+        display: none;
+    }
+    .form-row{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+}
