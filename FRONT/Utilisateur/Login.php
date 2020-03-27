@@ -37,7 +37,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link type="text/css" rel="stylesheet" href="style.css">
+        <link type="text/css" rel="stylesheet" href="stylelogin.css">
         <title>Horry Bord - Connexion</title>
     </head>
     <body>
@@ -62,7 +62,7 @@
                     <div class="form-group">
                         <button type="envoyer" value="ok"class="">Connexion</button>
                     </div>
-                    <p > <a href="" class="pasdecompte"> Vous n'avez pas de compte ? Inscription </a> </p>
+                    <p > <a href="inscription.php" class="pasdecompte"> Vous n'avez pas de compte ? Inscription </a> </p>
                 </form>
                 <?php 
                     if(isset($error)){
