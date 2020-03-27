@@ -144,7 +144,7 @@ body,html{
     color: #B93636;
 }
 .s_con{
-    width:17px;
+    width:17px !important;
 }
 .tir_con{
     background-color: #B93636;

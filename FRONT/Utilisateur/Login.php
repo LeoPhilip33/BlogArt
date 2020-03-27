@@ -12,7 +12,7 @@
         <!-- mennu -->
         <div class="content">
             <div class="fichecontact">
-                <h3 class="titrecont">Login</h3>
+                <h3 class="titrecont">Connexion</h3>
                 <form class="formcont" method="POST">
                     <div class="form-group">
                         <label for="email">Identifiant :</label>
