@@ -11,7 +11,7 @@
     <title>Accueil</title>
 </head>
 <body>
-    <?php require '../Require_php/Illustration_header.php'; ?><!--header-->
+    <?php require '../Require_php/Illu_Accueil.php'; ?><!--header-->
     <?php require '../Require_php/barnav.php'; ?><!--navbar-->
     <!-- mennu -->
     <div class="content">
@@ -52,6 +52,17 @@
                 <a href="https://www.instagram.com/horry_bord/" target="_blank"> <img src="../images/instagram.png" class="icon" alt="Logo d'instagram"> </a>
                 </div> -->
         </div>
+
+
+        <div class="Tousnosarticle">
+            <p></p>
+            <ul></ul>
+            <div >
+
+            </div>
+        </div>
+
+
         <div class="barlat">
           <?php require '../Require_php/barlat.php'; ?>
         </div>

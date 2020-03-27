@@ -51,6 +51,67 @@ li{
     background-size: cover;
     background-position:center center;
 }
+.IlluHead1{
+    height: 100vh;
+    background-image: url("../FRONT/images/illustration_principale.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center center;
+    display: flex;
+    flex-direction: column;
+}
+.txtimgheader{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    color: #DFFFF5;
+    width: 100%;
+    text-align: center;
+    margin-top: 87vh;
+}
+@keyframes masuperanimation {
+    0% {
+        margin-top: 10%;
+    }
+
+    50% {
+        margin-top: 20%;
+    }
+
+    100% {
+        margin-top: 10%;
+    }
+}
+@-webkit-keyframes masuperanimation {
+    0% {
+        margin-top: 10%;
+    }
+
+    50% {
+        margin-top: 20%;
+    }
+
+    100% {
+        margin-top: 10%;
+    }
+}
+.contentarrow{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30px;
+    height: 13vh;
+    
+}
+.downarrowheadac{
+    margin-left: auto;
+    margin-right: auto;
+    height: 30px;
+    width: 30px;
+    animation: masuperanimation 2s linear alternate infinite;
+    -webkit-animation: masuperanimation 2s linear alternate infinite;
+}
 .navbar{
     margin-left: 9.84vw;
     margin-right: 9.84vw;
@@ -618,8 +679,16 @@ aside
     font-size: 17px;
     color: #72857F;
     margin-left: 5px;
-
 }
 .fichecontact{
     margin-bottom: auto;
+}
+.txtimgheader{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    color: #DFFFF5;
+    width: 100%;
+    text-align: center;
+
 }

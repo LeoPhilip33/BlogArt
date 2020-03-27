@@ -215,18 +215,18 @@
 }
 .titreartmea1{
     margin: 0;
-    color:#F8F8F8;
+    color:#000703;
     font-family: 'Montserrat';
-    font-weight: 600;
+    font-weight: 700;
     font-size: 17px;
     margin-bottom: 7px;
     background-color: rgba(185,54,54,0.79);
 }
 .txtartmea1{
     margin: 0;
-    color:#F8F8F8;
+    color:#000703;
     font-family: 'Montserrat';
-    font-weight: 500;
+    font-weight: 600;
     font-size: 12px;
     margin-bottom: 17px;
     background-color: rgba(185,54,54,0.79);

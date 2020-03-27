@@ -24,15 +24,9 @@
             </div>
         </div>
         <div class="divhdp">
-            <div class="remonterehdiv " onclick='topFunction()'>
-                <script>
-                    function topFunction() {
-                        document.body.scrollTop = 0; // For Safari
-                        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-                    }
-                </script>
+        <a href="#h"><div class="remonterehdiv ">
                 <img class="remontereh" src="../images/goup.svg" alt="">
-            </div>
+            </div></a>
         </div>
     </div>
     <div class="part2foot">
