@@ -9,6 +9,7 @@
     background-color: #092E2B;
     border-radius: 20px;
     display: flex;
+    justify-content: space-between;
 }
 
 .inscription{
@@ -46,7 +47,7 @@
 }
 .formcont{
     margin-left: 11.44%;
-    width: 42.45%;
+    width: 80%;
 }
 .form-group textarea,.form-group input
 {
@@ -61,6 +62,7 @@
     font-weight: 400;
     font-size: 17px;
     padding-left: 10px;
+    width: 100%;
 }
 .password input
 {
@@ -108,7 +110,7 @@
     font-family: 'Montserrat';
     font-weight: 500;
     font-size: 17px;
-    border-radius: 20px;
+    border-radius: 8px;
     width: auto;
     margin-left: auto;
     margin-top: 42px;
@@ -124,7 +126,7 @@
     font-family: 'Montserrat';
     font-weight: 500;
     font-size: 17px;
-    border-radius: 20px;
+    border-radius: 8px;
     width: auto;
     margin-left: auto;
     margin-top: 42px;
@@ -138,7 +140,7 @@
 
 .illu_connexion
 {
-    margin-left: 15%;
     width: 45%;
     height: 100%;
+    margin-right: 3%;
 }
