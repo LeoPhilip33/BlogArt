@@ -210,4 +210,13 @@ body,html{
         display: block;
     }
 }
-
+.limitcont{
+    margin-left: 11.44%;
+    margin-right: 11.44%;
+}
+.titrepage{
+    color: #F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 30px;
+}

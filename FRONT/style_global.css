@@ -3,6 +3,7 @@ html, body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 .icons{
     display: flex;
@@ -286,6 +287,7 @@ li{
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    cursor: pointer;
 }
 .part2foot ul{
     display: flex;
