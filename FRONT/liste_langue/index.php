@@ -15,13 +15,15 @@
         <p class="texte1">Répertoire de toutes les langues</p>
   
             <table class="tableau_langues">
+                <thead>
                     <tr class="en-tete">
                         <th>Libellés courts</th>
                         <th>Libellés longs</th>
                         <th>Numéros pays</th>
                         <th>Actions</th>
                     </tr>
-                
+                </thead>
+                <tbody>
                     <tr class="ligne_1">
                         <td>Allemand(e)</td>
                         <td>Langue allemande</td>
@@ -46,6 +48,7 @@
                         <td>ESPA</td>
                         <td><button class="edit">éditer</button> <button class="delete">supprimer</button></td>
                     </tr>
+                </tbody>
              </table>
             </div>
             
