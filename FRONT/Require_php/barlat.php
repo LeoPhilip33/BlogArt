@@ -6,16 +6,28 @@
         <form class="search-form" method="GET" action="../Recherche/index.php">
             <input type="search"name="search" placeholder="Rechercher">
         </form>
-        
-
     </div>
     <div class="div_titre_barlat">
         <div class="trait_aside"></div>
         <h1 class="titre_aside">Article récent</h1>
     </div>
-    <div class="images_aside" style="background-image: url('../images/images_aside_1.jpg');">
-        <p class="titre2_aside">La bête du Gévaudan</p>
-    </div>
+    <?php
+        require '../db.php'; // On importe le fichier db.php
+        $requete = "SELECT MAX(NumArt) AS NumArt FROM ARTICLE";
+        $result = $connection->query($requete);
+        $NumLastArt = $result->fetch();
+        $NumLastArt = end($NumLastArt);
+        $NumLastArt = (int)$NumLastArt;
+        $sql = "SELECT * FROM article WHERE NumArt = '$NumLastArt'";
+        $statement = $connection->prepare($sql);
+        $statement->execute();
+        $articles = $statement->fetch();
+        $LibTitrA = $articles['LibTitrA'];
+        $UrlPhotA = $articles['UrlPhotA'];
+    ?>
+    <a href="../ArticleType/index.php?id=<?= $NumLastArt ?>" style="text-decoration: none;"><div class="images_aside" style="background-image: url('<?= $UrlPhotA ?>');">
+        <p class="titre2_aside"><?= $LibTitrA ?></p>
+    </div></a>
     <div class="div_titre_barlat">
         <div class="trait_aside"></div>
         <h1 class="titre_aside">Playlist d'Horry'Bord</h1>

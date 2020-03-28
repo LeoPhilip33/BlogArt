@@ -1,122 +1,155 @@
+
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <title>Home_page</title>
-    </head>
-    <body>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
+    <script src="../script_global.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Accueil</title>
+</head>
+<body>
+    <?php require '../Require_php/Illu_Accueil.php'; ?><!--header-->
+    <?php require '../Require_php/barnav.php'; ?><!--navbar-->
+    <!-- mennu -->
+    <p class="titreacprins">Dernières sorties</p>
+    <div class="content">
+        <div class="fichecontact">
+                <?php
+                    require '../db.php'; // On importe le fichier db.php
+                    $requete = "SELECT MAX(NumArt) AS NumArt FROM ARTICLE";
+                    $result = $connection->query($requete);
+                    $NumLastArt = $result->fetch();
+                    $NumLastArt = end($NumLastArt);
+                    $NumLastArt = (int)$NumLastArt;
+                    $NumLastArt2 = $NumLastArt - 1;
+                    $NumLastArt3 = $NumLastArt - 2;
+                ?>
+                <?php
+                    $sql = "SELECT * FROM article WHERE NumArt = '$NumLastArt'";
+                    $statement = $connection->prepare($sql);
+                    $statement->execute();
+                    $articles = $statement->fetch();
+                
+                    $LibTitrA = $articles['LibTitrA'];
+                    $LibAccrochA = $articles['LibAccrochA'];
+                    $UrlPhotA = $articles['UrlPhotA'];
+                ?>
+                <a href="../ArticleType/index.php?id=<?= $NumLastArt ?>" style="text-decoration: none;"><div class="artmisenavant" style="background-image: url('<?= $UrlPhotA ?>');">
+                    <div></div>
+                    <div class="descartmea">
+                        <p class="titreartmea1"><?= $LibTitrA ?></p>
+                        <p class="txtartmea1"><?= $LibAccrochA ?></p>
+                    </div>
+                </div></a>
+                <?php
+                    $sql = "SELECT * FROM article WHERE NumArt = '$NumLastArt2'";
+                    $statement = $connection->prepare($sql);
+                    $statement->execute();
+                    $articles = $statement->fetch();
+                
+                    $LibTitrA = $articles['LibTitrA'];
+                    $LibAccrochA = $articles['LibAccrochA'];
+                    $UrlPhotA = $articles['UrlPhotA'];
+                ?>
+                <div class="artmisenavant2">
+                    <div class="imgilluartmea" style="background-image: url('<?= $UrlPhotA ?>');"></div>
+                    <div class="txtilluartmea">
+                    <a href="../ArticleType/index.php?id=<?= $NumLastArt2 ?>" style="text-decoration: none;"><p class="titreartmea2"><?= $LibTitrA ?></p></a>
+                        <p class="txtartmea2"><?= $LibAccrochA ?></p>
+                        <div class="part2txtilluartmea">
+                            <div class="barretxtilluartmea"></div>
+                            <a href="../ArticleType/index.php?id=<?= $NumLastArt2 ?>" style="text-decoration: none;"><div class="voirvignadm"><p>Voir plus</p></div></a>
+                        </div>
+                    </div>
+                </div>
+                <?php
+                    $sql = "SELECT * FROM article WHERE NumArt = '$NumLastArt3'";
+                    $statement = $connection->prepare($sql);
+                    $statement->execute();
+                    $articles = $statement->fetch();
+                
+                    $LibTitrA = $articles['LibTitrA'];
+                    $LibAccrochA = $articles['LibAccrochA'];
+                    $UrlPhotA = $articles['UrlPhotA'];
+                ?>
+                <div class="artmisenavant2">
+                    <div class="imgilluartmea" style="background-image: url('<?= $UrlPhotA ?>');"></div>
+                    <div class="txtilluartmea">
+                        <a href="../ArticleType/index.php?id=<?= $NumLastArt3 ?>" style="text-decoration: none;"><p class="titreartmea2"><?= $LibTitrA ?></p></a>
+                        <p class="txtartmea2"><?= $LibAccrochA ?></p>
+                        <div class="part2txtilluartmea">
+                            <div class="barretxtilluartmea"></div>
+                            <a href="../ArticleType/index.php?id=<?= $NumLastArt3 ?>" style="text-decoration: none;"><div class="voirvignadm"><p>Voir plus</p></div></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- <div class="icons">
+                <a href="https://twitter.com/BordHorry" target="_blank"> <img src="../images/twitter.png" class="icon" alt="Logo de twitter" > </a>
+                <a href="https://medium.com/@horry.bord" target="_blank"> <img src="../images/medium.png" class="icon" alt="Logo de medium"> </a>
+                <a href="https://www.instagram.com/horry_bord/" target="_blank"> <img src="../images/instagram.png" class="icon" alt="Logo d'instagram"> </a>
+                </div> -->
+        </div>
+        <div class="barlat">
+          <?php require '../Require_php/barlat.php'; ?>
+        </div>
+    </div>
+    <p class="titreacprins">Tous nos terrifiants articles</p>
+    <div class="Tousnosarticle" >
+        <ul class="menutna">
+            <li class="tna1">Tous les articles</li>
+            <li class="tna2">Les plus aimés</li>
+        </ul>
+        <div class="listartwarp">
+            <div class="vigntna" style="background-image: url('../images/images_aside_1.jpg');">
+                <div></div>
+                <div class="divbasvign">
+                    <p class="titreartmea2">sdjhfbqsdhbfhqsdbfjhqsdjhfqsdjhfbsjqhdvfjhsdbfhjsdbfhjsdbhjfbsdqhjfbsdhjfbhsdjbfjhdsbfjhdsbfjhdsbfjh</p>
+                    <a href="" style="text-decoration: none;"><div class="voirvignadm2"><p>Voir plus</p></div></a>
+                </div>
+            </div>
+            <div class="vigntna" style="background-image: url('../images/images_aside_1.jpg');">
+                <div></div>
+                <div class="divbasvign">
+                    <p class="titreartmea2">sdjhfbqsdhbfhqsdbfjhqsdjhfqsdjhfbsjqhdvfjhsdbfhjsdbfhjsdbhjfbsdqhjfbsdhjfbhsdjbfjhdsbfjhdsbfjhdsbfjh</p>
+                    <a href="" style="text-decoration: none;"><div class="voirvignadm2"><p>Voir plus</p></div></a>
+                </div>
+            </div>
+            <div class="vigntna" style="background-image: url('../images/images_aside_1.jpg');">
+                <div></div>
+                <div class="divbasvign">
+                    <p class="titreartmea2">sdjhfbqsdhbfhqsdbfjhqsdjhfqsdjhfbsjqhdvfjhsdbfhjsdbfhjsdbhjfbsdqhjfbsdhjfbhsdjbfjhdsbfjhdsbfjhdsbfjh</p>
+                    <a href="" style="text-decoration: none;"><div class="voirvignadm2"><p>Voir plus</p></div></a>
+                </div>
+            </div>
+            <div class="vigntna" style="background-image: url('../images/images_aside_1.jpg');">
+                <div></div>
+                <div class="divbasvign">
+                    <p class="titreartmea2">sdjhfbqsdhbfhqsdbfjhqsdjhfqsdjhfbsjqhdvfjhsdbfhjsdbfhjsdbhjfbsdqhjfbsdhjfbhsdjbfjhdsbfjhdsbfjhdsbfjh</p>
+                    <a href="" style="text-decoration: none;"><div class="voirvignadm2"><p>Voir plus</p></div></a>
+                </div>
+            </div>
+            <div class="vigntna" style="background-image: url('../images/images_aside_1.jpg');">
+                <div></div>
+                <div class="divbasvign">
+                    <p class="titreartmea2">sdjhfbqsdhbfhqsdbfjhqsdjhfqsdjhfbsjqhdvfjhsdbfhjsdbfhjsdbhjfbsdqhjfbsdhjfbhsdjbfjhdsbfjhdsbfjhdsbfjh</p>
+                    <a href="" style="text-decoration: none;"><div class="voirvignadm2"><p>Voir plus</p></div></a>
+                </div>
+            </div>
+            <div class="vigntna" style="background-image: url('../images/images_aside_1.jpg');">
+                <div></div>
+                <div class="divbasvign">
+                    <p class="titreartmea2">sdjhfbqsdhbfhqsdbfjhqsdjhfqsdjhfbsjqhdvfjhsdbfhjsdbfhjsdbhjfbsdqhjfbsdhjfbhsdjbfjhdsbfjhdsbfjhdsbfjh</p>
+                    <a href="" style="text-decoration: none;"><div class="voirvignadm2"><p>Voir plus</p></div></a>
+                </div>
+            </div>
+        </div>
         
- <header>
-    <div class="decouvrir_arrow">
-        <h2 class="decouvrir">Découvrir</h2>
-        <img class="arrow" src="../images/arrow.svg" alt="flèche">
-    </div> 
- </header>
- <?php require '../Require_php/barnav.php'; ?><!--navbar-->
- <div id="container">
-<div id="part1">
-<div class="select_element"></div>
-
-<h1 class="titre_homepage1">Dernières sorties</h1>
- <div class="dernieres_sorties">
-     <h2 class="titre_derniere_sortie">Les momies de la basique Saint-Michel</h2>
-     <h3 class="sous_titre_ds">Annabelle a encore frappé! Découvrez si cela se passe près de chez vous</h3>
-   
- </div>
-
- <div class="article_homepage_1">
-     <img class="image_homepage_part1" src="../images/photo_article_homepage_1.jpeg" alt="La dune du pilat">
-     <div class="texte_article1">
-     <h2 class="titre_article">LA DAME BLANCHE</h2>
-     <h3 class="texte_article">Un automobiliste croise la dame blanche sur la route de Bordeaux!</h3>
-     <button class="bouton_voirplus1">Voir plus ></button>
     </div>
-     <div class="trait_article_homepage_1"></div>
-    </div>
- 
-
- <div class="article_homepage_2">
-     <img class="image_homepage_part1" src="../images/photo_article_homepage_2.png" alt="Stranger Things">
-     <div class="texte_article2">
-     <h2 class="titre_article">LA MOMIE BORDELAISE</h2>
-     <h3 class="texte_article">Légende urbaine ou réalité ? Découvrez l'histoire des momies bordelaises...</h3>
-     <button class="bouton_voirplus2">Voir plus ></button>
-    </div>
-    <div class="trait_article_homepage_2"></div>
-</div>
-<?php require '../Require_php/barlat.php'; ?>
-</div>
- 
-<div id="part2">
-<h1 class="titre_homepage2"> Tous nos terrifiants articles</h1>
-
-<div class="menu_part2">
-    <h2 class="all">Tout</h2>
-     <h2 class="les_plus_lus">Les + lus</h2>
-     <h2 class="les_mieux_notes">Les mieux notés</h2>
-</div>
-     
-         <div class="vignette1">
-            <div class="image_vignette1"> </div>
-             <div class="trait_vignette1"></div>
-             <h1 class="texte_vignette1">L'HISTOIRE DE LA MOMIE BORDELAISE</h1>
-             <button class="voirplus_vignette1">Voir plus ></button>
-         </div>
-
-         <div class="vignette7">
-            <div class="image_vignette7"> </div>
-             <div class="trait_vignette7"></div>
-             <h1 class="texte_vignette7">L'HISTOIRE DE LA MOMIE BORDELAISE</h1>
-             <button class="voirplus_vignette7">Voir plus ></button>
-         </div>
-     
-
-         <div class="vignette2">
-         <div class="image_vignette2"> </div>
-        <div class="trait_vignette2"></div>
-        <h2 class="texte_vignette2">LE VILLAGE CACHÉ DE LA DUNE DU PILAT</h2>
-        <button class="voirplus_vignette2">Voir plus ></button>
-        </div>
-
-        <div class="vignette5">
-        <div class="image_vignette5"> </div>
-            <div class="trait_vignette5"></div>
-            <h1 class="texte_vignette5">L'EFFROYABLE HISTOIRE DE LA RUE DU MIRAIL</h1>
-            <button class="voirplus_vignette5">Voir plus ></button>
-            </div>
-    
-
-
-         <div class="vignette3">
-         <div class="image_vignette3"> </div>
-        <div class="trait_vignette3"></div>
-        <h1 class="texte_vignette3">LES TERRIFIANTES MOMIES DE SAINT MICHEL</h1>
-        <button class="voirplus_vignette3">Voir plus ></button>
-        </div>
-
-        <div class="vignette4">
-        <div class="image_vignette4"> </div>
-            <div class="trait_vignette4"></div>
-            <h1 class="texte_vignette4">LA BASE NAUTIQUE DE BORDEAUX</h1>
-            <button class="voirplus_vignette4">Voir plus ></button>
-            </div>
-
-            <div class="vignette6">
-        <div class="image_vignette6"> </div>
-            <div class="trait_vignette6"></div>
-            <h1 class="texte_vignette6">L'EFFROYABLE HISTOIRE DE LA RUE DU MIRAIL</h1>
-            <button class="voirplus_vignette5">Voir plus ></button>
-            </div>
-    
-    
-  
-
-
- </div>
-  </div>
-  <!-- footer -->
- <?php require '../Require_php/footer.php'; ?>
-    </body>
+    <!-- footer -->
+    <?php require '../Require_php/footer.php'; ?>
+</body>
 </html>
