@@ -1,5 +1,6 @@
 <?php
     require '../db.php';
+    session_start();
     $erreur = " ";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if(isset($_POST['Login']) AND isset($_POST['Pass'])) { 
@@ -9,8 +10,11 @@
                 $Pass = htmlspecialchars($_POST['Pass']);
 
                 if($Login == "Admin" && $Pass == "Horry!1234Bord" ) {
-                    
-                    header("Location: admin.php");
+
+                    $_SESSION["Login"] = $Login;
+                    $_SESSION["mdp"] = $mdp;
+
+                    header("location:admin.php");
                     
                 } else {
                     $erreur = "Nom d'utilisateur ou mot de passe incorrecte";
