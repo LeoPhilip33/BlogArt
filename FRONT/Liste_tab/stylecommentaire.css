@@ -39,7 +39,10 @@
     color: #F8F8F8;
     font-family: 'Montserrat';
     font-weight: 200;
-    font-size: 17px;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    
 }
 
 .tableau_langues
@@ -49,6 +52,7 @@
     margin-top: 42px;
     margin-bottom: 30px;
     border-collapse: collapse;
+    width: 75%;
 
 }
 
@@ -69,10 +73,8 @@ td
     font-weight: 200;
     font-size: 15px;
     text-align: left;
-    padding-left: 5%;
     padding-top: 1%;
     padding-bottom: 1%;
-   
 }
 
 button.edit{
@@ -87,7 +89,6 @@ button.edit{
     font-size: 14px;
     border-radius: 30px;
     width: auto;
-    margin-left: auto;
     padding: 0px 5px 0px 5px;
     height: 20px;
     transition: 0.4s;
@@ -103,7 +104,6 @@ button.edit:hover{
     font-size: 14px;
     border-radius: 30px;
     width: auto;
-    margin-left: auto;
     padding: 0px 5px 0px 5px;
     height: 20px;
 }
@@ -121,7 +121,6 @@ button.delete{
     font-size: 14px;
     border-radius: 30px;
     width: auto;
-    margin-left: auto;
     padding: 0px 5px 0px 5px;
     height: 20px;
     transition: 0.4s;
@@ -137,8 +136,31 @@ button.delete:hover{
     font-size: 14px;
     border-radius: 30px;
     width: auto;
-    margin-left: auto;
     padding: 0px 5px 0px 5px;
     height: 20px;
 }
+*, ::after, ::before {
+    box-sizing: content-box;
+    
+}
+*, ::after, ::before {
+    box-sizing: content-box;
+}
 
+
+
+@media (max-width: 600px)
+{
+    .table-responsive-lg 
+    {
+    display: block;
+    overflow-x: auto;
+    }
+    *, ::after, ::before {
+        box-sizing: initial;
+        
+    }
+    *, ::after, ::before {
+        box-sizing: initial;
+    }
+}
