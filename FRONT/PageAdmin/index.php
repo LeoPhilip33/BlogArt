@@ -13,7 +13,6 @@
 
                     $_SESSION["Login"] = $Login;
                     $_SESSION["mdp"] = $mdp;
-
                     header("location:admin.php");
                     
                 } else {
