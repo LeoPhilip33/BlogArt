@@ -44,14 +44,11 @@
 
 .tableau_langues
 {
-    width: auto;
     margin-left: 11.7%;
     margin-right: 11.7%;
     margin-top: 42px;
     margin-bottom: 30px;
     border-collapse: collapse;
-    border-radius: 20px 20px 20px 20px;
-    -moz-border-radius: 20px;
 
 }
 
@@ -75,9 +72,6 @@ td
     padding-left: 5%;
     padding-top: 1%;
     padding-bottom: 1%;
-    border-radius: 20px;
- 
-    
    
 }
 
