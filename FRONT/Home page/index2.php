@@ -14,6 +14,7 @@
     <?php require '../Require_php/Illu_Accueil.php'; ?><!--header-->
     <?php require '../Require_php/barnav.php'; ?><!--navbar-->
     <!-- mennu -->
+    <p class="titreacprins">Dernières sorties</p>
     <div class="content">
         <div class="fichecontact">
                 <div class="artmisenavant" style="background-image: url('../images/images_aside_1.jpg');">
@@ -52,20 +53,61 @@
                 <a href="https://www.instagram.com/horry_bord/" target="_blank"> <img src="../images/instagram.png" class="icon" alt="Logo d'instagram"> </a>
                 </div> -->
         </div>
-
-
-        <div class="Tousnosarticle">
-            <p></p>
-            <ul></ul>
-            <div >
-
-            </div>
-        </div>
-
-
         <div class="barlat">
           <?php require '../Require_php/barlat.php'; ?>
         </div>
+    </div>
+    <p class="titreacprins">Tous nos terrifiants articles</p>
+    <div class="Tousnosarticle" >
+        <ul class="menutna">
+            <li class="tna1">Tous les articles</li>
+            <li class="tna2">Les plus aimés</li>
+        </ul>
+        <div class="listartwarp">
+            <div class="vigntna" style="background-image: url('../images/images_aside_1.jpg');">
+                <div></div>
+                <div class="divbasvign">
+                    <p class="titreartmea2">sdjhfbqsdhbfhqsdbfjhqsdjhfqsdjhfbsjqhdvfjhsdbfhjsdbfhjsdbhjfbsdqhjfbsdhjfbhsdjbfjhdsbfjhdsbfjhdsbfjh</p>
+                    <a href="" style="text-decoration: none;"><div class="voirvignadm2"><p>Voir plus</p></div></a>
+                </div>
+            </div>
+            <div class="vigntna" style="background-image: url('../images/images_aside_1.jpg');">
+                <div></div>
+                <div class="divbasvign">
+                    <p class="titreartmea2">sdjhfbqsdhbfhqsdbfjhqsdjhfqsdjhfbsjqhdvfjhsdbfhjsdbfhjsdbhjfbsdqhjfbsdhjfbhsdjbfjhdsbfjhdsbfjhdsbfjh</p>
+                    <a href="" style="text-decoration: none;"><div class="voirvignadm2"><p>Voir plus</p></div></a>
+                </div>
+            </div>
+            <div class="vigntna" style="background-image: url('../images/images_aside_1.jpg');">
+                <div></div>
+                <div class="divbasvign">
+                    <p class="titreartmea2">sdjhfbqsdhbfhqsdbfjhqsdjhfqsdjhfbsjqhdvfjhsdbfhjsdbfhjsdbhjfbsdqhjfbsdhjfbhsdjbfjhdsbfjhdsbfjhdsbfjh</p>
+                    <a href="" style="text-decoration: none;"><div class="voirvignadm2"><p>Voir plus</p></div></a>
+                </div>
+            </div>
+            <div class="vigntna" style="background-image: url('../images/images_aside_1.jpg');">
+                <div></div>
+                <div class="divbasvign">
+                    <p class="titreartmea2">sdjhfbqsdhbfhqsdbfjhqsdjhfqsdjhfbsjqhdvfjhsdbfhjsdbfhjsdbhjfbsdqhjfbsdhjfbhsdjbfjhdsbfjhdsbfjhdsbfjh</p>
+                    <a href="" style="text-decoration: none;"><div class="voirvignadm2"><p>Voir plus</p></div></a>
+                </div>
+            </div>
+            <div class="vigntna" style="background-image: url('../images/images_aside_1.jpg');">
+                <div></div>
+                <div class="divbasvign">
+                    <p class="titreartmea2">sdjhfbqsdhbfhqsdbfjhqsdjhfqsdjhfbsjqhdvfjhsdbfhjsdbfhjsdbhjfbsdqhjfbsdhjfbhsdjbfjhdsbfjhdsbfjhdsbfjh</p>
+                    <a href="" style="text-decoration: none;"><div class="voirvignadm2"><p>Voir plus</p></div></a>
+                </div>
+            </div>
+            <div class="vigntna" style="background-image: url('../images/images_aside_1.jpg');">
+                <div></div>
+                <div class="divbasvign">
+                    <p class="titreartmea2">sdjhfbqsdhbfhqsdbfjhqsdjhfqsdjhfbsjqhdvfjhsdbfhjsdbfhjsdbhjfbsdqhjfbsdhjfbhsdjbfjhdsbfjhdsbfjhdsbfjh</p>
+                    <a href="" style="text-decoration: none;"><div class="voirvignadm2"><p>Voir plus</p></div></a>
+                </div>
+            </div>
+        </div>
+        
     </div>
     <!-- footer -->
     <?php require '../Require_php/footer.php'; ?>

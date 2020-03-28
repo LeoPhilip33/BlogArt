@@ -319,10 +319,16 @@
     .artmisenavant2{
         margin-top: 42px;
     }
+    .vigntna{
+        width: 48% !important;
+    }
 }
 @media (max-width: 640px){
     .txtartmea2{
         display: none;
+    }
+    .vigntna{
+        width: 100% !important;
     }
 }
 @media (max-width: 340px){
@@ -332,4 +338,92 @@
     .txtilluartmea{
         width: 100%;
     }
+}
+.menutna{
+    display: flex;
+    padding: 0;
+    margin-top: 42px;
+    margin-bottom: 17px;
+}
+.menutna li{
+    margin: 0;
+    color:#F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 17px;
+}
+.menutna .tna2{
+    margin-left: 50px;
+}
+.vigntna{
+    width: 31.49%;
+    height: 200px;
+    overflow-wrap: break-word;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 0.9%;
+    margin-right: 0.9%;
+    margin-bottom: 17px;
+}
+.listartwarp{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+.titreacprins{
+    margin: 0;
+    color:#72857F;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 42px;
+    margin-left: 42px;
+    margin-left: 9.84vw;
+}
+.Tousnosarticle{
+    margin-left: 9.84vw;
+    margin-right: 9.84vw;
+}
+.divbasvign{
+    margin-bottom: 17px;
+}
+.voirvignadm2{
+    display: flex;
+    justify-content: space-around;
+    width: 65px;
+    margin-right: 0;
+    margin-left: auto;
+    margin-top: 17px;
+}
+.voirvignadm2 {
+    border: solid;
+    border-radius: 45px;
+    border-width: 1.5px;
+    border-color: #F8F8F8;
+    padding: 5px 12px 5px 12px;
+    margin-right: 17px;
+    text-align: center;
+}
+.voirvignadm2:hover{
+    background-color: #F8F8F8;
+}
+.voirvignadm2:hover p{
+    color: #092E2B;
+    font-weight: 600;
+}
+.voirvignadm2 p{
+    margin: 0;
+    color:#F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 12px;
+}
+.vigntna .titreartmea2{
+    background-color: rgba(185,54,54,0.79);
 }
