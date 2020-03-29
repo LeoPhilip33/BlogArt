@@ -32,7 +32,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link type="text/css" rel="stylesheet" href="style_admin.css">
-        <title>Horry Bord - Connexion</title>
+        <title>Connexion - Horry'Bord</title>
+        <link rel="icon" href="../images/favicon.ico" />
     </head>
     <body>
         <?php require '../Require_php/Illustration_header.php'; ?><!--header-->
