@@ -5,16 +5,14 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if(isset($_POST['Login']) AND isset($_POST['Pass'])) { 
             if (!empty($_POST['Login']) AND !empty($_POST['Pass'])) {
-                
+               
                 $Login = htmlspecialchars($_POST['Login']);
                 $Pass = htmlspecialchars($_POST['Pass']);
 
                 if($Login == "Admin" && $Pass == "Horry!1234Bord" ) {
-
                     $_SESSION["Login"] = $Login;
                     $_SESSION["mdp"] = $mdp;
-                    header("location:admin.php");
-                    
+                    header("location:admin.php");         
                 } else {
                     $erreur = "Nom d'utilisateur ou mot de passe incorrecte";
                 }
@@ -23,7 +21,6 @@
             $erreur = "Erreur, L'identifiant ou le mot de passe n'eswt pas complété";
         }
     }
-
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +29,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link type="text/css" rel="stylesheet" href="style_admin.css">
-        <title>Horry Bord - Connexion</title>
+        <title>Connexion - Horry'Bord</title>
+        <link rel="icon" href="../images/favicon.ico" />
     </head>
     <body>
         <?php require '../Require_php/Illustration_header.php'; ?><!--header-->

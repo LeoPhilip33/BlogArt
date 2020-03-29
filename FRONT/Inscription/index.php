@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>page inscription horry bord</title>
+    <title>Inscription - Horry'Bord</title>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
+    <link rel="icon" href="../images/favicon.ico" />
 </head>
 <body>
 <?php require '../Require_php/Illustration_header.php'; ?><!--header-->

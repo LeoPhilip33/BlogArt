@@ -43,15 +43,57 @@
 
     echo "<br>"."Premier echo : ".$NumArt." ".$DtCreA." ".$LibTitrA." ".$LibChapoA." ".$LibAccrochA." ".$Parag1A." ".$LibSsTitr1." ".$Parag2A." ".$LibSsTitr2." ".$Parag3A." ".$LibConclA." ".$UrlPhotA." ".$Likes." ".$NumAngl." ".$NumThem." ".$NumLang."<br><br>";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $erreur = false;
+      $requete = "SELECT MAX(NumArt) AS NumArt FROM ARTICLE";
+      $result = $connection->query($requete);
+      $tuple = $result->fetch();
+      $tuple = end($tuple);
+      $tuple = (int)$tuple;
+      $tuple++;
+      $NumArt = $tuple;
 
-    $requete = "SELECT MAX(NumArt) AS NumArt FROM ARTICLE";
-    $result = $connection->query($requete);
-    $tuple = $result->fetch();
-    $tuple = end($tuple);
-    $tuple = (int)$tuple;
-    $tuple++;
-    $NumArt = $tuple;
+
+      $nomOrigine = $_FILES['monfichier']['name'];
+      $elementsChemin = pathinfo($nomOrigine);
+      $extensionFichier = $elementsChemin['extension'];
+      $extensionsAutorisees = array("jpeg", "jpg", "gif");
+      if (!(in_array($extensionFichier, $extensionsAutorisees))) {
+          echo "Le fichier n'a pas l'extension attendue";
+      } else {    
+          // Copie dans le repertoire du script avec un nom
+          // incluant l'heure a la seconde pres 
+          $repertoireDestination = "../IlluArticles/";
+          $nomDestination = "illu_art_".$NumArt.".".$extensionFichier;
+
+          if (move_uploaded_file($_FILES["monfichier"]["tmp_name"], 
+                                          $repertoireDestination.$nomDestination)) {
+              echo "Le fichier temporaire ".$_FILES["monfichier"]["tmp_name"].
+                      " a été déplacé vers ".$repertoireDestination.$nomDestination;
+          } else {
+              echo "Le fichier n'a pas été uploadé (trop gros ?) ou ".
+                      "Le déplacement du fichier temporaire a échoué".
+                      " vérifiez l'existence du répertoire ".$repertoireDestination;
+          }
+      }
+      $UrlPhotA = "../IlluArticles/".$nomDestination;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    $erreur = false;
 
     $DtCreA = date("Y-m-d");
     $DtCreAd = date("H-i-s");
@@ -84,7 +126,6 @@
           ':NumLang' => $NumLang
         )
       );
-      $langid = $NumCom;
       $connection->commit();
       $query->closeCursor();
     }
@@ -100,7 +141,6 @@
         $query = $connection->prepare("INSERT INTO motclearticle (NumArt, NumMoCle) VALUES (:NumArt, :NumMoCle)");
         $query->execute(array(':NumArt' => $NumArt, ':NumMoCle' => $NumMoCle));
       }
-      $langid = $NumCom;
       $connection->commit();
       $query->closeCursor();
       header("Location:sent.php?id=".$NumArt);

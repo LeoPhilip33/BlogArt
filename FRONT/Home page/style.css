@@ -351,6 +351,13 @@
     font-family: 'Montserrat';
     font-weight: 600;
     font-size: 17px;
+    cursor: pointer;
+}
+.menutna .tna1:hover{
+    text-decoration:underline
+}
+.menutna .tna2:hover{
+    text-decoration:underline
 }
 .menutna .tna2{
     margin-left: 50px;
@@ -427,3 +434,18 @@
 .vigntna .titreartmea2{
     background-color: rgba(185,54,54,0.79);
 }
+.stocknumart{
+    width: 0;
+    height: 0;
+    font-size: 0;
+    color: transparent;
+}
+.stocklikes{
+    width: 0;
+    height: 0;
+    font-size: 0;
+    color: transparent;
+}
+/* element.style.order = "4"; */
+/*  */
+                    /*  */

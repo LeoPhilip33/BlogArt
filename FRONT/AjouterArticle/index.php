@@ -11,10 +11,11 @@ $NumLang="";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../script_global.js"></script>
     <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="../images/favicon.ico" />
     <script type="text/javascript" charset="utf8" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Rédiger Article</title>
+    <title>Rédiger Article - Horry'Bord</title>
 </head>
     <body>
         <?php require '../Require_php/Illustration_header.php'; ?><!--header-->
@@ -28,18 +29,17 @@ $NumLang="";
           <?= $message; ?> <!-- Echo de $message -->
         </div>
         <?php endif; ?>
-        <form class="container-contact-us" action="action-create.php" method="POST"> <!-- Si le formulaire est activé, on redirige vers action-create.php -->
+        <form class="container-contact-us" enctype="multipart/form-data" action="action-create.php" method="POST"> <!-- Si le formulaire est activé, on redirige vers action-create.php -->
             <div class="form-group">
                 <span class="span-text">Titre article</span> 
                 <input class="form-control" type="text" name="LibTitrA" maxlength="100" placeholder="100 caractères maximum" required> <!-- Définition du taille max et impose à se que le champ soit complété -->
                             <span 
                 class="line"></span>
             </div>
-            <div class="form-group">
-                <span class="span-text">Url illustration</span> 
-                <input class="form-control" type="text" name="UrlPhotA" maxlength="62" placeholder="62 caractères maximum" required> <!-- Définition du taille max et impose à se que le champ soit complété -->
-                            <span 
-                class="line"></span>
+            <div class="form-group importillu">
+                <span class="span-text">Importer Illustration</span>
+                <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
+                <input type="file" class="importillu" name="monfichier" />
             </div>
             <div class="form-group">
                 <span class="span-text">Libellé chapeau</span> 
