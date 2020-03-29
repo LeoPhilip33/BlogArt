@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+if(!isset($_SESSION['user']['Login'])) {
+    $utilisateur = " ";
+}
+else{
+    $utilisateur = $_SESSION['user']['Login'];
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -12,6 +23,7 @@
 </head>
 <body>
     <?php require '../Require_php/Illu_Accueil.php'; ?><!--header-->
+    <p class="Utilisateur"> Blyat </p>
     <?php require '../Require_php/barnav.php'; ?><!--navbar-->
     <!-- mennu -->
     <p class="titreacprins">Dernières sorties</p>

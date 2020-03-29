@@ -3,6 +3,15 @@ require '../db.php';
 $NumAngl="";
 $NumThem="";
 $NumLang="";
+
+session_start();
+
+if(!isset($_SESSION['user']['Login'])) {
+    header("location:../Utilisateur/Login.php");
+} else{
+    $utilisateur = $_SESSION['user']['Login'];
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -21,7 +30,7 @@ $NumLang="";
         <?php require '../Require_php/barnav.php'; ?><!--navbar-->
         <div class="content">
         <div class="fichecontact">
-        <h3 class="titrecont">Rédiger Article</h3>
+        <h3 class="titrecont">Rédiger Article - <?= $utilisateur ?></h3>
             <div class="monformlaire">
         <?php if(!empty($message)): ?> <!-- Si $message n'est pas vide -->
         <div class="alert alert-success"> <!-- Alerte succes -->
