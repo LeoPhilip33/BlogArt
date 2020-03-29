@@ -13,6 +13,22 @@
     flex-direction: column;
 }
 
+
+td
+{
+    border: solid 1px;
+    border-color: #F8F8F8;
+    color: #72857F;
+    font-family: 'Montserrat';
+    font-weight: 200;
+    font-size: 15px;
+    text-align: left;
+    padding-left: 3px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 100%;
+}
+
 .creat_php{
     margin-left: 11.44%;
     color: #F8F8F8;
@@ -41,7 +57,7 @@
     font-weight: 200;
     font-size: 16px;
     text-align: center;
-    width: 100%;
+    box-sizing: content-box;
     
 }
 
@@ -61,21 +77,10 @@
     border-color: #F8F8F8;
     border: solid 1px;
     border-radius: 20px;
+    white-space: normal;
    
 }
 
-td
-{
-    border: solid 1px;
-    border-color: #F8F8F8;
-    color: #72857F;
-    font-family: 'Montserrat';
-    font-weight: 200;
-    font-size: 15px;
-    text-align: left;
-    padding-top: 1%;
-    padding-bottom: 1%;
-}
 
 button.edit{
     margin-bottom: 0;
@@ -139,14 +144,6 @@ button.delete:hover{
     padding: 0px 5px 0px 5px;
     height: 20px;
 }
-*, ::after, ::before {
-    box-sizing: content-box;
-    
-}
-*, ::after, ::before {
-    box-sizing: content-box;
-}
-
 
 
 @media (max-width: 600px)
