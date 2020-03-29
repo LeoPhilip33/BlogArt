@@ -4,6 +4,7 @@ if(!isset($_SESSION['user']['Login'])) {
     $connexion = "Connexion";
     $inscription = "S'enregistrer";
     $linkconnexion = "../Utilisateur/Login.php";
+<<<<<<< HEAD
     $linkinscription = "../Utilisateur/inscription.php";
 }
 else{

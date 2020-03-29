@@ -11,6 +11,9 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    table-layout: fixed;
+
+  
 }
 
 
@@ -26,7 +29,16 @@ td
     padding-left: 3px;
     padding-top: 1%;
     padding-bottom: 1%;
-    width: 100%;
+    width: 20px;
+    overflow: scroll;
+    white-space: break-spaces;
+    text-overflow: ellipsis;
+    table-layout: fixed;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    height: 100px;
+  
+
 }
 
 .creat_php{
@@ -58,8 +70,11 @@ td
     font-size: 16px;
     text-align: center;
     box-sizing: content-box;
-    
+    overflow-y: scroll;
+    text-overflow: clip;
 }
+    
+
 
 .tableau_langues
 {
@@ -78,8 +93,11 @@ td
     border: solid 1px;
     border-radius: 20px;
     white-space: normal;
-   
+    overflow-y: scroll;
+    text-overflow: clip;
 }
+   
+
 
 
 button.edit{
@@ -146,8 +164,7 @@ button.delete:hover{
 }
 
 
-@media (max-width: 600px)
-{
+
     .table-responsive-lg 
     {
     display: block;
@@ -160,4 +177,3 @@ button.delete:hover{
     *, ::after, ::before {
         box-sizing: initial;
     }
-}
