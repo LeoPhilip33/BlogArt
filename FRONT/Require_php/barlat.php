@@ -32,7 +32,7 @@
         <div class="trait_aside"></div>
         <h1 class="titre_aside">Playlist d'Horry'Bord</h1>
     </div>
-    <iframe class="playlist" src="https://play.soundsgood.co/embed/5e754bed7381827590892c68?color=323733&hideCurator=1" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media" allowtransparency="true"></iframe>
+    <iframe class="playlist" src="https://play.soundsgood.co/embed/5e80f57b623c9d075e84b97f?color=920307" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; encrypted-media" allowtransparency="true"></iframe>
     <div class="reseaux-sociaux">
         <img class ="reseaux_sociauxt" src="../images/twitter1.png" alt="twitter_logo">
         <img class="reseaux_sociauxi" src="../images/insta1.png" alt="instagram_logo">
