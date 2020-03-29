@@ -12,7 +12,7 @@
         <!-- mennu -->
         <div class="content">
             <div class="fichecontact">
-                <h3 class="titrecont">Résultats de recherche</h3>
+                <h3 class="titrecont">Résultats de recherche - Horry'Bord</h3>
                 <meta charset="utf-8" />
                 <?php
                 

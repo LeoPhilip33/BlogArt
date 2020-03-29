@@ -63,9 +63,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>page inscription horry bord</title>
+    <title>Inscription - Horry'Bord</title>
     <link rel="stylesheet" href="styleinscription.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/favicon.ico" />
 </head>
 <body>
 

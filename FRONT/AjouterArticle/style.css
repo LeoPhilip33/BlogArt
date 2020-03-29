@@ -371,4 +371,17 @@ option{
         display: block;
     }
 }
-
+.importillu input{
+    background-color: #092E2B !important;
+    border: 0  !important;
+    border-color: #F8F8F8  !important;
+    border-radius: 0px  !important;
+    border-width: 0px  !important;
+    height: 40px  !important;
+    color: #72857F  !important;
+    font-family: 'Montserrat'  !important;
+    font-weight: 400  !important;
+    font-size: 17px  !important;
+    padding-left: 0  !important;
+    resize: vertical  !important;
+}
