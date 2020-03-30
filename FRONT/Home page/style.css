@@ -1,0 +1,451 @@
+.content{
+    display: flex;
+    margin-top: 42px;
+    margin-left: 9.84vw;
+    margin-right: 9.84vw;
+}
+.fichecontact{
+    width: 73.87%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0 !important;
+}
+.barlat{
+    margin-left: 2.84%;
+    width: 300px;
+    background-color: #092E2B;
+    border-radius: 20px;
+}
+.titrecont{
+    margin-left: 11.44%;
+    color: #F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 30px;
+    padding: 0;
+    margin-top: 42px;
+    margin-bottom: 0;
+}
+.phrasecont{
+    color: #F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0;
+    margin-top: 42px;
+    margin-bottom: 0;
+}
+.phrasecont2{
+    color: #F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 20px;
+    padding: 0;
+    margin-top: 42px;
+    margin-bottom: 0;
+    margin-left: 11.44%;
+    width: 42.45%;
+}
+.formcont{
+    margin-left: 11.44%;
+    width: 42.45%;
+}
+.form-group textarea,.form-group input{
+    background-color: #092E2B;
+    border: solid;
+    border-color: #F8F8F8;
+    border-radius: 9px;
+    border-width: 2px;
+    height: 30px;
+    color: #72857F;
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 17px;
+    padding-left: 10px;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+.form-group label{
+    padding: 0;
+    margin-top: 42px;
+    margin-bottom: 10px;
+    color: #F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 17px;
+}
+.form-row{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.form-row .form-group{
+    display: flex;
+    width: 45%;
+}
+.formcont button{
+    margin-bottom: 0;
+    color:#001003;
+    border: solid;
+    background-color: #F8F8F8;
+    border-color: #F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 17px;
+    border-radius: 45px;
+    width: auto;
+    margin-left: auto;
+    margin-top: 42px;
+    padding: 0px 12px 0px 12px;
+    height: 42px;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.formcont button:hover{
+    margin-bottom: 0;
+    color:#F8F8F8;
+    background-color: #092E2B;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 17px;
+    border-radius: 45px;
+    width: auto;
+    margin-left: auto;
+    margin-top: 42px;
+    padding: 7px 12px 7px 12px;
+    height: 42px;
+}
+.icons{
+    display: flex;
+    margin-top: 42px;
+    margin-bottom: 42px;
+    width: 30%;
+    margin-right: auto;
+    margin-left: 11.44%;
+    justify-content: space-between;
+}
+.icon{
+    width: 40px;
+    height: 40px;
+}
+.newmenu ul .li_ac a{
+    color: #B93636;
+}
+.navbar ul .ac a{
+    color: #B93636;
+}
+.s_ac{
+    width:17px !important;
+}
+.tir_ac{
+    background-color: #B93636;
+}
+@media (max-width: 1500px){
+    .formcont{
+        margin-left: 11.44%;
+        width: auto;
+        margin-right: 11.44%;
+    }
+    .phrasecont2{
+        width: auto;
+    }
+}
+@media (max-width: 1080px){
+    .barlat{
+        display: none;
+    }
+    .fichecontact{
+        width: 100%;
+    }
+    .formcont{
+        margin-left: 11.44%;
+        margin-right: 11.44%;
+        width: 77.12%;
+    }
+    .phrasecont2{
+        width: 77.12%;
+    }
+    .icons{
+        width: 40%;
+    }
+}
+
+@media (max-width: 640px){
+    .form-row{
+        display: flex;
+        flex-direction: column;
+    }
+    .form-row .form-group{
+        width: 100%;
+    }
+    .icons{
+        width: 50%;
+    }
+    .navbar ul{
+        display: none;
+    }
+    .traitnav{
+        display: block;
+    }
+}
+.fichecontact{
+    display: flex;
+    flex-direction: column;
+}
+.artmisenavant{
+    margin: 0;
+    width: 100%;
+    height: 200px;
+    background-color: #092E2B;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.descartmea{
+    margin-left: 6.79%;
+    margin-right: 6.79%;
+    overflow-wrap: break-word;
+}
+.titreartmea1{
+    margin: 0;
+    color:#000703;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 17px;
+    margin-bottom: 7px;
+    background-color: rgba(185,54,54,0.79);
+}
+.txtartmea1{
+    margin: 0;
+    color:#000703;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 17px;
+    background-color: rgba(185,54,54,0.79);
+}
+.artmisenavant2{
+    margin: 0;
+    width: 100%;
+    height: 155.3875px;
+    background-color: #092E2B;
+    border-radius: 20px;
+    display: flex;
+}
+.imgilluartmea{
+    height: 100%;
+    width: 40%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center center;
+}
+.txtilluartmea{
+    height: 100%;
+    width: 60%;
+    overflow-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.titreartmea2{
+    color:#F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 13px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 17px;
+    margin-bottom: 0;
+}
+.txtartmea2{
+    color:#F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 11px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 17px;
+    margin-bottom: 0;
+}
+.part2txtilluartmea{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 17px;
+}
+.barretxtilluartmea{
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 2px;
+    width: 50px;
+    background-color: #B93636;
+}
+.voirvignadm{
+    display: flex;
+    justify-content: space-around;
+}
+.voirvignadm {
+    border: solid;
+    border-radius: 45px;
+    border-width: 1.5px;
+    border-color: #F8F8F8;
+    padding: 5px 12px 5px 12px;
+    margin-right: 17px;
+    text-align: center;
+}
+.voirvignadm:hover{
+    background-color: #F8F8F8;
+}
+.voirvignadm:hover p{
+    color: #092E2B;
+    font-weight: 600;
+}
+.voirvignadm p{
+    margin: 0;
+    color:#F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 12px;
+}
+@media (max-width: 1080px){
+    .artmisenavant2{
+        margin-top: 42px;
+    }
+    .vigntna{
+        width: 48% !important;
+    }
+}
+@media (max-width: 640px){
+    .txtartmea2{
+        display: none;
+    }
+    .vigntna{
+        width: 100% !important;
+    }
+}
+@media (max-width: 340px){
+    .artmisenavant2, .fichecontact{
+        height: auto;
+    }
+    .txtilluartmea{
+        width: 100%;
+    }
+}
+.menutna{
+    display: flex;
+    padding: 0;
+    margin-top: 42px;
+    margin-bottom: 17px;
+}
+.menutna li{
+    margin: 0;
+    color:#F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 17px;
+    cursor: pointer;
+}
+.menutna .tna1:hover{
+    text-decoration:underline
+}
+.menutna .tna2:hover{
+    text-decoration:underline
+}
+.menutna .tna2{
+    margin-left: 50px;
+}
+.vigntna{
+    width: 31.49%;
+    height: 200px;
+    overflow-wrap: break-word;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 0.9%;
+    margin-right: 0.9%;
+    margin-bottom: 17px;
+}
+.listartwarp{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+.titreacprins{
+    margin: 0;
+    color:#72857F;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 42px;
+    margin-left: 42px;
+    margin-left: 9.84vw;
+}
+.Tousnosarticle{
+    margin-left: 9.84vw;
+    margin-right: 9.84vw;
+}
+.divbasvign{
+    margin-bottom: 17px;
+}
+.voirvignadm2{
+    display: flex;
+    justify-content: space-around;
+    width: 65px;
+    margin-right: 0;
+    margin-left: auto;
+    margin-top: 17px;
+}
+.voirvignadm2 {
+    border: solid;
+    border-radius: 45px;
+    border-width: 1.5px;
+    border-color: #F8F8F8;
+    padding: 5px 12px 5px 12px;
+    margin-right: 17px;
+    text-align: center;
+}
+.voirvignadm2:hover{
+    background-color: #F8F8F8;
+}
+.voirvignadm2:hover p{
+    color: #092E2B;
+    font-weight: 600;
+}
+.voirvignadm2 p{
+    margin: 0;
+    color:#F8F8F8;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 12px;
+}
+.vigntna .titreartmea2{
+    background-color: rgba(185,54,54,0.79);
+}
+.stocknumart{
+    width: 0;
+    height: 0;
+    font-size: 0;
+    color: transparent;
+}
+.stocklikes{
+    width: 0;
+    height: 0;
+    font-size: 0;
+    color: transparent;
+}
+/* element.style.order = "4"; */
+/*  */
+                    /*  */
