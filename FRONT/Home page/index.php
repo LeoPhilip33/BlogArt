@@ -23,7 +23,7 @@ else{
     <title>Accueil - Horry'Bord</title>
 </head>
 <body>
-    <?php require '../Require_php/Illu_Accueil.php'; ?><!--header-->
+    <?php require '../Require_php/Illu_Accueil.php'; ?><!--header accueil-->
     <p class="Utilisateur"> Blyat </p>
     <?php require '../Require_php/barnav.php'; ?><!--navbar-->
     <!-- mennu -->
