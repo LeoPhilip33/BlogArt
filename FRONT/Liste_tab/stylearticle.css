@@ -35,7 +35,7 @@ td
     text-overflow: ellipsis;
     table-layout: fixed;
     hyphens: auto;
-    overflow-wrap: break-spaces;
+    overflow-wrap: break-word;
     height: 100px;
   
 

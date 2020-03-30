@@ -1,15 +1,3 @@
-<?php
-session_start();
-
-if(!isset($_SESSION['user']['Login'])) {
-    $utilisateur = " ";
-}
-else{
-    $utilisateur = $_SESSION['user']['Login'];
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
