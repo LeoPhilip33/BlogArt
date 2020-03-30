@@ -24,7 +24,6 @@ else{
 </head>
 <body>
     <?php require '../Require_php/Illu_Accueil.php'; ?><!--header-->
-    <p class="Utilisateur"> Blyat </p>
     <?php require '../Require_php/barnav.php'; ?><!--navbar-->
     <!-- mennu -->
     <p class="titreacprins">Dernières sorties</p>
