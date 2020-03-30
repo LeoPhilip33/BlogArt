@@ -4,7 +4,7 @@ if(!isset($_SESSION['user']['Login'])) {
     $connexion = "Connexion";
     $inscription = "S'enregistrer";
     $linkconnexion = "../Utilisateur/Login.php";
-    $linkinscription = "../Inscription/index.php";
+    $linkinscription = "../Utilisateur/inscription.php";
 }
 else{
     $connexion = "";
