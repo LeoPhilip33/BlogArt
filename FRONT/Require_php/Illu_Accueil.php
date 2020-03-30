@@ -8,7 +8,7 @@ else{
 ?>
 <link href="../style_global.css" rel="stylesheet">
 <div class="IlluHead1">
-<h1 class="user"> <?= $utilisateur ?> </h1>
+<p class="userHeader"> <?= $utilisateur ?> </p>
     <p class="txtimgheader">Découvrir</p>
     <div class="contentarrow">
         <a href="#h"><img class="downarrowheadac" src="../images/down-arrow.png" alt=""></a>
