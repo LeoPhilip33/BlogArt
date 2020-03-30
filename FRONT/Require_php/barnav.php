@@ -1,20 +1,3 @@
-<?php
-
-if(!isset($_SESSION['user']['Login'])) {
-    $connexion = "Connexion";
-    $inscription = "S'enregistrer";
-    $linkconnexion = "../Utilisateur/Login.php";
-<<<<<<< HEAD
-    $linkinscription = "../Utilisateur/inscription.php";
-}
-else{
-    $connexion = "";
-    $inscription = "Déconnexion";
-    $linkconnexion = " ";
-    $linkinscription  = "../logout.php";
-}
-
-?>
 <link href="../style_global.css" rel="stylesheet">
 <script src="../script_global.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -37,13 +20,13 @@ else{
     </li>
     </ul>
     <ul id="cond">
-    <li class="con"><a href="<?= $linkconnexion ?>"><?= $connexion ?></a>
+    <li class="con"><a href="../Utilisateur/Login.php">Connexion</a>
         <div class="s_con"></div>
     </li>
     <li>
-        <a href="<?= $linkinscription ?>">
+        <a href="">
         <div class="divbtn" id="divbtn">
-            <p><?= $inscription ?></p>
+            <p>S'enregistrer</p>
         </div>
         </a>
     </li>
